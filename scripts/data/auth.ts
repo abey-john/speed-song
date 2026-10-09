@@ -64,7 +64,7 @@ function openBrowser(targetUrl: string): void {
 }
 
 const server = http.createServer(async (req, res) => {
-  const reqUrl = url.parse(req.url || '', true);
+  const reqUrl = new URL(req.url || '/', `http://${req.headers.host || '127.0.0.1:8888'}`);
 
   if (reqUrl.pathname !== CALLBACK_PATH) {
     res.writeHead(404, { 'Content-Type': 'text/plain' });
@@ -72,7 +72,9 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  const { code, state: returnedState, error } = reqUrl.query;
+  const code = reqUrl.searchParams.get('code');
+  const returnedState = reqUrl.searchParams.get('state');
+  const error = reqUrl.searchParams.get('error');
 
   if (error) {
     res.writeHead(400, { 'Content-Type': 'text/html' });
@@ -150,15 +152,17 @@ const server = http.createServer(async (req, res) => {
     console.log('✅ SPOTIFY_REFRESH_TOKEN saved to .env');
     console.log('You can now run the build-time data pipeline.\n');
 
-    server.close();
-    process.exit(0);
+    server.close(() => {
+      process.exit(0);
+    });
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
     console.error(`\n❌ Error exchanging code for token: ${msg}`);
     res.writeHead(500, { 'Content-Type': 'text/html' });
     res.end(`<h1>Token Exchange Error</h1><p>${msg}</p>`);
-    server.close();
-    process.exit(1);
+    server.close(() => {
+      process.exit(1);
+    });
   }
 });
 
