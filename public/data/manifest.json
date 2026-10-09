@@ -1,23 +1,29 @@
 {
-  "generatedAt": "2026-10-09T04:24:10.093Z",
+  "generatedAt": "2026-10-09T06:26:15.357Z",
   "playlists": [
     {
-      "id": "2KExcFMO47XI7pWZL8eOJY",
-      "name": "belt",
-      "songCount": 58,
-      "file": "playlists/2KExcFMO47XI7pWZL8eOJY.json"
+      "id": "3CpV0J5JEMkTYnLlOoEaWs",
+      "name": "🦀",
+      "songCount": 48,
+      "file": "playlists/3CpV0J5JEMkTYnLlOoEaWs.json"
     },
     {
-      "id": "37vcSy5hYWYCdtV7uuOkuS",
-      "name": "live 105",
-      "songCount": 166,
-      "file": "playlists/37vcSy5hYWYCdtV7uuOkuS.json"
+      "id": "7bWfS4q57ZyfSV1W9oOAkh",
+      "name": "2023 highlights",
+      "songCount": 56,
+      "file": "playlists/7bWfS4q57ZyfSV1W9oOAkh.json"
     },
     {
-      "id": "3UpWJxyxebaKiw0IAMKIPv",
-      "name": "dance now",
-      "songCount": 43,
-      "file": "playlists/3UpWJxyxebaKiw0IAMKIPv.json"
+      "id": "3kSAF2rOkfU4P3qKNAzpeT",
+      "name": "2024 highlights ",
+      "songCount": 57,
+      "file": "playlists/3kSAF2rOkfU4P3qKNAzpeT.json"
+    },
+    {
+      "id": "6IUmEBVD4AkBL3jhMKw2r5",
+      "name": "2025 highlights",
+      "songCount": 91,
+      "file": "playlists/6IUmEBVD4AkBL3jhMKw2r5.json"
     },
     {
       "id": "6kzGwYY7BnwfdQfnZBDKQw",
@@ -26,10 +32,70 @@
       "file": "playlists/6kzGwYY7BnwfdQfnZBDKQw.json"
     },
     {
+      "id": "5v0MCLaFomo8zUgeKtJfhs",
+      "name": "Adventure Time",
+      "songCount": 81,
+      "file": "playlists/5v0MCLaFomo8zUgeKtJfhs.json"
+    },
+    {
+      "id": "2KExcFMO47XI7pWZL8eOJY",
+      "name": "belt",
+      "songCount": 58,
+      "file": "playlists/2KExcFMO47XI7pWZL8eOJY.json"
+    },
+    {
+      "id": "2qPSijrRus2BUQ8LKmZTts",
+      "name": "Closet Weeb",
+      "songCount": 106,
+      "file": "playlists/2qPSijrRus2BUQ8LKmZTts.json"
+    },
+    {
+      "id": "6auUmzLNqMEfTaaM2vBXju",
+      "name": "compendium",
+      "songCount": 4237,
+      "file": "playlists/6auUmzLNqMEfTaaM2vBXju.json"
+    },
+    {
+      "id": "3UpWJxyxebaKiw0IAMKIPv",
+      "name": "dance now",
+      "songCount": 43,
+      "file": "playlists/3UpWJxyxebaKiw0IAMKIPv.json"
+    },
+    {
+      "id": "37vcSy5hYWYCdtV7uuOkuS",
+      "name": "live 105",
+      "songCount": 166,
+      "file": "playlists/37vcSy5hYWYCdtV7uuOkuS.json"
+    },
+    {
+      "id": "4d5Ge5O4ep1eV9e2PFKyoh",
+      "name": "Pantheon",
+      "songCount": 73,
+      "file": "playlists/4d5Ge5O4ep1eV9e2PFKyoh.json"
+    },
+    {
       "id": "7bXnPvTLZFaNyOeRCNXg7y",
       "name": "puget’s sound",
       "songCount": 76,
       "file": "playlists/7bXnPvTLZFaNyOeRCNXg7y.json"
+    },
+    {
+      "id": "04dv7lU03gy80our8z6J6a",
+      "name": "SOTD",
+      "songCount": 33,
+      "file": "playlists/04dv7lU03gy80our8z6J6a.json"
+    },
+    {
+      "id": "4jinbsx5ZRxvyL0DHQz6ra",
+      "name": "Unbridled Bangers",
+      "songCount": 187,
+      "file": "playlists/4jinbsx5ZRxvyL0DHQz6ra.json"
+    },
+    {
+      "id": "4PNSt4iAtg9EwBfz6VW9IY",
+      "name": "windows down",
+      "songCount": 123,
+      "file": "playlists/4PNSt4iAtg9EwBfz6VW9IY.json"
     }
   ]
 }
