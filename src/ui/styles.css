@@ -12,13 +12,13 @@
   --color-text-muted: #a69dc2;
   --color-text-dim: #716692;
 
-  /* Purple Accent & Subtle Gradient */
-  --color-accent: #9333ea;
-  --color-accent-hover: #a855f7;
-  --color-accent-active: #7e22ce;
+  /* Purple Accent & Subtle Gradient (Slightly Deeper) */
+  --color-accent: #7e22ce;
+  --color-accent-hover: #9333ea;
+  --color-accent-active: #6b21a8;
   --color-accent-light: #c084fc;
-  --color-accent-gradient: linear-gradient(180deg, #9b3be8 0%, #8227d8 100%);
-  --color-accent-gradient-hover: linear-gradient(180deg, #a855f7 0%, #9333ea 100%);
+  --color-accent-gradient: linear-gradient(180deg, #8526dc 0%, #6e1cba 100%);
+  --color-accent-gradient-hover: linear-gradient(180deg, #9333ea 0%, #7e22ce 100%);
 
   /* Outcome & state colors */
   --color-success: #10b981;
@@ -328,20 +328,20 @@ body {
   gap: 10px;
   background: var(--color-accent-gradient);
   color: #ffffff;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
   padding: 14px 20px;
   font-size: 1.05rem;
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition-fast);
-  box-shadow: 0 3px 12px rgba(147, 51, 234, 0.22);
+  box-shadow: 0 4px 14px rgba(110, 28, 186, 0.28);
 }
 
 .btn-play:hover {
   background: var(--color-accent-gradient-hover);
   transform: translateY(-1px);
-  box-shadow: 0 5px 16px rgba(147, 51, 234, 0.32);
+  box-shadow: 0 6px 18px rgba(110, 28, 186, 0.38);
 }
 
 .btn-play.is-playing {
@@ -456,20 +456,20 @@ body {
 .btn-submit-guess {
   background: var(--color-accent-gradient);
   color: #ffffff;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
   padding: 0 22px;
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition-fast);
-  box-shadow: 0 3px 12px rgba(147, 51, 234, 0.22);
+  box-shadow: 0 3px 12px rgba(110, 28, 186, 0.25);
 }
 
 .btn-submit-guess:hover:not(:disabled) {
   background: var(--color-accent-gradient-hover);
   transform: translateY(-1px);
-  box-shadow: 0 5px 16px rgba(147, 51, 234, 0.32);
+  box-shadow: 0 5px 16px rgba(110, 28, 186, 0.35);
 }
 
 .btn-submit-guess:disabled {
@@ -653,19 +653,19 @@ body {
   flex: 1;
   background: var(--color-accent-gradient);
   color: #ffffff;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 13px 18px;
   border-radius: var(--radius-md);
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition-fast);
-  box-shadow: 0 3px 12px rgba(147, 51, 234, 0.22);
+  box-shadow: 0 3px 12px rgba(110, 28, 186, 0.25);
 }
 
 .btn-next-round:hover {
   background: var(--color-accent-gradient-hover);
   transform: translateY(-1px);
-  box-shadow: 0 5px 16px rgba(147, 51, 234, 0.32);
+  box-shadow: 0 5px 16px rgba(110, 28, 186, 0.35);
 }
 
 /* Stats Modal Backdrop & Dialog */
