@@ -19,5 +19,6 @@ Thumbs.db
 .vscode/*
 !.vscode/extensions.json
 
-# Notes
+# Notes & Screenshots
 notes/
+*.png
