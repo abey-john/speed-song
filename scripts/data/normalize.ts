@@ -6,12 +6,34 @@ export function normalize(text: string): string {
 }
 
 /**
- * Extracts base title before opening parentheses, brackets, hyphens, dashes, colons.
+ * Extracts base title before version descriptors, appendages, and subtitle tags.
  * E.g. "Song Name (feat. Artist)" -> "Song Name"
+ *      "Song Name - Remastered 2011" -> "Song Name"
+ *      "19-2000" -> "19-2000" (preserves compound numbers/words)
+ *      "(I Can't Get No) Satisfaction - Mono" -> "(I Can't Get No) Satisfaction"
  */
 export function getBaseTitle(title: string): string {
-  const parts = title.split(/[\(\[\-–—:]/);
-  return (parts[0] || '').trim();
+  let cleaned = (title || '').trim();
+
+  // 1. Strip trailing dash subtitles with spaces around: " - Remastered", " – Live", " — 2019"
+  cleaned = cleaned.replace(/\s+[-–—:]\s+.*$/i, '');
+
+  // 2. Strip trailing parenthetical / bracketed info like (feat. ...), [Remastered], (Live ...), (Version), (Radio Edit)
+  // But DO NOT strip if the title starts with '(' like "(I Can't Get No) Satisfaction"
+  if (cleaned.startsWith('(')) {
+    // If it starts with '(', only strip trailing brackets/parentheses that come AFTER the initial group:
+    // e.g. "(I Can't Get No) Satisfaction (Mono)" -> "(I Can't Get No) Satisfaction"
+    cleaned = cleaned.replace(/\s+[\(\[][^\(\)]*[\)\]]$/i, '');
+  } else {
+    // Standard title: strip trailing (feat. ...), [Remastered ...], etc.
+    cleaned = cleaned.replace(/\s*[\(\[][^\(\)]*[\)\]].*$/i, '');
+  }
+
+  // 3. If there is still a trailing ": Subtitle", strip it
+  cleaned = cleaned.replace(/:\s+.*$/, '');
+
+  const result = cleaned.trim();
+  return result || title.trim();
 }
 
 /**
@@ -37,4 +59,46 @@ export function artistsMatch(targetArtist: string, candidateArtist: string): boo
 
   if (!normTarget || !normCandidate) return false;
   return normCandidate.includes(normTarget) || normTarget.includes(normCandidate);
+}
+
+/**
+ * Checks if candidate song title matches target song title.
+ * Strictly prevents mismatched song audio from being assigned to another song.
+ */
+export function titlesMatch(targetTitle: string, candidateTitle: string): boolean {
+  const normTarget = normalize(targetTitle);
+  const normCandidate = normalize(candidateTitle);
+
+  if (!normTarget || !normCandidate) return false;
+
+  // 1. Exact normalized match: "192000" === "192000"
+  if (normTarget === normCandidate) return true;
+
+  // 2. Base title match: "kids" === "kids"
+  const baseTarget = normalize(getBaseTitle(targetTitle));
+  const baseCandidate = normalize(getBaseTitle(candidateTitle));
+  if (baseTarget && baseCandidate && baseTarget === baseCandidate) return true;
+
+  // 3. Base matches other's full or vice versa
+  if (baseTarget && baseTarget === normCandidate) return true;
+  if (baseCandidate && baseCandidate === normTarget) return true;
+
+  // 4. Base title substring match if base title is substantial (>= 4 characters)
+  if (
+    baseTarget.length >= 4 &&
+    baseCandidate.length >= 4 &&
+    (baseTarget.includes(baseCandidate) || baseCandidate.includes(baseTarget))
+  ) {
+    return true;
+  }
+
+  // 5. Full normalized title substring match if shorter string is substantial (>= 4 chars)
+  const shorter = normTarget.length < normCandidate.length ? normTarget : normCandidate;
+  const longer = normTarget.length < normCandidate.length ? normCandidate : normTarget;
+
+  if (shorter.length >= 4 && longer.includes(shorter)) {
+    return true;
+  }
+
+  return false;
 }

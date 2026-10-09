@@ -1,4 +1,4 @@
-import { normalize, getBaseTitle, artistsMatch } from './normalize';
+import { normalize, getBaseTitle, artistsMatch, titlesMatch } from './normalize';
 import { ResolutionResult } from './types';
 
 interface AppleArtworkDictionary {
@@ -134,10 +134,11 @@ export async function tryAppleMusicWeb(
     // Match priorities:
     // 1. Exact normalized title
     // 2. Base title match
-    // 3. First track
+    // 3. Robust titlesMatch (substring/fuzzy variant)
     const exact = tracks.find((t) => normalize(t.title || '') === cleanTarget);
     const baseMatch = tracks.find((t) => normalize(getBaseTitle(t.title || '')) === baseTarget);
-    const chosen = exact || baseMatch || tracks[0];
+    const fuzzyMatch = tracks.find((t) => titlesMatch(title, t.title || ''));
+    const chosen = exact || baseMatch || fuzzyMatch;
 
     if (!chosen?.previewUrl) return null;
 
@@ -169,7 +170,8 @@ export async function tryItunesApi(
   spotifyArtworkUrl: string
 ): Promise<ResolutionResult | null> {
   try {
-    const q = `${title} ${artist}`;
+    const primaryArtist = artist.split(',')[0]?.trim() || artist;
+    const q = `${title} ${primaryArtist}`;
     const url = `https://itunes.apple.com/search?term=${encodeURIComponent(q)}&entity=song&limit=10`;
 
     const res = await fetch(url, {
@@ -197,12 +199,8 @@ export async function tryItunesApi(
 
     const exact = pool.find((t) => normalize(t.trackName || '') === cleanTarget);
     const baseMatch = pool.find((t) => normalize(getBaseTitle(t.trackName || '')) === baseTarget);
-    const nonRemix = pool.find(
-      (t) =>
-        !(t.trackName || '').toLowerCase().includes('remix') &&
-        !(t.collectionName || '').toLowerCase().includes('remix')
-    );
-    const chosen = exact || baseMatch || nonRemix || pool[0];
+    const fuzzyMatch = pool.find((t) => titlesMatch(title, t.trackName || ''));
+    const chosen = exact || baseMatch || fuzzyMatch;
 
     if (!chosen?.previewUrl) return null;
 

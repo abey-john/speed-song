@@ -21,6 +21,7 @@ class SpeedSongApp {
   private state: GameState = { type: 'idle', selectedPlaylistId: null };
   private controls: GameControls;
   private isPlayingFullPreview = false;
+  private prefetchTimer: number | null = null;
 
   constructor(root: HTMLElement) {
     this.root = root;
@@ -61,6 +62,12 @@ class SpeedSongApp {
     localStorage.setItem(LAST_PLAYLIST_KEY, playlistId);
     this.renderLoading(`Loading ${entry.name}...`);
 
+    if (this.prefetchTimer !== null) {
+      window.clearTimeout(this.prefetchTimer);
+      this.prefetchTimer = null;
+    }
+    this.nextSong = null;
+
     try {
       this.currentPlaylist = await loadPlaylist(entry.file);
       this.shuffleBag = new ShuffleBag(this.currentPlaylist.songs);
@@ -77,11 +84,18 @@ class SpeedSongApp {
   private async startNewRound(): Promise<void> {
     if (!this.shuffleBag || !this.currentPlaylist) return;
 
+    if (this.prefetchTimer !== null) {
+      window.clearTimeout(this.prefetchTimer);
+      this.prefetchTimer = null;
+    }
+
     audioEngine.stop();
     this.isPlayingFullPreview = false;
 
-    // Pick song
-    const song = this.nextSong || this.shuffleBag.draw();
+    // Pick song, ensuring candidate belongs strictly to current playlist
+    const isValidPrefetch =
+      this.nextSong && this.currentPlaylist.songs.some((s) => s.id === this.nextSong?.id);
+    const song = isValidPrefetch ? this.nextSong! : this.shuffleBag.draw();
     this.nextSong = null;
 
     if (!song) {
@@ -100,12 +114,16 @@ class SpeedSongApp {
     const duration = INTERVALS[0] ?? 0.1;
     this.playCurrentStep(duration);
 
-    // Prefetch next song in background
-    setTimeout(() => {
-      if (this.shuffleBag) {
-        this.nextSong = this.shuffleBag.draw();
-        if (this.nextSong?.previewUrl) {
-          audioEngine.preloadSong(this.nextSong.previewUrl);
+    // Prefetch next song in background after 1s
+    this.prefetchTimer = window.setTimeout(() => {
+      this.prefetchTimer = null;
+      if (this.shuffleBag && this.currentPlaylist) {
+        const candidate = this.shuffleBag.draw();
+        if (candidate) {
+          this.nextSong = candidate;
+          if (candidate.previewUrl) {
+            audioEngine.preloadSong(candidate.previewUrl);
+          }
         }
       }
     }, 1000);

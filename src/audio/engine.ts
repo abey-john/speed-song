@@ -26,6 +26,7 @@ export class AudioEngine {
     audioContextState: 'uninitialized',
   };
   private isCurrentlyPlaying = false;
+  private playGeneration = 0;
 
   private getContext(): AudioContext {
     if (!this.ctx) {
@@ -96,8 +97,11 @@ export class AudioEngine {
     onEnded?: () => void
   ): Promise<boolean> {
     this.stop();
+    const currentGen = this.playGeneration;
 
     await this.unlock();
+    if (this.playGeneration !== currentGen) return false;
+
     const ctx = this.getContext();
 
     // Try Web Audio API first
@@ -107,7 +111,19 @@ export class AudioEngine {
         track = (await this.preloadSong(url)) || undefined;
       }
 
+      if (this.playGeneration !== currentGen) return false;
+
       if (track) {
+        // Ensure any previous active source is completely detached
+        if (this.activeSource) {
+          try {
+            this.activeSource.stop();
+            this.activeSource.disconnect();
+          } catch {}
+          this.activeSource = null;
+          this.activeGain = null;
+        }
+
         const source = ctx.createBufferSource();
         source.buffer = track.buffer;
 
@@ -136,10 +152,12 @@ export class AudioEngine {
         };
 
         source.onended = () => {
-          this.isCurrentlyPlaying = false;
-          this.activeSource = null;
-          this.activeGain = null;
-          if (onEnded) onEnded();
+          if (this.activeSource === source) {
+            this.isCurrentlyPlaying = false;
+            this.activeSource = null;
+            this.activeGain = null;
+            if (onEnded) onEnded();
+          }
         };
 
         source.start(startTime, track.silenceOffset);
@@ -151,6 +169,8 @@ export class AudioEngine {
       console.warn('[audio-engine] Web Audio playback failed, falling back to HTMLAudioElement:', err);
     }
 
+    if (this.playGeneration !== currentGen) return false;
+
     // Fallback path
     this.lastDebugInfo = {
       engine: 'html-fallback',
@@ -159,8 +179,10 @@ export class AudioEngine {
     };
     this.isCurrentlyPlaying = true;
     this.fallbackPlayer.play(url, durationSec, () => {
-      this.isCurrentlyPlaying = false;
-      if (onEnded) onEnded();
+      if (this.playGeneration === currentGen) {
+        this.isCurrentlyPlaying = false;
+        if (onEnded) onEnded();
+      }
     });
 
     return true;
@@ -170,6 +192,7 @@ export class AudioEngine {
    * Stops any currently active snippet immediately.
    */
   public stop(): void {
+    this.playGeneration++;
     if (this.activeSource) {
       try {
         if (this.ctx && this.activeGain) {
@@ -182,7 +205,6 @@ export class AudioEngine {
       this.activeSource = null;
       this.activeGain = null;
     }
-
     this.fallbackPlayer.stop();
     this.isCurrentlyPlaying = false;
   }

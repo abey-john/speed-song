@@ -255,7 +255,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/9f/1d/aa9f1d53-aebd-6543-cf9b-50ea5eed1a39/mzaf_6355199564144959073.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f6/65/b5/f665b52b-8d6d-b94d-cc2c-db826e35304e/22UMGIM52376.rgb.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:08:02.025Z"
+    "resolvedAt": "2026-10-09T07:01:23.393Z"
   },
   "065J6YUGz8tN0A3TkRrWtP": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8f/d8/b2/8fd8b286-3fdb-b61d-e4ee-b44fc4ffb4f8/mzaf_6889727093515835474.plus.aac.p.m4a",
@@ -396,10 +396,10 @@
     "resolvedAt": "2026-10-09T06:17:46.768Z"
   },
   "09EwNbGvUyu7BDEYG0cJro": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ae/24/f0/ae24f032-1b91-07dc-fc52-9ec4a20c73e6/mzaf_11983502347990973478.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/33/84/fc/3384fc51-1eeb-e78f-2770-14844fcdd3b5/21UM1IM16262.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:43:00.625Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/42/6c/a0/426ca090-f244-e05b-4404-12ab26414bbc/mzaf_7689504980523316414.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/55/e5/7c/55e57cf2-8325-a088-7d54-3aeedad1143f/21UM1IM16263.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:34.182Z"
   },
   "09PGubKAMryhOWv1LHpCYz": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d4/7d/c6/d47dc6eb-790a-f214-b77a-e7b2c83af2c4/mzaf_13946896427193864170.plus.aac.p.m4a",
@@ -1116,10 +1116,9 @@
     "resolvedAt": "2026-10-09T06:25:57.112Z"
   },
   "0MnJ73xPk7rQDw0lIu8kBh": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/78/20/e5/7820e566-c066-7704-6fcb-fee4bc5da1db/mzaf_18208678455416927859.plus.aac.p.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1d/6d/8d/1d6d8dbe-2938-0fa2-927e-0f4acc1a718a/859761364971.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:13:14.636Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:01:53.046Z"
   },
   "0N3W5peJUQtI4eyR6GJT5O": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/26/15/64/26156438-55e2-eeef-272b-180a1634085c/mzaf_10041646963262075859.plus.aac.ep.m4a",
@@ -1191,7 +1190,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/29/fd/18/29fd18d9-5230-327b-6585-40dc9d4997b9/mzaf_952033828184725506.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2003/m10/d20/h21/s05.lcrggtrf.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:29:33.438Z"
+    "resolvedAt": "2026-10-09T06:59:52.107Z"
   },
   "0O45fw2L5vsWpdsOdXwNAR": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e5/07/9d/e5079d55-b1b0-daf1-7d66-373aad9df1b3/mzaf_2595439522759358701.plus.aac.ep.m4a",
@@ -1338,10 +1337,9 @@
     "resolvedAt": "2026-10-09T06:19:42.927Z"
   },
   "0SR4ItBJEpDf5I6zrcPDt4": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:31.592Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:21.524Z"
   },
   "0SYRVn2YF7HBscQEmlkpTI": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f7/a7/6a/f7a76a18-cdc7-9222-12e8-98ceb6177f2d/mzaf_16699508070503693599.plus.aac.ep.m4a",
@@ -1470,10 +1468,10 @@
     "resolvedAt": "2026-10-09T06:21:46.834Z"
   },
   "0VSzREd1OjEWJ9tXoFHRQH": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f1/41/53/f141535f-82a6-e8fd-ba63-8e3a699db2d4/mzaf_742090324965247854.plus.aac.p.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7d/36/53/7d36532b-0e8c-90d3-3dbc-b2239d1ad0ad/20UM1IM15658.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:46:48.754Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/72/cd/60/72cd60fc-e11f-3240-1af5-1a92b7f741fe/mzaf_515124840375749748.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/c6/3f/7a/c63f7a28-4e53-1ae2-cfae-5d211e0c256c/20UMGIM02955.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:42.966Z"
   },
   "0VaeksJaXy5R1nvcTMh3Xk": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/4b/fc/854bfc12-b275-24a8-d303-e2726fa68181/mzaf_5651639153501121401.plus.aac.ep.m4a",
@@ -1626,10 +1624,10 @@
     "resolvedAt": "2026-10-09T04:27:19.776Z"
   },
   "0YeUVm23SAkUruwEx9LWnt": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/9f/1d/aa9f1d53-aebd-6543-cf9b-50ea5eed1a39/mzaf_6355199564144959073.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f6/65/b5/f665b52b-8d6d-b94d-cc2c-db826e35304e/22UMGIM52376.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:32:52.091Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b7/4d/b8/b74db87e-ab7c-51a6-524d-0e221f332c64/mzaf_377496720411431322.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/eb/44/c9/eb44c9e1-401e-b118-6254-7b9a10888c39/22UMGIM52376.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T06:59:58.930Z"
   },
   "0Z1hvbWG6GJNfra89uS5Gx": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/88/f2/ff/88f2ff87-c260-baab-4fdd-1463afb26651/mzaf_5800368431980262320.plus.aac.ep.m4a",
@@ -1908,10 +1906,10 @@
     "resolvedAt": "2026-10-09T05:28:21.595Z"
   },
   "0cfhXKQGi6BJZxbvO21g7p": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/d5/a6/01d5a67f-ca7b-3f4b-5b07-122c25d4c54b/mzaf_10017834682156060201.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/8a/59/fa8a5999-c497-5903-20d0-fd7f08563dd9/196872387544.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:09:49.061Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bb/a2/60/bba2606f-5381-9a8e-bd4f-e8f184ad18ef/mzaf_13261046352249305591.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/02/4f/be/024fbe59-7bf9-098b-9a75-8a801e5edb0a/196871101493.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:37.084Z"
   },
   "0ciA43AxH3rZASCUBmYvPJ": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ab/e9/ea/abe9ea60-8620-3449-d6ec-d34e0fa7343a/mzaf_4902121387165154355.plus.aac.ep.m4a",
@@ -2004,10 +2002,9 @@
     "resolvedAt": "2026-10-09T06:25:12.676Z"
   },
   "0e8nrvls4Qqv5Rfa2UhqmO": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7c/19/0c/7c190ccf-5566-0b76-5743-2f6777e006fd/mzaf_7795848953666015796.plus.aac.p.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/36/0b/f9/360bf9dd-4298-db13-e41f-e22235afeacb/886449203512.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:23:21.676Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:42.318Z"
   },
   "0eBryM7ePQH3Klt3jz8xZd": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9c/3e/1a/9c3e1a0c-c8ec-6378-a0f1-e1ad14f1c53a/mzaf_10293814776273339185.plus.aac.ep.m4a",
@@ -2376,10 +2373,10 @@
     "resolvedAt": "2026-10-09T05:40:59.342Z"
   },
   "0lwkzF4dDxLp8HMVSQjpFf": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/78/20/e5/7820e566-c066-7704-6fcb-fee4bc5da1db/mzaf_18208678455416927859.plus.aac.p.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1d/6d/8d/1d6d8dbe-2938-0fa2-927e-0f4acc1a718a/859761364971.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:12:24.630Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6c/c2/5b/6cc25bfc-de06-f301-c599-af17e95e7c60/mzaf_16906636580213372623.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5c/83/ff/5c83ffcb-f593-f0cc-9c92-54a4e8548d3f/859762200643.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:49.616Z"
   },
   "0lx2cLdOt3piJbcaXIV74f": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e8/fe/12/e8fe121d-8607-9535-8752-2c6db57c6882/mzaf_4106041986402583919.plus.aac.ep.m4a",
@@ -2490,10 +2487,10 @@
     "resolvedAt": "2026-10-09T06:20:19.599Z"
   },
   "0nn0Z1o1WI01pB7oEPiJeE": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/db/1b/e4/db1be4bd-7ca4-13a3-4484-ffe49365dd6c/mzaf_11190889619806473443.plus.aac.p.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4a/8a/7c/4a8a7caa-73de-7343-092e-0ac2e97f4b2d/26UMGIM15402.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:22:40.535Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/15/86/33/158633a0-a8e0-56d4-34fb-f0581b66754c/mzaf_9058625132791162783.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ec/ea/f2/eceaf289-7b27-cf73-e134-1ce964077cc5/26UMGIM17314.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:40.335Z"
   },
   "0nnwn7LWHCAu09jfuH1xTA": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c2/23/dd/c223dd87-c1d5-4838-0a11-f89865e31b20/mzaf_12668632037147817624.plus.aac.ep.m4a",
@@ -2526,10 +2523,9 @@
     "resolvedAt": "2026-10-09T06:23:57.344Z"
   },
   "0oaQasvlfdkSWepVuHFQtY": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:34.311Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:24.860Z"
   },
   "0oemhAQXaaIHCEARF9JFGg": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/04/54/b1/0454b18b-baff-3dc0-1000-1038862b417b/mzaf_11962544330710351401.plus.aac.ep.m4a",
@@ -2550,10 +2546,9 @@
     "resolvedAt": "2026-10-09T05:30:12.464Z"
   },
   "0oiGUMBeL8Bn0csxAl4a1W": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fa/e2/40/fae2402b-44b1-ad4f-bcf3-59b50a91d447/mzaf_10361924111918698083.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/14/2f/2b/142f2b6c-5cee-18d7-b8f2-f7b14344b774/U0RTLnBuZw.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:17:18.002Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:07.788Z"
   },
   "0ono6UCNVZ1XqOm6j78Blu": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b7/96/66/b7966600-5da1-41e6-9129-2eaa52e07872/mzaf_18211166638683399917.plus.aac.ep.m4a",
@@ -2652,10 +2647,10 @@
     "resolvedAt": "2026-10-09T04:26:36.948Z"
   },
   "0qPHyYoGZeujrXNwNEvkQv": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/d5/a6/01d5a67f-ca7b-3f4b-5b07-122c25d4c54b/mzaf_10017834682156060201.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/8a/59/fa8a5999-c497-5903-20d0-fd7f08563dd9/196872387544.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:09:50.096Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a1/49/57/a14957d6-1176-a1f7-19c6-5b0789a935c4/mzaf_5840825879183522701.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/02/4f/be/024fbe59-7bf9-098b-9a75-8a801e5edb0a/196871101493.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:39.224Z"
   },
   "0qRR9d89hIS0MHRkQ0ejxX": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/87/4b/67/874b6790-6843-1b8a-abda-c07a26b1268b/mzaf_556647035615181017.plus.aac.p.m4a",
@@ -2703,7 +2698,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/66/c2/00/66c2000b-173d-cf6e-8215-8cc9b5bb1534/mzaf_940127748887836731.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/db/9e/48/db9e4855-8df4-10a9-6476-6a1f3751d0a0/16UMGIM84522.rgb.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:03:54.124Z"
+    "resolvedAt": "2026-10-09T07:01:17.947Z"
   },
   "0rT9KyAEDNr0kbBL5Qfo8k": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9c/5c/27/9c5c27f8-80ad-65cf-d6b2-71016204ed33/mzaf_9332146191782544890.plus.aac.ep.m4a",
@@ -3048,10 +3043,10 @@
     "resolvedAt": "2026-10-09T06:20:04.159Z"
   },
   "0xCYHtz6bHgKY9zqP7Yciu": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/d5/a6/01d5a67f-ca7b-3f4b-5b07-122c25d4c54b/mzaf_10017834682156060201.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/8a/59/fa8a5999-c497-5903-20d0-fd7f08563dd9/196872387544.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:09:51.702Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/18/d7/a6/18d7a6c3-2ddf-afb3-6804-95794f408b1b/mzaf_15607360134571869725.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/02/4f/be/024fbe59-7bf9-098b-9a75-8a801e5edb0a/196871101493.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:42.417Z"
   },
   "0xHajFt9da19XukzC2z1Sk": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/99/41/9c/99419c60-ef45-8ba1-e636-d8cd14b93ab0/mzaf_6160218805131740979.plus.aac.ep.m4a",
@@ -3108,10 +3103,9 @@
     "resolvedAt": "2026-10-09T05:40:24.541Z"
   },
   "0y4eECj53tUhMbKLTb8QOy": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:36.910Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:27.809Z"
   },
   "0y5CnV2idm2KkQEudDjfDT": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/74/3e/05/743e0513-5cb5-623c-574a-d0275014c382/mzaf_16123166541961016278.plus.aac.ep.m4a",
@@ -3432,10 +3426,10 @@
     "resolvedAt": "2026-10-09T05:35:01.516Z"
   },
   "15Ev5G9uLhXqjBH4t16GQq": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/16/8b/b6168b6b-5560-41c7-c2d3-59a6f55354cc/mzaf_2004648566291396468.plus.aac.ep.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/21/91/6b/21916bd1-b2ae-a8a2-58f1-81eab6fed8b0/mzaf_13717276752821163033.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/99/4f/5f/994f5f40-a842-4dc7-58d4-a0210ae09c8c/dj.rengmjbv.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:55:31.674Z"
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:05.838Z"
   },
   "15JINEqzVMv3SvJTAXAKED": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/74/a8/ea/74a8eabe-accb-207f-9d24-7b9d55ac70d2/mzaf_12112257946085083249.plus.aac.ep.m4a",
@@ -3582,10 +3576,10 @@
     "resolvedAt": "2026-10-09T06:21:54.324Z"
   },
   "19Fg3WrTfo35Ji3PtfZE6J": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/9f/1d/aa9f1d53-aebd-6543-cf9b-50ea5eed1a39/mzaf_6355199564144959073.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f6/65/b5/f665b52b-8d6d-b94d-cc2c-db826e35304e/22UMGIM52376.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:08:08.661Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/27/85/d4/2785d4f5-2f84-749f-b6db-615fcdf359cc/mzaf_11522987625060525484.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/eb/44/c9/eb44c9e1-401e-b118-6254-7b9a10888c39/22UMGIM52376.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:28.683Z"
   },
   "19JdbdEwQI7bCxefMokZO8": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7a/91/5f/7a915fc9-b453-8057-e5cd-5d9189a65ef1/mzaf_8388841285715345710.plus.aac.ep.m4a",
@@ -3966,10 +3960,9 @@
     "resolvedAt": "2026-10-09T05:47:35.940Z"
   },
   "1EtR8nAoFKJryJqmf426YZ": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:36.034Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:26.207Z"
   },
   "1ExfPZEiahqhLyajhybFeS": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b3/83/19/b3831988-b8e7-315b-ad85-7b2d05a7b22b/mzaf_7287375560875012414.plus.aac.ep.m4a",
@@ -4038,10 +4031,10 @@
     "resolvedAt": "2026-10-09T06:21:45.051Z"
   },
   "1Gdb0ewTCvrDK5WbbCITL2": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/14/bc/f614bc9f-6881-2fa1-89fe-8b9e2df4070b/mzaf_4418974614278735399.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/60/40/d4604014-e1ec-07a2-156d-d97945d3db9c/198704504488_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:25.982Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9f/ea/a4/9feaa487-6d4e-d14d-8360-07724c29ece3/mzaf_13362627175419409167.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b9/2d/4b/b92d4b0b-d8d8-fdee-b14b-2a9de71e1b2d/198704605284_Cover.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:13.759Z"
   },
   "1GxGLSKW0HxYkvUJH8OVRd": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4c/c7/7c/4cc77cbd-3f83-e362-0e43-52db82793ce5/mzaf_15518611156633104770.plus.aac.ep.m4a",
@@ -4322,7 +4315,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c0/7f/37/c07f37f1-a8e1-b093-f643-9e3bae02589b/mzaf_7307473310952258509.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features126/v4/9e/c6/7d/9ec67d77-e47f-a146-bfa0-cb08ab64cd01/U0RTLU1TLVdXLUFteV9XaW5laG91c2UtQURBTV9JRD0xNDQwODU2MjE5LnBuZw.png/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:06:08.150Z"
+    "resolvedAt": "2026-10-09T07:01:19.856Z"
   },
   "1L94M3KIu7QluZe63g64rv": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/7f/14/377f14d3-61d3-471f-d21b-2f11f49467cc/mzaf_3938353571947845780.plus.aac.ep.m4a",
@@ -4454,7 +4447,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/14/bc/f614bc9f-6881-2fa1-89fe-8b9e2df4070b/mzaf_4418974614278735399.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/60/40/d4604014-e1ec-07a2-156d-d97945d3db9c/198704504488_Cover.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:27.441Z"
+    "resolvedAt": "2026-10-09T07:02:15.888Z"
   },
   "1OBb2wZMXKNmtdyyejLIyL": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/28/69/e7/2869e765-bf7b-0076-bd49-6de914e2dd5b/mzaf_2496358889425576455.plus.aac.ep.m4a",
@@ -4490,7 +4483,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/68/f6/57/68f65703-19ca-6441-105c-104d0a6e355c/mzaf_1121822245832369988.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3c/c3/b3/3cc3b3f1-0376-997b-b690-ae830dd4fe85/6005.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:17:48.578Z"
+    "resolvedAt": "2026-10-09T07:02:08.507Z"
   },
   "1PEPcLm2QEo0HCRIhQjPq1": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/78/8d/13/788d13a6-e624-61ba-aa61-47817065c2e1/mzaf_18288093159749995237.plus.aac.p.m4a",
@@ -4508,7 +4501,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/37/f6/ee/37f6ee00-1207-2e87-b308-0f4f070e670d/mzaf_3208591499365977808.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features116/v4/0c/45/05/0c4505a9-f069-42f4-eedf-85cd52fbcaaa/U0RTLU1TLVdXLVRoZV9CbGFja19LZXlzLUFEQU1fSUQ9MTA1Mjk2NjI4Ny5wbmc.png/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:56:41.915Z"
+    "resolvedAt": "2026-10-09T07:01:09.979Z"
   },
   "1Pbs2eCcX9p2onaAvMYvhk": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6d/5a/a3/6d5aa38c-fee3-85a6-5b10-87e27c8d8fb1/mzaf_6152334738838889330.plus.aac.ep.m4a",
@@ -4604,7 +4597,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/80/90/16/809016c8-ea66-940b-f3d7-80a991aca571/mzaf_16730860428755085029.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/26/74/90/267490c0-d04b-7268-76cc-c346cbbec1de/5400863168971_cover.jpg/600x600bb.jpg",
     "source": "itunes-api",
-    "resolvedAt": "2026-10-09T06:15:33.185Z"
+    "resolvedAt": "2026-10-09T07:01:57.689Z"
   },
   "1RpoUhwpD8ZtpJhq41EU9k": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f2/cd/28/f2cd2808-bff1-2fdb-bc7e-92e89b365bbe/mzaf_2890079861474104184.plus.aac.ep.m4a",
@@ -4634,7 +4627,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7c/19/0c/7c190ccf-5566-0b76-5743-2f6777e006fd/mzaf_7795848953666015796.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/36/0b/f9/360bf9dd-4298-db13-e41f-e22235afeacb/886449203512.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:23:21.103Z"
+    "resolvedAt": "2026-10-09T07:02:41.610Z"
   },
   "1SGvjfc85yzqKXsfKcCxn2": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/fc/eb/ecfceb4f-a2a0-1668-431d-e90e0d9938f6/mzaf_15825584609442274713.plus.aac.ep.m4a",
@@ -4799,10 +4792,10 @@
     "resolvedAt": "2026-10-09T06:20:34.849Z"
   },
   "1VdZ0vKfR5jneCmWIUAMxK": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/89/10/378910a3-b590-8daa-c6fd-7cc9b6f8279a/mzaf_8359051427970034169.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features116/v4/17/0c/9d/170c9d95-1f43-eb0d-cf43-1ac6ee26877e/U0RTLnBuZw.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:02:50.810Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ac/10/2c/ac102c22-cd64-b2ad-5d2e-03923594c1a3/mzaf_3740743634676510964.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/65/fb/84/65fb8432-f539-d67d-0670-b1358d16e5af/contsched.zkbwdtfj.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:16.697Z"
   },
   "1VmWC3ZZwqpP79ifFC8LzI": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/67/18/17/67181708-5ade-a317-24f7-d62abd44b5dd/mzaf_18257849364104040464.plus.aac.p.m4a",
@@ -4918,10 +4911,10 @@
     "resolvedAt": "2026-10-09T06:11:54.163Z"
   },
   "1XPta4VLT78HQnVFd1hlsK": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b1/5b/0f/b15b0fd9-97a7-2d92-561a-417c2106c486/mzaf_9991415954407018351.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/0e/80/43/0e804357-95fa-acc0-fc60-d1dfe5f861bf/00602537460809.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:13:25.249Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c2/dd/f7/c2ddf7dd-f8d5-18ee-0ea1-658a7441145b/mzaf_5814503050448650956.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3a/dc/08/3adc08b0-e98c-b5dd-943e-a37c7ed06205/13UABIM03615.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:54.580Z"
   },
   "1XQhZctQWzkznclbmbE7FQ": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ce/ef/39/ceef3931-085e-8da9-2009-be31d8fefb5a/mzaf_10117785781604638816.plus.aac.ep.m4a",
@@ -5047,7 +5040,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c2/27/3c/c2273c06-512b-0f28-aa7a-39c86238d963/mzaf_3274932674424589643.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a5/dd/d4/a5ddd4a0-9036-c816-0ea7-e7899a820222/199350860195.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:07.862Z"
+    "resolvedAt": "2026-10-09T07:02:09.307Z"
   },
   "1ZPlNanZsJSPK5h9YZZFbZ": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/53/7c/ee/537ceef4-ef8b-f822-2863-e754a404cd0b/mzaf_15408739403958462264.plus.aac.ep.m4a",
@@ -5290,10 +5283,10 @@
     "resolvedAt": "2026-10-09T04:24:52.933Z"
   },
   "1ctDUAAad7Em6JenrjdMNC": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/14/bc/f614bc9f-6881-2fa1-89fe-8b9e2df4070b/mzaf_4418974614278735399.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/60/40/d4604014-e1ec-07a2-156d-d97945d3db9c/198704504488_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:28.491Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/b4/28/9fb4281f-2492-c735-4a58-cb0c712c5d4a/mzaf_17253048028020598068.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b9/2d/4b/b92d4b0b-d8d8-fdee-b14b-2a9de71e1b2d/198704605284_Cover.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:16.670Z"
   },
   "1cu5PHumWAqQf9M6BHQ8b7": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/8b/ee/ff/8beeffec-a3a2-5b55-251f-87ebd0bdc765/mzaf_4489722797024411161.plus.aac.ep.m4a",
@@ -5758,10 +5751,10 @@
     "resolvedAt": "2026-10-09T06:01:01.880Z"
   },
   "1kSWrMDt439cT64WpjJigW": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/04/51/4d/04514d42-94ca-8162-e68c-643022e56eaf/mzaf_12445491468664312526.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/ca/d0/31/cad031b5-a586-ad56-aa16-e0a9af698f0b/5099990845352_1535x1535_300dpi.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:41:08.580Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ee/33/13/ee3313d1-bb7a-4384-9f27-a86270448e21/mzaf_12410614931071144796.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5b/8d/47/5b8d47da-71ea-93ab-dffc-733f11332659/825646290703.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:27.037Z"
   },
   "1ko2NuvWlQdxtNRc8QQzmT": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/8a/69/d98a69db-e2f7-b1ce-6e6e-803e7d45ebbc/mzaf_1096578242897693017.plus.aac.ep.m4a",
@@ -5848,10 +5841,10 @@
     "resolvedAt": "2026-10-09T05:34:10.972Z"
   },
   "1lgN0A2Vki2FTON5PYq42m": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9c/9c/09/9c9c09cd-7c37-0d7f-b928-7a986846472a/mzaf_10155680949312053277.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c1/16/59/c116596f-f3fd-3499-6cc2-bcb5b4931e6e/14UMGIM61459.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:36:12.054Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bb/72/d8/bb72d87f-c6e5-b2c2-c2da-f09b1329a9d0/mzaf_14405083140077388552.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/b3/a8/b0/b3a8b05f-7dfe-f557-6147-57e74dfdbebe/15UMGIM53209.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:17.914Z"
   },
   "1lguQJjlNrIOoOylYVZN3M": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/13/43/6b/13436b87-5449-2755-1087-9baed7c26b32/mzaf_6992366078686138312.plus.aac.ep.m4a",
@@ -6064,10 +6057,10 @@
     "resolvedAt": "2026-10-09T05:40:45.273Z"
   },
   "1ptwL6lZNLc654XAaHqcHb": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/d5/a6/01d5a67f-ca7b-3f4b-5b07-122c25d4c54b/mzaf_10017834682156060201.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/8a/59/fa8a5999-c497-5903-20d0-fd7f08563dd9/196872387544.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:09:51.191Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ad/95/f9/ad95f983-f5be-4c64-cedf-12e4cd2d4324/mzaf_283823340905022755.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/02/4f/be/024fbe59-7bf9-098b-9a75-8a801e5edb0a/196871101493.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:41.287Z"
   },
   "1pyfaPU3aw8JorXRJQf6cs": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cc/3e/d0/cc3ed09c-0053-9e75-19f3-3f372c98144d/mzaf_15022436535594771484.plus.aac.p.m4a",
@@ -6256,10 +6249,10 @@
     "resolvedAt": "2026-10-09T05:59:14.107Z"
   },
   "1u4727ZsHw1maP8y9YbIQo": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/14/bc/f614bc9f-6881-2fa1-89fe-8b9e2df4070b/mzaf_4418974614278735399.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/60/40/d4604014-e1ec-07a2-156d-d97945d3db9c/198704504488_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:27.022Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/0c/30/7a0c30bc-b93f-f3a3-5be2-941f2e598983/mzaf_10825766492572680461.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b9/2d/4b/b92d4b0b-d8d8-fdee-b14b-2a9de71e1b2d/198704605284_Cover.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:15.453Z"
   },
   "1uCqIhOePc6hDMG2ijk8sp": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/40/f0/1e/40f01ec5-25d4-5dbb-af36-990f7ad90f34/mzaf_11620820860580665018.plus.aac.ep.m4a",
@@ -6478,10 +6471,10 @@
     "resolvedAt": "2026-10-09T05:34:09.187Z"
   },
   "1z3ugFmUKoCzGsI6jdY4Ci": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/48/03/d5/4803d53c-ed5f-cadc-0486-2b303bf8ecf2/mzaf_6074866620721144210.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/31/35/6a/mzi.zjfxpifn.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:16:25.853Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0b/23/82/0b238289-52e2-2107-5531-181836267ed2/mzaf_6726729811402686020.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/20/3c/f5/203cf53d-689e-528f-29d7-ba33758254aa/mzi.rotbotfl.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:05.891Z"
   },
   "1zB4vmk8tFRmM9UULNzbLB": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/78/7d/8b/787d8b89-7b57-d3bc-1f9d-6378fad1b4f5/mzaf_5383268330399534046.plus.aac.ep.m4a",
@@ -6736,10 +6729,10 @@
     "resolvedAt": "2026-10-09T05:44:33.704Z"
   },
   "22sLuJYcvZOSoLLRYev1s5": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/48/03/d5/4803d53c-ed5f-cadc-0486-2b303bf8ecf2/mzaf_6074866620721144210.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/31/35/6a/mzi.zjfxpifn.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:53:41.915Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f9/a3/69/f9a369cc-16a4-3064-2c12-56ecf13f18bc/mzaf_2371968126843790037.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/8e/80/32/8e803264-c925-14dd-3412-2d7652c3df7b/mzi.wxptosaa.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:55.578Z"
   },
   "234RqTZmnDTnxWlVciXHLD": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/43/0d/cb430dec-8df8-766b-a8f0-515387f5a47f/mzaf_15911230937163782016.plus.aac.ep.m4a",
@@ -6808,10 +6801,10 @@
     "resolvedAt": "2026-10-09T06:03:35.661Z"
   },
   "23wfXwnsPZYe5A1xXRHb3J": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/13/9e/5f/139e5f0c-5529-cd51-2db3-707b75983ec6/mzaf_10710254132957093788.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/00/35/65/0035653b-6949-3dc5-0c8e-dbe9deb9f82b/23UM1IM11434.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:43:54.910Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/69/49/72/6949729f-14ca-46fc-5437-e0ce2ab8b4e3/mzaf_1236646818496670462.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/ea/ac/03/eaac03e5-8e9d-847e-d5b9-af7dee6a970b/00606949063221.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:36.954Z"
   },
   "249gnXrbfmV8NG6jTEMSwD": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7f/63/1c/7f631c84-92f2-0805-22cf-8b15ddae12ce/mzaf_4591144576665360727.plus.aac.ep.m4a",
@@ -6832,10 +6825,10 @@
     "resolvedAt": "2026-10-09T06:15:04.114Z"
   },
   "24NwBd5vZ2CK8VOQVnqdxr": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/97/05/0a/97050a9f-2c14-4e6c-ed7c-23c3897c30c9/mzaf_4128783606163000933.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/ce/57/c6/ce57c6fe-0b10-a563-f40b-905fbe4d9ce9/22UM1IM38562.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:48:42.813Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/23/ae/f623ae9f-8900-a396-8b47-05212b27fab7/mzaf_6595060732910616580.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9c/fa/da/9cfada2b-efbe-187f-dacf-a0f90ffdf63a/22UM1IM35694.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:48.626Z"
   },
   "24QhGejjYWG2CfbHRGLmEr": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b8/b1/94/b8b194db-847b-98ea-3224-261086932566/mzaf_14176328223097222885.plus.aac.ep.m4a",
@@ -6874,10 +6867,10 @@
     "resolvedAt": "2026-10-09T06:08:29.768Z"
   },
   "25AvaE23MXl06YRtQcQoJS": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/94/d9/01/94d9014a-8a63-3fcc-3cb5-e66a2b04311f/mzaf_798952034531409972.plus.aac.p.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1d/d7/f4/1dd7f45e-e64c-e928-7253-2ebcd7f23794/192641757730_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:07:19.425Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/77/7b/54/777b5443-c6bc-8677-2677-92923c04c258/mzaf_1430995039486200575.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/2a/5c/ec/2a5cec5d-7d29-1f28-0faf-333e0d0a6485/4260507131959_1448.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:21.464Z"
   },
   "25F6MWrnFBCXVnpN4n76EK": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/11/a2/4d/11a24d2a-5048-6769-0960-79fb5ffb5954/mzaf_2346645722785952567.plus.aac.ep.m4a",
@@ -6892,10 +6885,10 @@
     "resolvedAt": "2026-10-09T06:09:38.960Z"
   },
   "25YSJknEODwMpCb60ICz20": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/14/bc/f614bc9f-6881-2fa1-89fe-8b9e2df4070b/mzaf_4418974614278735399.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/60/40/d4604014-e1ec-07a2-156d-d97945d3db9c/198704504488_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:26.493Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c5/10/42/c5104250-e9f2-4f61-397b-3f55da2b9500/mzaf_9056649343181303179.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b9/2d/4b/b92d4b0b-d8d8-fdee-b14b-2a9de71e1b2d/198704605284_Cover.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:14.617Z"
   },
   "25nbeJzxF3dwvtTq57QKZi": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8b/df/c0/8bdfc0e9-1f7b-8437-0f6a-1523c87e8d4a/mzaf_9836371239908388874.plus.aac.ep.m4a",
@@ -6928,10 +6921,10 @@
     "resolvedAt": "2026-10-09T05:42:06.469Z"
   },
   "26PnyFUmYdeRG7nQrsTpHc": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e7/43/b0/e743b08f-d0f5-6142-70cb-62cbdec4e943/mzaf_12847313914004625995.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/f9/ff/3d/f9ff3d9a-8dd8-464a-97db-29a0ac5f8a8f/U0RTLU1TLVdXLUpvaG5fTWF5ZXJfSUQ9MjgzNjk5NzIwLnBuZw.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:08:32.053Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5f/39/19/5f39199a-db24-a8a1-00bc-90b550471485/mzaf_7177907629267535968.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/64/0b/78/mzi.ddlpkrcq.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:31.691Z"
   },
   "26QJuQfM8PVAWkIm1JRyqq": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/69/b6/88/69b68862-d0db-53be-67b1-dd95d24c8b55/mzaf_15133081495659648140.plus.aac.ep.m4a",
@@ -7261,7 +7254,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/40/27/4e402705-2e0a-de49-d68a-27f9dab2c0c0/mzaf_14439087491613335699.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/47/9e/a3/479ea382-2686-3ea9-3def-d67d81fb2ee3/mzi.lhtprasx.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:21:14.813Z"
+    "resolvedAt": "2026-10-09T07:02:31.470Z"
   },
   "2Bs4jQEGMycglOfWPBqrVG": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4c/f4/68/4cf468de-fdc7-7c64-b34d-ba7e4aca6b95/mzaf_5110631770292827893.plus.aac.ep.m4a",
@@ -7462,10 +7455,9 @@
     "resolvedAt": "2026-10-09T06:06:15.112Z"
   },
   "2FZsOypXRoYIrGI6s8C3Zm": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/80/90/16/809016c8-ea66-940b-f3d7-80a991aca571/mzaf_16730860428755085029.plus.aac.p.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/26/74/90/267490c0-d04b-7268-76cc-c346cbbec1de/5400863168971_cover.jpg/600x600bb.jpg",
-    "source": "itunes-api",
-    "resolvedAt": "2026-10-09T06:15:21.144Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:01:56.857Z"
   },
   "2FeBslNBMdR9V58uv6hd2t": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f2/ba/83/f2ba8321-eb5e-28c8-877e-ffb993b56506/mzaf_18180830103080959477.plus.aac.ep.m4a",
@@ -7624,10 +7616,10 @@
     "resolvedAt": "2026-10-09T05:41:20.425Z"
   },
   "2IwbW2jd0Ncv99Aroe77Ru": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/9f/1d/aa9f1d53-aebd-6543-cf9b-50ea5eed1a39/mzaf_6355199564144959073.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f6/65/b5/f665b52b-8d6d-b94d-cc2c-db826e35304e/22UMGIM52376.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:08:06.899Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/dc/26/ba/dc26ba55-558f-b7f0-4e5d-6f35bbcefa5d/mzaf_17252211032496316255.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/eb/44/c9/eb44c9e1-401e-b118-6254-7b9a10888c39/22UMGIM52376.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:25.717Z"
   },
   "2J3n32GeLmMjwuAzyhcSNe": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2a/09/97/2a09970d-b3f0-d499-867c-fd26405f7f56/mzaf_279624859451340896.plus.aac.ep.m4a",
@@ -7789,7 +7781,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/14/24/87/1424870a-1154-828e-705a-b10c418857fd/mzaf_10277884756271565214.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/6c/06/f1/6c06f1d9-68f5-d0ec-80ee-bdf8892d1711/886447460344.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:34:22.661Z"
+    "resolvedAt": "2026-10-09T07:00:14.967Z"
   },
   "2Ld2LehpgQNREMxl9LlIzm": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9f/9a/ef/9f9aef3c-da2d-2f40-d580-e930907fb128/mzaf_1568362057957141216.plus.aac.ep.m4a",
@@ -7816,10 +7808,10 @@
     "resolvedAt": "2026-10-09T06:08:16.917Z"
   },
   "2M38zNMI7gCoCwfEUZQPq5": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/e7/4a/b6e74a45-429e-4e19-8a03-29e9c7ce06c3/mzaf_11933340888421153744.plus.aac.ep.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b8/fe/8c/b8fe8c3c-3977-d805-30a9-6948cfa2e775/mzaf_13244556720462526881.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/49/bf/f2/49bff28a-aec7-e4c8-9529-89ea809c24b3/Job10799623-f43a-46e9-a26d-abf4cf06fc80-173292856-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_337791703_1856162957-Time1723069739939.png/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:37:09.304Z"
+    "resolvedAt": "2026-10-09T07:00:21.236Z"
   },
   "2M9ro2krNb7nr7HSprkEgo": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6f/52/41/6f5241a2-3e98-3c1f-3cda-11f34da680aa/mzaf_11644766457963626823.plus.aac.ep.m4a",
@@ -7846,10 +7838,10 @@
     "resolvedAt": "2026-10-09T06:08:28.682Z"
   },
   "2MLHyLy5z5l5YRp7momlgw": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e2/9e/df/e29edfaa-e12f-d81f-81a0-9c9284e1be67/mzaf_8880315267358065122.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/98/f8/ab/98f8ab48-2bb6-ef63-4061-404459b02202/16UMGIM52971.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:27:28.889Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/52/a6/03/52a6032e-39c0-fd3e-555d-ce683f3d9d31/mzaf_7707796819108024384.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fc/ef/19/fcef196c-3f81-e9da-f02a-b55d900e7d69/16UMGIM53162.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T06:59:46.740Z"
   },
   "2MVwrvjmcdt4MsYYLCYMt8": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9b/24/16/9b2416d0-16b6-d63d-d8b9-b3016eade919/mzaf_1121019063769735516.plus.aac.ep.m4a",
@@ -7939,7 +7931,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f0/b6/98/f0b698b8-9ae3-49be-1780-8ab96a82299c/mzaf_13221203781793245960.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f6/73/be/f673bed1-8b81-7af1-14bd-103ccdb9b3f2/19UMGIM46307.rgb.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:46:20.668Z"
+    "resolvedAt": "2026-10-09T07:00:39.099Z"
   },
   "2OLaeJRrRjFgLfTsccnzlM": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d6/0a/73/d60a7309-6892-7f39-a899-90882bf34280/mzaf_15663859393382659583.plus.aac.ep.m4a",
@@ -7960,10 +7952,9 @@
     "resolvedAt": "2026-10-09T05:41:36.534Z"
   },
   "2OiBrXP8M2EkF10c5FYod6": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:31.108Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:20.908Z"
   },
   "2P3SLxeQHPqh8qKB6gtJY2": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ab/0a/56/ab0a564c-ade2-c6ef-c4b1-ff872585cc5a/mzaf_8642464243810803495.plus.aac.ep.m4a",
@@ -8011,7 +8002,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3f/86/c9/3f86c967-3f24-24f5-5397-d8dfe45ffb92/mzaf_3949064388927449970.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fe/21/cc/fe21cc4f-cfbc-72f3-ed17-2a8ddab2948b/25UMGIM77357.rgb.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:28:34.587Z"
+    "resolvedAt": "2026-10-09T06:59:48.615Z"
   },
   "2PdIo7ewQPuAsP99LVg9uy": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1d/08/24/1d0824ab-83f3-b5ba-b9e4-3f93aeda201d/mzaf_12022948968283517938.plus.aac.p.m4a",
@@ -8092,10 +8083,10 @@
     "resolvedAt": "2026-10-09T05:57:00.373Z"
   },
   "2QfA2znZln0n0k2zdo91RZ": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/14/bc/f614bc9f-6881-2fa1-89fe-8b9e2df4070b/mzaf_4418974614278735399.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/60/40/d4604014-e1ec-07a2-156d-d97945d3db9c/198704504488_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:24.401Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/44/0c/b0/440cb054-c229-a138-b121-d53a992e0005/mzaf_4879053590942643482.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/34/d0/94/34d094c2-8ace-badc-d1ab-446f9c3f4e0e/198704575495_Cover.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:11.042Z"
   },
   "2QfiRTz5Yc8DdShCxG1tB2": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e5/e3/7d/e5e37d79-825b-5412-c7d3-17e0c0858e97/mzaf_10206958060225028419.plus.aac.ep.m4a",
@@ -8176,10 +8167,10 @@
     "resolvedAt": "2026-10-09T06:02:58.468Z"
   },
   "2Rvhjn78vg0rnuBHCdtz9P": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/16/8b/b6168b6b-5560-41c7-c2d3-59a6f55354cc/mzaf_2004648566291396468.plus.aac.ep.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b9/9e/ab/b99eab42-ee12-563f-21c5-110f9ad5ca19/mzaf_12508673148457484134.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/99/4f/5f/994f5f40-a842-4dc7-58d4-a0210ae09c8c/dj.rengmjbv.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:55:30.541Z"
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:03.853Z"
   },
   "2S4CfxZG29GZWwDeMtBq2R": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/38/30/53/38305315-f7ac-0699-5613-813294902f85/mzaf_12621107935528890685.plus.aac.ep.m4a",
@@ -8236,10 +8227,10 @@
     "resolvedAt": "2026-10-09T06:18:11.984Z"
   },
   "2SXx7Ofa79CeJfio98aJcG": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/d5/a6/01d5a67f-ca7b-3f4b-5b07-122c25d4c54b/mzaf_10017834682156060201.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/8a/59/fa8a5999-c497-5903-20d0-fd7f08563dd9/196872387544.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:26:50.242Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/02/a1/06/02a106cf-708f-0bda-0f80-20724cbf42fb/mzaf_16436026680622884693.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b6/78/82/b6788259-bff6-4ecc-4779-c5582b39d318/196589917829.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T06:59:44.269Z"
   },
   "2SasoXZyv82yYgHiVOvxQn": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/35/5c/05/355c0564-5666-b15e-88d3-a91fe1a80b36/mzaf_14252649110834335245.plus.aac.p.m4a",
@@ -8512,10 +8503,10 @@
     "resolvedAt": "2026-10-09T05:42:57.103Z"
   },
   "2Xaw1RrXP3mdooKWysuRJ8": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9c/9c/09/9c9c09cd-7c37-0d7f-b928-7a986846472a/mzaf_10155680949312053277.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c1/16/59/c116596f-f3fd-3499-6cc2-bcb5b4931e6e/14UMGIM61459.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:36:12.705Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/fd/93/b6fd9399-f1ee-21b9-8e8b-82ca5401b2ae/mzaf_1972878987197626057.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/b3/a8/b0/b3a8b05f-7dfe-f557-6147-57e74dfdbebe/15UMGIM53209.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:19.039Z"
   },
   "2Xcvt8NRLw0xbB3ClfW8MI": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5c/cf/b9/5ccfb9fb-6c5f-bd97-296c-63720a6e7da4/mzaf_16588228044814335801.plus.aac.ep.m4a",
@@ -8773,7 +8764,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/29/fd/18/29fd18d9-5230-327b-6585-40dc9d4997b9/mzaf_952033828184725506.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2003/m10/d20/h21/s05.lcrggtrf.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T04:26:12.325Z"
+    "resolvedAt": "2026-10-09T06:59:37.955Z"
   },
   "2cYZpcIV39X48RnOFM7w2V": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/66/7b/40/667b4062-31e1-7850-e327-c42fed72fd9d/mzaf_4459712429895528814.plus.aac.ep.m4a",
@@ -9187,7 +9178,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/78/20/e5/7820e566-c066-7704-6fcb-fee4bc5da1db/mzaf_18208678455416927859.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1d/6d/8d/1d6d8dbe-2938-0fa2-927e-0f4acc1a718a/859761364971.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:12:18.127Z"
+    "resolvedAt": "2026-10-09T07:01:48.372Z"
   },
   "2jSbuzSLLvFYO7xAMEU85i": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/44/ba/12/44ba128c-0c1c-057c-523a-71eec0060368/mzaf_10715120610740726783.plus.aac.p.m4a",
@@ -9364,10 +9355,10 @@
     "resolvedAt": "2026-10-09T06:13:55.022Z"
   },
   "2mPMFJvQ0v27gVqe5b6nDn": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e2/9e/df/e29edfaa-e12f-d81f-81a0-9c9284e1be67/mzaf_8880315267358065122.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/98/f8/ab/98f8ab48-2bb6-ef63-4061-404459b02202/16UMGIM52971.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T04:28:12.558Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c8/b9/91/c8b99109-7918-35be-86ef-5f44b8c13952/mzaf_4194190756458836811.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fc/ef/19/fcef196c-3f81-e9da-f02a-b55d900e7d69/16UMGIM53162.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T06:59:41.089Z"
   },
   "2maEFaoAyNjQVv14Hm4esN": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/b9/4c/c3b94cb7-ea66-cb2f-c796-c6b2262c9166/mzaf_6527785364602308898.plus.aac.ep.m4a",
@@ -9766,10 +9757,10 @@
     "resolvedAt": "2026-10-09T06:16:04.630Z"
   },
   "2vFYhHS8ycUITvZYownH5K": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/16/8b/b6168b6b-5560-41c7-c2d3-59a6f55354cc/mzaf_2004648566291396468.plus.aac.ep.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3f/cc/66/3fcc668e-50d5-37ef-27ac-1297b06c691f/mzaf_11570894217546484562.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/99/4f/5f/994f5f40-a842-4dc7-58d4-a0210ae09c8c/dj.rengmjbv.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:55:29.485Z"
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:02.668Z"
   },
   "2ve5NyzWHUbIYxL33goCX7": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/be/4f/26/be4f2657-1454-bd61-84c7-4acd36a4536c/mzaf_9789002979695317151.plus.aac.p.m4a",
@@ -9838,10 +9829,10 @@
     "resolvedAt": "2026-10-09T05:32:02.324Z"
   },
   "2xTft6GEZeTyWNpdX94rkf": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ae/24/f0/ae24f032-1b91-07dc-fc52-9ec4a20c73e6/mzaf_11983502347990973478.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/33/84/fc/3384fc51-1eeb-e78f-2770-14844fcdd3b5/21UM1IM16262.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:42:57.614Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/13/5e/7f/135e7f39-a38c-238e-4b1e-e9c1d8ff05c4/mzaf_1539161598890726745.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/55/e5/7c/55e57cf2-8325-a088-7d54-3aeedad1143f/21UM1IM16263.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:33.225Z"
   },
   "2xWS42KhsTSszdWI7hLOhM": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0a/d9/32/0ad9323b-745c-c806-72a1-51208c040d9d/mzaf_10035197791685443248.plus.aac.ep.m4a",
@@ -10185,10 +10176,9 @@
     "resolvedAt": "2026-10-09T05:48:07.583Z"
   },
   "34OSqW5ULWxmCEMjJ1ZgVW": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a4/39/71/a4397190-0168-cb2a-bbba-da96cd1fe2c0/mzaf_1636709324047645332.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/00/2c/ff002c29-6da9-1a26-16b3-282a73180366/192562871591_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:24:23.133Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:44.073Z"
   },
   "34aYkYrY3sXhEU9O4VQgtB": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/62/04/52/620452fb-9953-a5ce-c10e-bbbaa8356c1a/mzaf_11674131739900923501.plus.aac.ep.m4a",
@@ -10443,10 +10433,10 @@
     "resolvedAt": "2026-10-09T04:23:16.167Z"
   },
   "38U4hYYzUbydvJ4J5YZEy6": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/d5/a6/01d5a67f-ca7b-3f4b-5b07-122c25d4c54b/mzaf_10017834682156060201.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/8a/59/fa8a5999-c497-5903-20d0-fd7f08563dd9/196872387544.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:09:49.632Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3a/57/5b/3a575b03-6dde-d3a3-7bee-bae51e10119a/mzaf_4657410287127092380.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/02/4f/be/024fbe59-7bf9-098b-9a75-8a801e5edb0a/196871101493.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:38.083Z"
   },
   "38iBrrbbXyWaSPkmuDNgjZ": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/11/13/34/1113344a-7bec-6d70-c3df-5eed69f0072e/mzaf_17780093595154944851.plus.aac.ep.m4a",
@@ -10461,10 +10451,10 @@
     "resolvedAt": "2026-10-09T06:25:59.650Z"
   },
   "38td8VabuKlQt72Q2VnhbO": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a4/39/71/a4397190-0168-cb2a-bbba-da96cd1fe2c0/mzaf_1636709324047645332.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/00/2c/ff002c29-6da9-1a26-16b3-282a73180366/192562871591_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:02:06.707Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2a/f3/b6/2af3b687-d3c0-9a57-53f0-9feea9a92813/mzaf_15515595851221632751.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/02/c5/18/02c518f5-ac06-3321-622e-08d9429fd968/192562556672_Cover.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:14.158Z"
   },
   "38x5Xwz3mkH6iCghORp0gW": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/d4/ab/59/mzm.ligvxqeg.aac.ep.m4a",
@@ -10785,10 +10775,10 @@
     "resolvedAt": "2026-10-09T06:18:56.217Z"
   },
   "3EN1l4uUvFBOy3pD9we2jf": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/d5/a6/01d5a67f-ca7b-3f4b-5b07-122c25d4c54b/mzaf_10017834682156060201.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/8a/59/fa8a5999-c497-5903-20d0-fd7f08563dd9/196872387544.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:09:46.672Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ad/8a/9b/ad8a9bce-db05-0bba-4188-af24f1b95e28/mzaf_6255355375554673716.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/02/4f/be/024fbe59-7bf9-098b-9a75-8a801e5edb0a/196871101493.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:34.029Z"
   },
   "3ERa3mEeOnrh2Mc47qM6T1": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bc/cf/16/bccf164e-fa68-11c2-5e03-f87ca8e6e637/mzaf_6529754124613921120.plus.aac.ep.m4a",
@@ -10803,10 +10793,10 @@
     "resolvedAt": "2026-10-09T05:43:36.355Z"
   },
   "3EtyEzMpfKSaoVhPunvbRV": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f0/b6/98/f0b698b8-9ae3-49be-1780-8ab96a82299c/mzaf_13221203781793245960.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f6/73/be/f673bed1-8b81-7af1-14bd-103ccdb9b3f2/19UMGIM46307.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:46:19.138Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d7/97/b0/d797b01b-def6-77b9-8bb6-fede80890df9/mzaf_1464742728885001111.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3e/fe/fa/3efefa81-fa46-8124-46b1-1b340baff0e9/19UMGIM46307.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:38.633Z"
   },
   "3F0OuzOT2k6NJU65oFeeSs": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/54/0d/34/540d34e7-cde1-da4f-751e-59d41f6cae15/mzaf_8691439872516959543.plus.aac.p.m4a",
@@ -10971,10 +10961,10 @@
     "resolvedAt": "2026-10-09T06:12:41.420Z"
   },
   "3HfEgAaf0koxBpBB8NvGda": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fa/e2/40/fae2402b-44b1-ad4f-bcf3-59b50a91d447/mzaf_10361924111918698083.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/14/2f/2b/142f2b6c-5cee-18d7-b8f2-f7b14344b774/U0RTLnBuZw.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:16:08.842Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0f/c0/42/0fc04289-cc92-44c5-6aa7-d5182fd3000b/mzaf_16966809819238256144.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f1/23/1f/f1231f68-a8b3-b64d-5a59-90d24aead4c7/artwork.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:00.188Z"
   },
   "3HgA5R5alihocnOYE9ihpS": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/66/35/b4/6635b449-15f3-f526-ee06-b83a2e6df154/mzaf_13883859624837777908.plus.aac.ep.m4a",
@@ -10995,10 +10985,9 @@
     "resolvedAt": "2026-10-09T05:34:05.053Z"
   },
   "3I0FBDc1c1BLNtXWKVjmFg": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/89/ea/80/89ea8029-d619-23ce-5a6c-3339277d5257/mzaf_16404612383813273247.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/93/89/2e/93892e3d-6471-64eb-ee80-c42b95b53d29/16UMGIM10770.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:33:12.360Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T06:59:59.829Z"
   },
   "3I4QOvltiKcMu3xmnQjEct": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/52/98/aa/5298aa77-f5d0-e6b7-7f24-5d06409abfc8/mzaf_2807486213723870160.plus.aac.ep.m4a",
@@ -11454,7 +11443,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/35/25/c7/3525c700-8776-5b4d-fdd2-7754b26c7fbf/mzaf_4390385370578627076.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/37/8c/7a/378c7a72-5cd8-2047-0531-ac3df2bb2633/Jobfe86e4a2-d625-48ea-8d96-70b19768e7b6-200724877-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_392830683_2301917559-Time1755718002332.png/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:10:20.725Z"
+    "resolvedAt": "2026-10-09T07:01:43.602Z"
   },
   "3QzbAOEzX6tbEpRuwvLZ3Z": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/27/af/7027af5d-c374-d9e9-1c61-425a2537da09/mzaf_13257325427034096714.plus.aac.p.m4a",
@@ -11481,10 +11470,9 @@
     "resolvedAt": "2026-10-09T04:26:13.429Z"
   },
   "3RIgHHpnFKj5Rni1shokDj": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/08/b4/ea/08b4ea80-3526-188c-452a-5b19e2d36a6b/mzaf_10509024473416803833.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c6/5f/b9/c65fb9eb-da2f-89a9-b640-2fff1fc3a660/19UMGIM61350.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:12:05.767Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:01:44.792Z"
   },
   "3RKblQNJs8HPvWBgXmq6nn": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/73/6c/35/736c3541-e55f-3c57-b579-d040f5d9e289/mzaf_11700516803251958169.plus.aac.ep.m4a",
@@ -11571,10 +11559,10 @@
     "resolvedAt": "2026-10-09T06:17:36.099Z"
   },
   "3SRtygyWBQnoxuOPtdBPm2": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/d5/a6/01d5a67f-ca7b-3f4b-5b07-122c25d4c54b/mzaf_10017834682156060201.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/8a/59/fa8a5999-c497-5903-20d0-fd7f08563dd9/196872387544.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:33:20.645Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/91/be/7091be12-58ec-7763-7967-fe73da42816d/mzaf_252409865080639019.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/02/4f/be/024fbe59-7bf9-098b-9a75-8a801e5edb0a/196871101493.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:00.740Z"
   },
   "3SUusuA9jH1v6PVwtYMbdv": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/69/c7/30/69c73043-f9dd-0c63-23cd-bfab274520ee/mzaf_8707959303994168061.plus.aac.ep.m4a",
@@ -11745,10 +11733,10 @@
     "resolvedAt": "2026-10-09T05:28:49.254Z"
   },
   "3UmaczJpikHgJFyBTAJVoz": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/13/9e/5f/139e5f0c-5529-cd51-2db3-707b75983ec6/mzaf_10710254132957093788.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/00/35/65/0035653b-6949-3dc5-0c8e-dbe9deb9f82b/23UM1IM11434.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:56:28.148Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/df/2f/1d/df2f1d7d-494a-cf04-4c7c-96d743c91147/mzaf_16086271698379505688.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/79/d5/2779d529-ff10-c15d-1c50-08cd46dd1237/06UMGIM17625.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:07.997Z"
   },
   "3Umj02ZNl4d356pS1D38mn": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f7/e4/b6/f7e4b696-5ae3-a728-3b78-89ec2bf6c194/mzaf_7663945109802305471.plus.aac.ep.m4a",
@@ -11796,7 +11784,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/01/c7/ee/01c7ee6e-3945-95a2-3fde-eff4055c34ce/mzaf_13032360687349974165.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/13/7d/c2/137dc2b7-61db-4976-0d57-f5acd515796f/743217679125.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:50:14.950Z"
+    "resolvedAt": "2026-10-09T07:00:50.289Z"
   },
   "3WSOUb3U7tqURbBSgZTrZX": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6f/3f/61/6f3f6134-57f0-972b-a52f-e2929a37044b/mzaf_10996813737643178554.plus.aac.ep.m4a",
@@ -11883,10 +11871,10 @@
     "resolvedAt": "2026-10-09T05:43:52.998Z"
   },
   "3XW2c507flCMzqd7Woc2mr": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/97/05/0a/97050a9f-2c14-4e6c-ed7c-23c3897c30c9/mzaf_4128783606163000933.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/ce/57/c6/ce57c6fe-0b10-a563-f40b-905fbe4d9ce9/22UM1IM38562.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:51:14.285Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1f/f0/38/1ff03835-c6ac-1535-6905-6904e6fdfec2/mzaf_13554239139675528764.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9c/fa/da/9cfada2b-efbe-187f-dacf-a0f90ffdf63a/22UM1IM35694.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:52.176Z"
   },
   "3XbJL25pekZFFv1pd8ytZe": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b3/c7/2e/b3c72e30-9ff9-cd83-e66d-94f6257c06c4/mzaf_6692169458300770141.plus.aac.ep.m4a",
@@ -12303,10 +12291,9 @@
     "resolvedAt": "2026-10-09T05:36:30.227Z"
   },
   "3evG0BIqEFMMP7lVJh1cSf": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/bc/c5/01bcc5e6-b94c-41b9-878c-c67549d73bef/mzaf_2497027483319122614.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/a6/8b/65/a68b657c-cac6-68e6-3bde-b79d58fbc795/18UMGIM30762.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:13:43.213Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:01:55.701Z"
   },
   "3f3omU8n47Mqyab5nCaGyT": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/21/e8/8c/21e88c85-0a7c-c9d5-8d70-8f6f9014c65d/mzaf_16406437685881666588.plus.aac.ep.m4a",
@@ -12387,10 +12374,10 @@
     "resolvedAt": "2026-10-09T05:41:49.451Z"
   },
   "3h5zik31hTTat9jmpCZZNC": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b1/5b/0f/b15b0fd9-97a7-2d92-561a-417c2106c486/mzaf_9991415954407018351.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/0e/80/43/0e804357-95fa-acc0-fc60-d1dfe5f861bf/00602537460809.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T04:26:57.453Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b5/e7/20/b5e720c8-3fc8-a440-e636-5424059e1d9a/mzaf_15333034011422151287.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/37/30/ea/3730ea31-78ad-b6ac-9869-656efb5dfd79/00602577577536.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T06:59:39.653Z"
   },
   "3hARuUtzTdUuWH1KiLJlSf": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0a/ff/00/0aff007e-04e0-9aca-c2de-b72e61e1f9d6/mzaf_4360722299507160806.plus.aac.p.m4a",
@@ -12531,10 +12518,10 @@
     "resolvedAt": "2026-10-09T04:28:25.697Z"
   },
   "3kUHIvjJ8p9UzeaeeqHkfg": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/db/1b/e4/db1be4bd-7ca4-13a3-4484-ffe49365dd6c/mzaf_11190889619806473443.plus.aac.p.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4a/8a/7c/4a8a7caa-73de-7343-092e-0ac2e97f4b2d/26UMGIM15402.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:22:39.260Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bf/48/7c/bf487c66-c3f1-9315-625a-7f6c5f2ba53b/mzaf_14353651435344499732.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ec/ea/f2/eceaf289-7b27-cf73-e134-1ce964077cc5/26UMGIM17314.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:38.391Z"
   },
   "3kZC0ZmFWrEHdUCmUqlvgZ": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6c/6c/1b/6c6c1b47-67f2-c8eb-7d38-bfc679607702/mzaf_16514130019043414663.plus.aac.ep.m4a",
@@ -12693,10 +12680,10 @@
     "resolvedAt": "2026-10-09T06:06:16.328Z"
   },
   "3nwJjTphObeWha3DY3BpNy": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/68/f6/57/68f65703-19ca-6441-105c-104d0a6e355c/mzaf_1121822245832369988.plus.aac.ep.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9c/e8/6c/9ce86c7c-5155-651e-c4bd-0b3b766ea976/mzaf_10115610172253126002.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3c/c3/b3/3cc3b3f1-0376-997b-b690-ae830dd4fe85/6005.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:22:32.260Z"
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:35.811Z"
   },
   "3o8QzWsiiqTUVgBZfHgF58": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e0/44/a3/e044a3ad-f25b-84df-7a64-684e43cc4c7d/mzaf_5378313552786745119.plus.aac.ep.m4a",
@@ -12711,10 +12698,10 @@
     "resolvedAt": "2026-10-09T05:53:26.740Z"
   },
   "3oGRjCpV07tCM5mrYv6iQA": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/16/8b/b6168b6b-5560-41c7-c2d3-59a6f55354cc/mzaf_2004648566291396468.plus.aac.ep.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/07/09/de/0709de5c-27c2-731b-6a8d-8f400044a926/mzaf_619504849147199364.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/99/4f/5f/994f5f40-a842-4dc7-58d4-a0210ae09c8c/dj.rengmjbv.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:55:32.679Z"
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:06.885Z"
   },
   "3oP3Tfn86FRmxAGsV0TqCp": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fd/60/51/fd6051bf-f733-6a67-a512-e26959115b6c/mzaf_7567803992409852975.plus.aac.ep.m4a",
@@ -12768,7 +12755,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a4/39/71/a4397190-0168-cb2a-bbba-da96cd1fe2c0/mzaf_1636709324047645332.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/00/2c/ff002c29-6da9-1a26-16b3-282a73180366/192562871591_Cover.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:58:59.818Z"
+    "resolvedAt": "2026-10-09T07:01:11.387Z"
   },
   "3pD0f7hSJg2XdQ6udw5Tey": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/db/54/1f/db541f98-6f53-b811-47dd-be40ea8659b1/mzaf_11526145729188140126.plus.aac.ep.m4a",
@@ -12915,10 +12902,10 @@
     "resolvedAt": "2026-10-09T05:46:57.243Z"
   },
   "3sfdkh6pvMMvhcSIJ2j8AS": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/97/05/0a/97050a9f-2c14-4e6c-ed7c-23c3897c30c9/mzaf_4128783606163000933.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/ce/57/c6/ce57c6fe-0b10-a563-f40b-905fbe4d9ce9/22UM1IM38562.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:54:35.180Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a6/77/a9/a677a9f5-3d13-fa47-ee39-669935c8b867/mzaf_3362944050337910327.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9c/fa/da/9cfada2b-efbe-187f-dacf-a0f90ffdf63a/22UM1IM35694.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:56.595Z"
   },
   "3siwsiaEoU4Kuuc9WKMUy5": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/46/59/68/465968ed-5c6d-0f97-167d-6f53b74793fc/mzaf_17516767964531700049.plus.aac.ep.m4a",
@@ -12942,7 +12929,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ae/24/f0/ae24f032-1b91-07dc-fc52-9ec4a20c73e6/mzaf_11983502347990973478.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/33/84/fc/3384fc51-1eeb-e78f-2770-14844fcdd3b5/21UM1IM16262.rgb.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:42:27.391Z"
+    "resolvedAt": "2026-10-09T07:00:30.299Z"
   },
   "3t1cMXPS25j8hpzJyLY3Pn": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/64/2a/f0/642af091-57c7-6423-b43a-1fa43fdfe187/mzaf_2634248407019712784.plus.aac.p.m4a",
@@ -12981,10 +12968,10 @@
     "resolvedAt": "2026-10-09T06:07:55.631Z"
   },
   "3tYTyAt1q6BFBiGyYVOLhi": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/9f/1d/aa9f1d53-aebd-6543-cf9b-50ea5eed1a39/mzaf_6355199564144959073.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f6/65/b5/f665b52b-8d6d-b94d-cc2c-db826e35304e/22UMGIM52376.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:08:07.440Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1c/95/4b/1c954b8c-8045-8e42-6889-aaa8bec09ec3/mzaf_4349144828487529842.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/eb/44/c9/eb44c9e1-401e-b118-6254-7b9a10888c39/22UMGIM52376.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:26.670Z"
   },
   "3tgHGoK5ItQv2q2yqggxlb": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/eb/ac/42/ebac42b5-2a1a-d68f-63a4-236fb318b3da/mzaf_5160569661804027400.plus.aac.ep.m4a",
@@ -13041,10 +13028,10 @@
     "resolvedAt": "2026-10-09T06:00:42.008Z"
   },
   "3vbxQpZdIXJ3oALBd8OyQ6": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/40/27/4e402705-2e0a-de49-d68a-27f9dab2c0c0/mzaf_14439087491613335699.plus.aac.p.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/64/9c/1e/649c1ec9-8575-89b4-6fa6-badd7e6019d6/mzaf_16686492748120291355.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/47/9e/a3/479ea382-2686-3ea9-3def-d67d81fb2ee3/mzi.lhtprasx.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:29:03.531Z"
+    "resolvedAt": "2026-10-09T06:59:50.997Z"
   },
   "3vq4QqcaVIRePdxSxRQmPX": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/88/38/7b/88387b7c-1345-ce90-e34c-e8db2cd6b84e/mzaf_4699247719770629861.plus.aac.ep.m4a",
@@ -13113,10 +13100,9 @@
     "resolvedAt": "2026-10-09T05:40:42.030Z"
   },
   "3x1BtwpOBgsXVPHG6nSkpm": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:32.963Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:22.880Z"
   },
   "3x3K1RP3Zfi2qeMR8kyrNO": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/89/28/17/8928177d-5187-5921-a152-4c44146c7a86/mzaf_13522703878668346000.plus.aac.ep.m4a",
@@ -13221,10 +13207,9 @@
     "resolvedAt": "2026-10-09T05:43:31.455Z"
   },
   "3yP6JtxLu2PFmpdEUl7Qj7": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/59/97/e7/5997e776-2cdb-0fdb-ba38-ddf7203ad8e2/mzaf_8057873599214695017.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/30/6a/1a/306a1a00-8d32-6476-89ad-0aa78503aee4/Jobab9eae8b-db96-421a-a38b-7f2f82253b6d-168037621-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_326876510_1768592885-Time1715742971174.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:12:37.916Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:01:51.380Z"
   },
   "3ySCUGgxRXaP39gbO9Zu3Z": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/86/ce/6d/86ce6d8c-1faf-aa4b-554c-8af3d8e9192f/mzaf_11641072997513152466.plus.aac.ep.m4a",
@@ -13251,10 +13236,10 @@
     "resolvedAt": "2026-10-09T05:37:44.981Z"
   },
   "3yfqSUWxFvZELEM4PmlwIR": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/13/9e/5f/139e5f0c-5529-cd51-2db3-707b75983ec6/mzaf_10710254132957093788.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/00/35/65/0035653b-6949-3dc5-0c8e-dbe9deb9f82b/23UM1IM11434.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:42:13.206Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/54/a8/fe/54a8fe16-03e8-b88d-f5b8-f52cee216825/mzaf_7303311571415241049.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/79/d5/2779d529-ff10-c15d-1c50-08cd46dd1237/06UMGIM17625.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:29.345Z"
   },
   "3ykSdTGmYPFl8pDBXer1zG": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d1/03/b9/d103b9ef-73f9-18f7-4ac8-c41a5d844341/mzaf_18431190855691324620.plus.aac.ep.m4a",
@@ -13416,7 +13401,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/17/30/06/1730066d-13fb-6803-0e52-46d4762b94e0/mzaf_7936905186888183932.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Video116/v4/de/e6/c1/dee6c185-975d-4eea-9d90-f47a93de9cf6/Jobc6b08e40-3605-4ea3-9280-a70f2f813a5d-162536482-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_314524703_1678137771-Time1707224086387.png/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:48:40.120Z"
+    "resolvedAt": "2026-10-09T07:00:46.953Z"
   },
   "40rvBMQizxkIqnjPdEWY1v": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/63/57/ce/6357ce8e-d486-5072-74ac-fa395ce5d5c6/mzaf_9498101818047953304.plus.aac.ep.m4a",
@@ -13437,10 +13422,9 @@
     "resolvedAt": "2026-10-09T06:23:35.553Z"
   },
   "41R4fI1Z1w2gsJEFQWdeJs": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fa/e2/40/fae2402b-44b1-ad4f-bcf3-59b50a91d447/mzaf_10361924111918698083.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/14/2f/2b/142f2b6c-5cee-18d7-b8f2-f7b14344b774/U0RTLnBuZw.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:16:08.192Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:01:59.229Z"
   },
   "41WcmdweTbIJAc8tiOR6xw": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/88/23/14/88231492-d278-d23b-0118-cb5cdceb0cd7/mzaf_4490703479334500483.plus.aac.ep.m4a",
@@ -13542,7 +13526,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4c/1b/29/4c1b29ad-87d1-9968-28d5-486985a9e115/mzaf_8446009298265516371.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/51/41/9c/51419c3f-dce3-5072-eb94-fc453f6fdb87/199350974793.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:21:03.756Z"
+    "resolvedAt": "2026-10-09T07:02:30.040Z"
   },
   "42apdJFDH65Ew9RVuldbrb": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c2/ee/9f/c2ee9f8a-1372-39a3-1ac8-466461ef35f5/mzaf_16542508373947695834.plus.aac.ep.m4a",
@@ -13551,10 +13535,10 @@
     "resolvedAt": "2026-10-09T06:03:18.926Z"
   },
   "42d6bxB7OQ6f8ct2ihYNBw": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/e7/4a/b6e74a45-429e-4e19-8a03-29e9c7ce06c3/mzaf_11933340888421153744.plus.aac.ep.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b5/b1/6e/b5b16ee8-ba20-dfa4-0bee-90adf28e9a88/mzaf_688833492852095838.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/49/bf/f2/49bff28a-aec7-e4c8-9529-89ea809c24b3/Job10799623-f43a-46e9-a26d-abf4cf06fc80-173292856-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_337791703_1856162957-Time1723069739939.png/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:37:08.654Z"
+    "resolvedAt": "2026-10-09T07:00:20.633Z"
   },
   "42dbDZX9bsEGqMZWYmnR7J": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/ae/47/01ae4770-9df7-1cc6-6716-dde46def3548/mzaf_6106944781658267814.plus.aac.ep.m4a",
@@ -14157,10 +14141,10 @@
     "resolvedAt": "2026-10-09T05:54:15.771Z"
   },
   "4DvoYgOZXnqmKuc2GzzFHz": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/db/1b/e4/db1be4bd-7ca4-13a3-4484-ffe49365dd6c/mzaf_11190889619806473443.plus.aac.p.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4a/8a/7c/4a8a7caa-73de-7343-092e-0ac2e97f4b2d/26UMGIM15402.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:22:38.581Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/dd/77/10/dd771028-96c0-f797-2750-0213a04c83ec/mzaf_17787688733670865628.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ec/ea/f2/eceaf289-7b27-cf73-e134-1ce964077cc5/26UMGIM17314.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:37.436Z"
   },
   "4E6cwWJWZw2zWf7VFbH7wf": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5a/62/23/5a62232b-78f6-7e99-bb42-6071dc5bbfe9/mzaf_13917388179116563189.plus.aac.ep.m4a",
@@ -14418,7 +14402,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/02/f2/7e/02f27ec1-146a-3174-e35e-08845c15b9b1/mzaf_9665858117835856497.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/30/6a/1a/306a1a00-8d32-6476-89ad-0aa78503aee4/Jobab9eae8b-db96-421a-a38b-7f2f82253b6d-168037621-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_326876510_1768592885-Time1715742971174.png/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T04:22:59.151Z"
+    "resolvedAt": "2026-10-09T06:59:34.407Z"
   },
   "4IhKLu7Vk3j2TLmnFPl6To": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/47/b9/f2/47b9f20e-6b8c-ee52-f6d8-480e645e6002/mzaf_13581089994444374508.plus.aac.ep.m4a",
@@ -14601,10 +14585,10 @@
     "resolvedAt": "2026-10-09T05:53:25.873Z"
   },
   "4LesrBswFnLcHmwDslst1q": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/d5/a6/01d5a67f-ca7b-3f4b-5b07-122c25d4c54b/mzaf_10017834682156060201.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/8a/59/fa8a5999-c497-5903-20d0-fd7f08563dd9/196872387544.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T04:28:24.623Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ac/65/6d/ac656d1b-e941-67cf-2246-be4444bae488/mzaf_14351264181576428702.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/02/4f/be/024fbe59-7bf9-098b-9a75-8a801e5edb0a/196871101493.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T06:59:42.540Z"
   },
   "4LfCY65LvojKjWEnU7fNN4": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ab/d6/78/abd678a1-bf4e-7ee9-d0b2-ba8afee10914/mzaf_3726531799916235303.plus.aac.ep.m4a",
@@ -14625,16 +14609,15 @@
     "resolvedAt": "2026-10-09T05:42:24.179Z"
   },
   "4LyO99BhEMAyVGe4J5genE": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/40/27/4e402705-2e0a-de49-d68a-27f9dab2c0c0/mzaf_14439087491613335699.plus.aac.p.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/18/14/87/18148789-f9fd-e174-3291-a4818c3e9162/mzaf_13921559302009677149.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/47/9e/a3/479ea382-2686-3ea9-3def-d67d81fb2ee3/mzi.lhtprasx.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:21:15.389Z"
+    "resolvedAt": "2026-10-09T07:02:32.089Z"
   },
   "4M0gfUpAfFRv7O44ZSkRIK": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:35.179Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:25.546Z"
   },
   "4M88Wd7Aps5LGRWMOC7gSH": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/76/ef/0f/76ef0fe0-3943-88e3-4133-f5b90e42ac74/mzaf_7338225354911952692.plus.aac.ep.m4a",
@@ -14667,10 +14650,10 @@
     "resolvedAt": "2026-10-09T05:50:10.144Z"
   },
   "4MeXE7YF459t1PbFTtAklF": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/16/8b/b6168b6b-5560-41c7-c2d3-59a6f55354cc/mzaf_2004648566291396468.plus.aac.ep.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c8/f1/4c/c8f14c53-d0a3-a1fd-2fca-1f0270ca07e1/mzaf_4516281629584365782.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/99/4f/5f/994f5f40-a842-4dc7-58d4-a0210ae09c8c/dj.rengmjbv.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:55:22.776Z"
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:59.236Z"
   },
   "4MhTFsyqIJnjsOweVcU8ug": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a5/82/2d/a5822d67-2e65-fe95-511e-1f785d23e5cc/mzaf_16274862463888730546.plus.aac.ep.m4a",
@@ -14733,10 +14716,10 @@
     "resolvedAt": "2026-10-09T05:35:48.109Z"
   },
   "4OT8GH9u9Gx7ydJ49ULunN": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/16/8b/b6168b6b-5560-41c7-c2d3-59a6f55354cc/mzaf_2004648566291396468.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/99/4f/5f/994f5f40-a842-4dc7-58d4-a0210ae09c8c/dj.rengmjbv.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:30:21.505Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2a/ab/53/2aab53e6-ed87-1ce8-3b12-01c5a847aa42/mzaf_15151430342496758350.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7a/a0/f4/7aa0f487-f983-390e-73ef-005115eea1e0/dj.oqpplyfm.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T06:59:53.851Z"
   },
   "4OciRObYGzPzlU40U7YRc8": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f5/f1/05/f5f1052a-d76f-89ef-9b47-d60ad0eeb1cd/mzaf_456789732773817971.plus.aac.ep.m4a",
@@ -14757,10 +14740,9 @@
     "resolvedAt": "2026-10-09T05:38:09.547Z"
   },
   "4Ozk6GESL4KkJ0C1yXgDLf": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c2/27/3c/c2273c06-512b-0f28-aa7a-39c86238d963/mzaf_3274932674424589643.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a5/dd/d4/a5ddd4a0-9036-c816-0ea7-e7899a820222/199350860195.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:08.297Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:09.870Z"
   },
   "4P0osvTXoSYZZC2n8IFH3c": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/de/d8/c3ded82b-903e-e8ce-1118-1ed93413defe/mzaf_5351545715408957449.plus.aac.ep.m4a",
@@ -15033,10 +15015,9 @@
     "resolvedAt": "2026-10-09T06:18:52.268Z"
   },
   "4SuLBSHPVKd3PypgU88tWZ": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:37.938Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:29.279Z"
   },
   "4T1iiabe7G0UjWQJCY6NE2": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8f/04/26/8f0426ef-4d1b-c1e7-dcde-dfb868f2c52a/mzaf_11154163380691095259.plus.aac.ep.m4a",
@@ -15465,16 +15446,16 @@
     "resolvedAt": "2026-10-09T05:44:24.866Z"
   },
   "4cBlIM5AjnQ74f52Dv7T5K": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f0/b6/98/f0b698b8-9ae3-49be-1780-8ab96a82299c/mzaf_13221203781793245960.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f6/73/be/f673bed1-8b81-7af1-14bd-103ccdb9b3f2/19UMGIM46307.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:47:45.882Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5f/e1/53/5fe15392-72c7-db60-50e8-166700cb6e46/mzaf_1042693770260242678.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3e/fe/fa/3efefa81-fa46-8124-46b1-1b340baff0e9/19UMGIM46307.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:43.890Z"
   },
   "4cEo4yPU622aFadaA3grdg": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/14/bc/f614bc9f-6881-2fa1-89fe-8b9e2df4070b/mzaf_4418974614278735399.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/60/40/d4604014-e1ec-07a2-156d-d97945d3db9c/198704504488_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:24.961Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/77/4d/6a/774d6a2f-0d9d-987f-5f65-2628d467dcdc/mzaf_15560845444857044804.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b9/2d/4b/b92d4b0b-d8d8-fdee-b14b-2a9de71e1b2d/198704605284_Cover.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:11.955Z"
   },
   "4cgSBnNzOo9rhwzUczB7HI": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ae/4a/e3/ae4ae377-d318-3e20-4d69-5266a91238fb/mzaf_13431936154346748622.plus.aac.p.m4a",
@@ -16005,16 +15986,15 @@
     "resolvedAt": "2026-10-09T05:45:32.107Z"
   },
   "4nGAoP1Q1SNv0sd8bK54TF": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:30.673Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:20.208Z"
   },
   "4nHnXZfr4IdxYgmYkH8ivZ": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/40/27/4e402705-2e0a-de49-d68a-27f9dab2c0c0/mzaf_14439087491613335699.plus.aac.p.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d4/6b/e2/d46be218-3d67-2369-4a36-4b2b178260ae/mzaf_3736306456648455357.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/47/9e/a3/479ea382-2686-3ea9-3def-d67d81fb2ee3/mzi.lhtprasx.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:21:19.912Z"
+    "resolvedAt": "2026-10-09T07:02:32.611Z"
   },
   "4nMlau89VAjmV7agkl7OY3": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7b/2f/0a/7b2f0a57-9e51-b0ec-4fd5-d433c17021b7/mzaf_9712128078529886796.plus.aac.ep.m4a",
@@ -16460,10 +16440,9 @@
     "resolvedAt": "2026-10-09T05:57:22.725Z"
   },
   "4uiWVcv70Ct5Oz87LCxdrk": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/59/97/e7/5997e776-2cdb-0fdb-ba38-ddf7203ad8e2/mzaf_8057873599214695017.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/30/6a/1a/306a1a00-8d32-6476-89ad-0aa78503aee4/Jobab9eae8b-db96-421a-a38b-7f2f82253b6d-168037621-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_326876510_1768592885-Time1715742971174.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:12:37.141Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:01:50.435Z"
   },
   "4v4HwTfMPslhWAnJxIXchn": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b7/ce/5a/b7ce5a3a-458e-e17e-4bc9-f6db7dedd40c/mzaf_5783101500365550124.plus.aac.ep.m4a",
@@ -16568,10 +16547,10 @@
     "resolvedAt": "2026-10-09T06:22:54.132Z"
   },
   "4wmNXY7vf3Zc1k1Q0rdHeD": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/68/f6/57/68f65703-19ca-6441-105c-104d0a6e355c/mzaf_1121822245832369988.plus.aac.ep.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b1/db/74/b1db74bc-94b1-9785-b553-7b31ce8c4bce/mzaf_106669002986530147.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3c/c3/b3/3cc3b3f1-0376-997b-b690-ae830dd4fe85/6005.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:22:31.313Z"
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:33.989Z"
   },
   "4wsQGsdf8D0Bj26cGdvreB": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/67/3f/0e/673f0e5a-432d-7c99-460e-c74af4c097d7/mzaf_17521864636637377788.plus.aac.p.m4a",
@@ -16688,10 +16667,10 @@
     "resolvedAt": "2026-10-09T06:13:57.145Z"
   },
   "4yugZvBYaoREkJKtbG08Qr": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/17/30/06/1730066d-13fb-6803-0e52-46d4762b94e0/mzaf_7936905186888183932.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Video116/v4/de/e6/c1/dee6c185-975d-4eea-9d90-f47a93de9cf6/Jobc6b08e40-3605-4ea3-9280-a70f2f813a5d-162536482-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_314524703_1678137771-Time1707224086387.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:27:18.171Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b5/82/74/b5827460-35c2-9abe-e57f-111aaa96309f/mzaf_16106309200518422738.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ac/47/c7/ac47c7ca-10fa-7cf9-9d66-f5d6c7261241/603497827404.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T06:59:45.803Z"
   },
   "4yxKbzUC9auTZR9rTvFOTr": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/40/2d/ba/402dbaa0-8f6b-63f8-5d08-c6e3c662500d/mzaf_5879507375441956378.plus.aac.ep.m4a",
@@ -16727,13 +16706,13 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3f/86/c9/3f86c967-3f24-24f5-5397-d8dfe45ffb92/mzaf_3949064388927449970.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fe/21/cc/fe21cc4f-cfbc-72f3-ed17-2a8ddab2948b/25UMGIM77357.rgb.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:16:24.440Z"
+    "resolvedAt": "2026-10-09T07:02:04.272Z"
   },
   "4zop1FQ0ukwsBtXv4zrv5X": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/02/f2/7e/02f27ec1-146a-3174-e35e-08845c15b9b1/mzaf_9665858117835856497.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/30/6a/1a/306a1a00-8d32-6476-89ad-0aa78503aee4/Jobab9eae8b-db96-421a-a38b-7f2f82253b6d-168037621-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_326876510_1768592885-Time1715742971174.png/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:12:16.730Z"
+    "resolvedAt": "2026-10-09T07:01:47.362Z"
   },
   "4zu9wo2FXoBSsKjO6tRB3R": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a1/9a/17/a19a1730-a9e0-eb2b-8557-4efa82edd62c/mzaf_9740103331394976850.plus.aac.ep.m4a",
@@ -16898,10 +16877,10 @@
     "resolvedAt": "2026-10-09T05:47:28.490Z"
   },
   "52UcjsM15hjCQAUbTW2hy1": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fa/e2/40/fae2402b-44b1-ad4f-bcf3-59b50a91d447/mzaf_10361924111918698083.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/14/2f/2b/142f2b6c-5cee-18d7-b8f2-f7b14344b774/U0RTLnBuZw.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:17:17.413Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/26/c0/34/26c0345f-f98d-8d80-2822-dd8a8b712364/mzaf_2539717901323878075.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/84/6f/6f/846f6fdb-5fd2-3a8d-74c4-1ea2c6e36318/744861009863.png/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:07.018Z"
   },
   "52a6VcF23v5HB7KfDEmBHq": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1b/39/c7/1b39c7f2-0a02-800e-d7fe-054b9bb180be/mzaf_6530026694180243701.plus.aac.ep.m4a",
@@ -17275,10 +17254,10 @@
     "resolvedAt": "2026-10-09T05:34:20.864Z"
   },
   "59GnwORhNmJMvkUmEwvTV0": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/14/bc/f614bc9f-6881-2fa1-89fe-8b9e2df4070b/mzaf_4418974614278735399.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/60/40/d4604014-e1ec-07a2-156d-d97945d3db9c/198704504488_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:29.899Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3b/25/c6/3b25c68a-4d9b-d685-926b-e4b8d29889af/mzaf_16626576397821579640.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b9/2d/4b/b92d4b0b-d8d8-fdee-b14b-2a9de71e1b2d/198704605284_Cover.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:19.228Z"
   },
   "59WN2psjkt1tyaxjspN8fp": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/42/f7/47/42f74777-e681-9f68-6c26-48be3fac3d34/mzaf_1017027568943483563.plus.aac.ep.m4a",
@@ -17695,10 +17674,9 @@
     "resolvedAt": "2026-10-09T06:21:36.906Z"
   },
   "5H5Xx4JYBxrP8DgWpY7Xgk": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/59/97/e7/5997e776-2cdb-0fdb-ba38-ddf7203ad8e2/mzaf_8057873599214695017.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/30/6a/1a/306a1a00-8d32-6476-89ad-0aa78503aee4/Jobab9eae8b-db96-421a-a38b-7f2f82253b6d-168037621-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_326876510_1768592885-Time1715742971174.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:12:38.526Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:01:52.044Z"
   },
   "5H6Jp0syB5yEPk7SWYdlmk": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/ea/93/cbea932e-a131-5a02-112b-946b40388784/mzaf_3223849062027279916.plus.aac.ep.m4a",
@@ -17731,10 +17709,9 @@
     "resolvedAt": "2026-10-09T05:58:44.929Z"
   },
   "5HRO58hfVhTpGR87AzHaBa": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/66/c2/00/66c2000b-173d-cf6e-8215-8cc9b5bb1534/mzaf_940127748887836731.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/db/9e/48/db9e4855-8df4-10a9-6476-6a1f3751d0a0/16UMGIM84522.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:04:05.180Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:01:18.794Z"
   },
   "5HYHGYx3Yl0B344J6eAdgF": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/78/64/13/786413ab-6f9c-6df3-4da0-2a4220a04bdd/mzaf_14494828631943733830.plus.aac.ep.m4a",
@@ -17863,10 +17840,10 @@
     "resolvedAt": "2026-10-09T04:24:14.000Z"
   },
   "5KBKqxYY263Tr0haAu3fMz": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fa/e2/40/fae2402b-44b1-ad4f-bcf3-59b50a91d447/mzaf_10361924111918698083.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/14/2f/2b/142f2b6c-5cee-18d7-b8f2-f7b14344b774/U0RTLnBuZw.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:16:09.463Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/45/37/57/45375737-8e14-a79e-9d25-a910cd848ebb/mzaf_15445439003391261775.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/11/dc/f4/11dcf4a2-28fb-59bd-a660-6d50474d0f7c/mzi.ncxnbkxd.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:01.169Z"
   },
   "5KE5Inz4uZKGb2EzETaOEe": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1a/62/04/1a6204dd-ba99-8ff8-9646-d5a1fc0f03c6/mzaf_17971094150138111813.plus.aac.ep.m4a",
@@ -17881,10 +17858,10 @@
     "resolvedAt": "2026-10-09T06:03:42.876Z"
   },
   "5KL4iZkCTZyXl7KnHgfVDj": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/89/10/378910a3-b590-8daa-c6fd-7cc9b6f8279a/mzaf_8359051427970034169.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features116/v4/17/0c/9d/170c9d95-1f43-eb0d-cf43-1ac6ee26877e/U0RTLnBuZw.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:38:58.643Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a3/8d/84/a38d8498-7317-9d96-9386-b1c139d3d5c3/mzaf_2672375613302296577.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/66/e2/c6/66e2c6bd-7d09-192d-6b7b-947bc5c3f0e8/825646621668.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:25.633Z"
   },
   "5KMB0DItRBrLbYWN6CDJed": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f5/35/e2/f535e251-94ec-5423-dc38-6b689e314763/mzaf_4230191821807028912.plus.aac.ep.m4a",
@@ -17950,7 +17927,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/59/97/e7/5997e776-2cdb-0fdb-ba38-ddf7203ad8e2/mzaf_8057873599214695017.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/30/6a/1a/306a1a00-8d32-6476-89ad-0aa78503aee4/Jobab9eae8b-db96-421a-a38b-7f2f82253b6d-168037621-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_326876510_1768592885-Time1715742971174.png/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:12:12.603Z"
+    "resolvedAt": "2026-10-09T07:01:46.766Z"
   },
   "5L79aNYCTKiZq7vaOElXYj": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a8/68/21/a86821f1-cf17-28df-f335-9e0d2884c966/mzaf_7657835333550494311.plus.aac.ep.m4a",
@@ -17971,16 +17948,16 @@
     "resolvedAt": "2026-10-09T06:25:02.302Z"
   },
   "5LLa7Xb6xfRVpRXgjyevvM": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/40/27/4e402705-2e0a-de49-d68a-27f9dab2c0c0/mzaf_14439087491613335699.plus.aac.p.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5e/a8/9c/5ea89c38-0a51-2275-2200-a74e66d6c522/mzaf_14961383725347151827.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/47/9e/a3/479ea382-2686-3ea9-3def-d67d81fb2ee3/mzi.lhtprasx.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:21:25.044Z"
+    "resolvedAt": "2026-10-09T07:02:33.158Z"
   },
   "5LOiuvbH62YGtnwe6Ltt4T": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/9f/1d/aa9f1d53-aebd-6543-cf9b-50ea5eed1a39/mzaf_6355199564144959073.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f6/65/b5/f665b52b-8d6d-b94d-cc2c-db826e35304e/22UMGIM52376.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:08:09.803Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b8/e0/db/b8e0dbf1-33fb-4982-d2d4-6376346b1878/mzaf_11962285253366603488.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/eb/44/c9/eb44c9e1-401e-b118-6254-7b9a10888c39/22UMGIM52376.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:30.731Z"
   },
   "5Lgqu1th1KqlG97OF2gWGe": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/27/33/ea/2733eae6-b9c9-d674-773e-a4944adad429/mzaf_11547537853450103493.plus.aac.ep.m4a",
@@ -17995,10 +17972,9 @@
     "resolvedAt": "2026-10-09T06:15:25.926Z"
   },
   "5Lng4q571jghXAeYMMndia": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:37.478Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:28.528Z"
   },
   "5MMLS3xm12D7N26xlfFApr": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/80/4b/fd/804bfdd0-c727-3512-692e-8a2a44b85006/mzaf_3570604987009959542.plus.aac.p.m4a",
@@ -18181,10 +18157,10 @@
     "resolvedAt": "2026-10-09T06:19:20.173Z"
   },
   "5PPUw4Xo3Hz6rl4GpBfd3c": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/9f/1d/aa9f1d53-aebd-6543-cf9b-50ea5eed1a39/mzaf_6355199564144959073.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f6/65/b5/f665b52b-8d6d-b94d-cc2c-db826e35304e/22UMGIM52376.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:08:08.042Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6a/3f/f3/6a3ff303-206c-b5b3-eb3b-86a79c606305/mzaf_5897164515960103297.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/eb/44/c9/eb44c9e1-401e-b118-6254-7b9a10888c39/22UMGIM52376.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:27.709Z"
   },
   "5PQmSHzWnlgG4EBuIqjac2": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/eb/80/fd/eb80fd5e-cfde-8f1c-8941-484622537ec1/mzaf_8352205899214694238.plus.aac.ep.m4a",
@@ -18433,10 +18409,9 @@
     "resolvedAt": "2026-10-09T05:50:05.954Z"
   },
   "5TRCIkDGNty4FY284bdjRo": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:32.052Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:22.244Z"
   },
   "5TTGoX70AFrTvuEtqHK37S": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/79/e8/9e/79e89e66-23ab-6998-b91f-9317656e84ed/mzaf_180119724171761656.plus.aac.ep.m4a",
@@ -18472,7 +18447,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/35/25/c7/3525c700-8776-5b4d-fdd2-7754b26c7fbf/mzaf_4390385370578627076.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/37/8c/7a/378c7a72-5cd8-2047-0531-ac3df2bb2633/Jobfe86e4a2-d625-48ea-8d96-70b19768e7b6-200724877-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_392830683_2301917559-Time1755718002332.png/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:37:30.835Z"
+    "resolvedAt": "2026-10-09T07:00:22.160Z"
   },
   "5UaDi8KzCGJqFfVAOBfXhi": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/df/91/31/df9131b0-7a11-090f-4c38-7835eec7af6d/mzaf_17229908005182794752.plus.aac.ep.m4a",
@@ -18618,10 +18593,10 @@
     "resolvedAt": "2026-10-09T06:10:43.667Z"
   },
   "5XNOw5EcLiqeqx8KDQY5Q6": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/d5/a6/01d5a67f-ca7b-3f4b-5b07-122c25d4c54b/mzaf_10017834682156060201.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/8a/59/fa8a5999-c497-5903-20d0-fd7f08563dd9/196872387544.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:09:50.728Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e8/8f/27/e88f273d-0313-fb13-4ff5-51baa4828cfd/mzaf_4408490958948545138.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/02/4f/be/024fbe59-7bf9-098b-9a75-8a801e5edb0a/196871101493.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:40.224Z"
   },
   "5XRHGXut00SrJUFmcn2lQF": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cf/7f/63/cf7f63d4-7674-34c1-ba41-9fb1eecb5cad/mzaf_9742154108774008379.plus.aac.ep.m4a",
@@ -18732,10 +18707,9 @@
     "resolvedAt": "2026-10-09T05:50:02.211Z"
   },
   "5ZbztTcvj6QWWbeYsL4GTa": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4c/1b/29/4c1b29ad-87d1-9968-28d5-486985a9e115/mzaf_8446009298265516371.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/51/41/9c/51419c3f-dce3-5072-eb94-fc453f6fdb87/199350974793.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:21:04.606Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:30.661Z"
   },
   "5ZfOg71oANMaKmswvSEF2r": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e6/cd/f1/e6cdf192-02f8-5133-f277-f8dc181a12b5/mzaf_8709473960657299580.plus.aac.ep.m4a",
@@ -18876,10 +18850,10 @@
     "resolvedAt": "2026-10-09T05:28:48.271Z"
   },
   "5csu6psyW6UN4ggucwOuDR": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/d5/a6/01d5a67f-ca7b-3f4b-5b07-122c25d4c54b/mzaf_10017834682156060201.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/8a/59/fa8a5999-c497-5903-20d0-fd7f08563dd9/196872387544.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:09:48.608Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/02/2f/24/022f246f-92a3-02fe-78d6-1441f20aef88/mzaf_17181861184725736527.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b6/78/82/b6788259-bff6-4ecc-4779-c5582b39d318/196589917829.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:36.065Z"
   },
   "5dIz2Q54yzcvyiXHRnvj4C": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2f/a5/a1/2fa5a1ff-01ec-7e21-527e-73c9cec3a6e6/mzaf_8691875216270828809.plus.aac.ep.m4a",
@@ -18891,7 +18865,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:28:45.911Z"
+    "resolvedAt": "2026-10-09T06:59:49.459Z"
   },
   "5dONhl6aXFuN86UBdayF6W": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cd/e6/1e/cde61ea9-c8ff-c68f-1eaf-75aa87bc4faf/mzaf_15622267462397704441.plus.aac.ep.m4a",
@@ -18948,10 +18922,10 @@
     "resolvedAt": "2026-10-09T06:26:04.960Z"
   },
   "5eGEc27nnhtmcOh6RC890a": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/13/9e/5f/139e5f0c-5529-cd51-2db3-707b75983ec6/mzaf_10710254132957093788.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/00/35/65/0035653b-6949-3dc5-0c8e-dbe9deb9f82b/23UM1IM11434.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:43:45.439Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/55/78/ff/5578ffc1-5c84-a798-8663-7c1ea6a01ba1/mzaf_3743899976936012261.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/ea/ac/03/eaac03e5-8e9d-847e-d5b9-af7dee6a970b/00606949063221.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:35.540Z"
   },
   "5eWOsyHHic4vJP3LjTVhqv": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6b/0c/f8/6b0cf848-aff9-01b6-a0fa-5c98a843f80e/mzaf_13173705858540228256.plus.aac.ep.m4a",
@@ -19092,10 +19066,10 @@
     "resolvedAt": "2026-10-09T05:35:27.041Z"
   },
   "5glrDFQKeKwntPjzkCh5qW": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/01/c7/ee/01c7ee6e-3945-95a2-3fde-eff4055c34ce/mzaf_13032360687349974165.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/13/7d/c2/137dc2b7-61db-4976-0d57-f5acd515796f/743217679125.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:50:17.074Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/eb/94/9d/eb949d89-dcd6-6336-4178-976844b65bbf/mzaf_5408787855626353018.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/31/26/4b312698-1511-c0a7-66dd-9808188850af/dj.rwsaogpu.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:51.216Z"
   },
   "5gmMa8nwzrkcPbHzSW3azN": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1f/40/9c/1f409cd4-28ca-f500-ffea-2c1053b5e00e/mzaf_13839373624243053303.plus.aac.p.m4a",
@@ -19398,10 +19372,10 @@
     "resolvedAt": "2026-10-09T06:10:47.595Z"
   },
   "5mZXWEH2eh8zMZGCxT5aW0": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f1/41/53/f141535f-82a6-e8fd-ba63-8e3a699db2d4/mzaf_742090324965247854.plus.aac.p.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7d/36/53/7d36532b-0e8c-90d3-3dbc-b2239d1ad0ad/20UM1IM15658.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:56:38.057Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f1/98/c0/f198c069-f250-15ff-02b9-36c15fe5bda1/mzaf_16316356371080617037.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/c6/3f/7a/c63f7a28-4e53-1ae2-cfae-5d211e0c256c/20UMGIM02955.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:08.963Z"
   },
   "5mkGfmJGFZpwK9nA5amOhv": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5c/c6/56/5cc65626-7557-ae52-1a8a-b8fa5ff8158d/mzaf_4370044605982912520.plus.aac.ep.m4a",
@@ -19434,10 +19408,9 @@
     "resolvedAt": "2026-10-09T05:30:48.206Z"
   },
   "5n8Aro6j1bEGIy7Tpo7FV7": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/80/8c/3d/808c3dc8-23aa-ba2d-d758-b8b4c88b7943/mzaf_11930800143007172296.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/82/52/e38252e8-148d-551e-2216-4b51e847f1bd/00602547276506.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:42:37.461Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:00:32.234Z"
   },
   "5nEkWBNfUA87RY6ZSx2aR3": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ca/a4/10/caa41088-154b-f36b-db1a-723904d84095/mzaf_14218101183487078787.plus.aac.ep.m4a",
@@ -19512,10 +19485,10 @@
     "resolvedAt": "2026-10-09T05:31:13.310Z"
   },
   "5p10VwQ8LRoyTc8LFrvPw6": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a4/39/71/a4397190-0168-cb2a-bbba-da96cd1fe2c0/mzaf_1636709324047645332.plus.aac.ep.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/17/97/0e/17970e68-28ff-9f52-972e-c854d9f19730/mzaf_3520822402606147609.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/00/2c/ff002c29-6da9-1a26-16b3-282a73180366/192562871591_Cover.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:01:43.418Z"
+    "resolvedAt": "2026-10-09T07:01:12.155Z"
   },
   "5p3SJ3CYqrmFbboAtfNo5n": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a5/a3/76/a5a376f7-7cb5-2f82-c326-7633278924b9/mzaf_4976725508330968153.plus.aac.ep.m4a",
@@ -19830,10 +19803,10 @@
     "resolvedAt": "2026-10-09T04:28:00.106Z"
   },
   "5ubHAQtKuFfiG4FXfLP804": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/89/10/378910a3-b590-8daa-c6fd-7cc9b6f8279a/mzaf_8359051427970034169.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features116/v4/17/0c/9d/170c9d95-1f43-eb0d-cf43-1ac6ee26877e/U0RTLnBuZw.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:02:47.101Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/55/4b/86/554b86c1-9c31-5629-43bd-6d753e75bd28/mzaf_17199857534869997590.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/65/fb/84/65fb8432-f539-d67d-0670-b1358d16e5af/contsched.zkbwdtfj.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:15.343Z"
   },
   "5ubUprLRov5UPDCS2UP4cb": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/19/66/11/196611b0-670c-3754-230e-181438c37250/mzaf_17538886754635334548.plus.aac.ep.m4a",
@@ -20340,10 +20313,10 @@
     "resolvedAt": "2026-10-09T05:27:40.146Z"
   },
   "645YBsxhFPSOKxGep3uHLv": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a4/39/71/a4397190-0168-cb2a-bbba-da96cd1fe2c0/mzaf_1636709324047645332.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/00/2c/ff002c29-6da9-1a26-16b3-282a73180366/192562871591_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:01:49.180Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0e/aa/08/0eaa081a-b849-09fd-4f4f-da4890764d1f/mzaf_12782472910331827457.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/02/c5/18/02c518f5-ac06-3321-622e-08d9429fd968/192562556672_Cover.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:13.112Z"
   },
   "647YDaQTk75guVjjMQQJt0": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fb/33/68/fb3368f4-0eca-55e2-4834-cb8463342f50/mzaf_17599722260849333886.plus.aac.ep.m4a",
@@ -20562,10 +20535,10 @@
     "resolvedAt": "2026-10-09T06:21:31.020Z"
   },
   "68KdvPllp9Pug8ZG6AByFY": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/16/8b/b6168b6b-5560-41c7-c2d3-59a6f55354cc/mzaf_2004648566291396468.plus.aac.ep.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f7/09/f9/f709f9d3-0430-8a61-71db-21d60a46d8c2/mzaf_9847838209774690745.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/99/4f/5f/994f5f40-a842-4dc7-58d4-a0210ae09c8c/dj.rengmjbv.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:55:27.455Z"
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:00.777Z"
   },
   "68MSCSP7Y6PnzXcW1IlN7G": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/28/d1/25/28d1257f-23ec-0918-f6bd-5f8d566e8eab/mzaf_1881785581498773714.plus.aac.ep.m4a",
@@ -20826,10 +20799,10 @@
     "resolvedAt": "2026-10-09T05:37:14.895Z"
   },
   "6D43oUO6nImERk2psfXdNY": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/14/24/87/1424870a-1154-828e-705a-b10c418857fd/mzaf_10277884756271565214.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/6c/06/f1/6c06f1d9-68f5-d0ec-80ee-bdf8892d1711/886447460344.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:38:23.536Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/67/3e/34/673e348a-54c3-afa6-3654-aea016e2e92d/mzaf_16122341126515624179.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/42/51/88/42518825-5e28-fb70-17b2-f2c2d33ee3da/886447165850.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:23.350Z"
   },
   "6DAPX3IK33jiOHUzIWbYn6": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d7/e2/75/d7e275b9-7ed6-2a61-4b9a-c04dec681297/mzaf_1021006442417114873.plus.aac.ep.m4a",
@@ -21126,10 +21099,10 @@
     "resolvedAt": "2026-10-09T05:38:32.039Z"
   },
   "6JBjqwVQNIPpXHedQaP82R": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/bc/c5/01bcc5e6-b94c-41b9-878c-c67549d73bef/mzaf_2497027483319122614.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/a6/8b/65/a68b657c-cac6-68e6-3bde-b79d58fbc795/18UMGIM30762.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:52:59.178Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d7/39/59/d739592e-992e-b3ba-9122-d005f588183e/mzaf_14580553156081398746.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/09/f5/f9/09f5f938-53d1-6b1e-7ec0-c4d8ecae552d/13UABIM56313.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:53.718Z"
   },
   "6JG0qhINKVwiHxqN85j7RG": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cf/94/ff/cf94ff6f-c4db-de8d-4ef9-12d49a46952c/mzaf_10258177698700799899.plus.aac.ep.m4a",
@@ -21219,7 +21192,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/80/8c/3d/808c3dc8-23aa-ba2d-d758-b8b4c88b7943/mzaf_11930800143007172296.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/82/52/e38252e8-148d-551e-2216-4b51e847f1bd/00602547276506.rgb.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:42:36.920Z"
+    "resolvedAt": "2026-10-09T07:00:31.260Z"
   },
   "6KNNqqLaousABh4LeVhdJ9": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/24/eb/be/24ebbeb1-24f9-d80f-d70c-957770bb616a/mzaf_1159008307167561808.plus.aac.ep.m4a",
@@ -21378,10 +21351,9 @@
     "resolvedAt": "2026-10-09T06:21:07.807Z"
   },
   "6NZOc8kO0Fxo0fLPvIdLnW": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/9f/1d/aa9f1d53-aebd-6543-cf9b-50ea5eed1a39/mzaf_6355199564144959073.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f6/65/b5/f665b52b-8d6d-b94d-cc2c-db826e35304e/22UMGIM52376.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:08:09.184Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:01:29.558Z"
   },
   "6NaBDHz9C7Uz9Z9CwLXQin": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fc/22/48/fc22484a-90fa-95dc-cb23-ff99598260ec/mzaf_15799423182611716626.plus.aac.ep.m4a",
@@ -21480,10 +21452,9 @@
     "resolvedAt": "2026-10-09T06:16:47.583Z"
   },
   "6OkOFxU6j0UufR97VgSnS7": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/89/ea/80/89ea8029-d619-23ce-5a6c-3339277d5257/mzaf_16404612383813273247.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/93/89/2e/93892e3d-6471-64eb-ee80-c42b95b53d29/16UMGIM10770.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:48:02.053Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:00:45.921Z"
   },
   "6OnfBiiSc9RGKiBKKtZXgQ": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/52/68/61/52686112-174d-f297-950f-2b28604ff749/mzaf_13153123075969317260.plus.aac.ep.m4a",
@@ -21618,10 +21589,10 @@
     "resolvedAt": "2026-10-09T05:36:02.865Z"
   },
   "6QnfsyzifAJJrNHYTO6j9J": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/d5/a6/01d5a67f-ca7b-3f4b-5b07-122c25d4c54b/mzaf_10017834682156060201.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/8a/59/fa8a5999-c497-5903-20d0-fd7f08563dd9/196872387544.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:09:46.095Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d3/48/1e/d3481e5c-56f9-3138-0e46-a312087ad98d/mzaf_8906166425981690721.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/02/4f/be/024fbe59-7bf9-098b-9a75-8a801e5edb0a/196871101493.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:33.031Z"
   },
   "6QvxTX9zvo4u7XhP9vOP3n": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/22/75/68/2275684a-11fd-2b6f-5469-7a7b2acfe332/mzaf_5895241602880093986.plus.aac.p.m4a",
@@ -21861,7 +21832,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e7/43/b0/e743b08f-d0f5-6142-70cb-62cbdec4e943/mzaf_12847313914004625995.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/f9/ff/3d/f9ff3d9a-8dd8-464a-97db-29a0ac5f8a8f/U0RTLU1TLVdXLUpvaG5fTWF5ZXJfSUQ9MjgzNjk5NzIwLnBuZw.png/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:55:13.115Z"
+    "resolvedAt": "2026-10-09T07:00:57.483Z"
   },
   "6VflG4mpZSlpKnqNRL3NO9": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7d/be/08/7dbe08be-55f0-3d0e-b75c-a6ffb2872ec2/mzaf_4246988015414072755.plus.aac.ep.m4a",
@@ -21900,10 +21871,10 @@
     "resolvedAt": "2026-10-09T05:52:27.033Z"
   },
   "6WGJ7hPYHXu3aQ6x8GzigX": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/db/1b/e4/db1be4bd-7ca4-13a3-4484-ffe49365dd6c/mzaf_11190889619806473443.plus.aac.p.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4a/8a/7c/4a8a7caa-73de-7343-092e-0ac2e97f4b2d/26UMGIM15402.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:22:40.038Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/91/ca/1a/91ca1abb-256e-0bbb-9f81-894e954c2a5e/mzaf_12010401632195392165.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ec/ea/f2/eceaf289-7b27-cf73-e134-1ce964077cc5/26UMGIM17314.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:39.306Z"
   },
   "6WMxH9twwIFfH3OVfs40lA": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a2/2b/a3/a22ba3ec-747e-e046-a56b-7255002470ba/mzaf_15243992906979440952.plus.aac.p.m4a",
@@ -22047,7 +22018,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/37/f6/ee/37f6ee00-1207-2e87-b308-0f4f070e670d/mzaf_3208591499365977808.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features116/v4/0c/45/05/0c4505a9-f069-42f4-eedf-85cd52fbcaaa/U0RTLU1TLVdXLVRoZV9CbGFja19LZXlzLUFEQU1fSUQ9MTA1Mjk2NjI4Ny5wbmc.png/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T04:24:49.407Z"
+    "resolvedAt": "2026-10-09T06:59:37.167Z"
   },
   "6ZrlXT6mUMEgomN128iekU": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/80/3b/5b/803b5b41-f4f4-8cc8-1ef2-9d6772fbf555/mzaf_14845684719428773344.plus.aac.ep.m4a",
@@ -22266,10 +22237,10 @@
     "resolvedAt": "2026-10-09T04:27:36.033Z"
   },
   "6dokAviU0xkR5yxI7YGcLz": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:36.484Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cb/c4/af/cbc4af26-325d-c768-eb15-2d0f8405ae48/mzaf_4962498613613451694.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0c/9e/61/0c9e6107-9f8e-3738-ca50-5d24b0d280dc/artwork.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:27.169Z"
   },
   "6eBYkBuDknRmKLj68hIfWW": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9b/fe/9d/9bfe9db4-08c3-561b-7861-0b4392ed0dcd/mzaf_12138252066832750315.plus.aac.p.m4a",
@@ -22758,10 +22729,10 @@
     "resolvedAt": "2026-10-09T06:03:23.963Z"
   },
   "6nLvaCZFR1wEzW3sIKpsnr": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c0/7f/37/c07f37f1-a8e1-b093-f643-9e3bae02589b/mzaf_7307473310952258509.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features126/v4/9e/c6/7d/9ec67d77-e47f-a146-bfa0-cb08ab64cd01/U0RTLU1TLVdXLUFteV9XaW5laG91c2UtQURBTV9JRD0xNDQwODU2MjE5LnBuZw.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:31:04.760Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/69/6c/bc/696cbc2a-74ed-bff3-da8f-d3ba670e1333/mzaf_3177036448917222053.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/92/de/b8/92deb80d-066f-3dc1-4645-43121cb45879/13UAAIM81406.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T06:59:55.364Z"
   },
   "6nRCTb5b0N5zp8WTeY6xFZ": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/80/10/f0/8010f066-3aa2-9235-6c53-3c737769d86b/mzaf_13932237629583644852.plus.aac.ep.m4a",
@@ -22890,10 +22861,10 @@
     "resolvedAt": "2026-10-09T05:41:01.141Z"
   },
   "6q9viAYuJznGpexLuG8TXk": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/68/f6/57/68f65703-19ca-6441-105c-104d0a6e355c/mzaf_1121822245832369988.plus.aac.ep.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/30/86/7a3086af-b9ae-a2c1-3370-73621a1e9d1a/mzaf_8408259360664801897.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3c/c3/b3/3cc3b3f1-0376-997b-b690-ae830dd4fe85/6005.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:22:31.779Z"
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:35.008Z"
   },
   "6qAzAmPBUpGrk7XADZHR5k": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/73/29/01/732901ee-14be-612d-5269-5371d3c2518e/mzaf_16275171055920548375.plus.aac.ep.m4a",
@@ -23501,10 +23472,9 @@
     "resolvedAt": "2026-10-09T05:35:35.544Z"
   },
   "70Dt20sMmgLQiYOgnClHw1": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:28:46.362Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T06:59:50.060Z"
   },
   "70FCugJxa7XW04Np6iYJdI": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/21/83/62/21836260-a34d-e67f-b5fd-0c5ec9523aef/mzaf_11702089484293975271.plus.aac.ep.m4a",
@@ -23771,10 +23741,10 @@
     "resolvedAt": "2026-10-09T06:16:33.395Z"
   },
   "75LltETkbWa2OKmJ1AEoM3": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/16/8b/b6168b6b-5560-41c7-c2d3-59a6f55354cc/mzaf_2004648566291396468.plus.aac.ep.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1d/cc/59/1dcc595e-72fa-f81e-c1bf-3072fa11df41/mzaf_18113995471653478452.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/99/4f/5f/994f5f40-a842-4dc7-58d4-a0210ae09c8c/dj.rengmjbv.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:55:31.038Z"
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:04.871Z"
   },
   "75izAeHlGuOgA865CFDyIv": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8b/3e/34/8b3e346f-523a-0b3d-b5cb-9683f7d39998/mzaf_12446081146759864056.plus.aac.p.m4a",
@@ -23962,10 +23932,10 @@
     "resolvedAt": "2026-10-09T04:27:29.866Z"
   },
   "79H87DHga7uOxkvFRGa4a8": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/16/8b/b6168b6b-5560-41c7-c2d3-59a6f55354cc/mzaf_2004648566291396468.plus.aac.ep.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/b2/f9/ecb2f90e-07f0-b440-d385-ec784ac0e8e3/mzaf_10878945032853954376.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/99/4f/5f/994f5f40-a842-4dc7-58d4-a0210ae09c8c/dj.rengmjbv.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:55:28.973Z"
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:01.732Z"
   },
   "79Hz50oQtHIt5dDoEx4IDk": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bc/98/3f/bc983f9e-9ef9-3795-f961-d9df46c815fa/mzaf_4658095988806827984.plus.aac.ep.m4a",
@@ -24004,10 +23974,10 @@
     "resolvedAt": "2026-10-09T06:25:31.833Z"
   },
   "79vF2NjarXQHuc2OJse7Y0": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/14/bc/f614bc9f-6881-2fa1-89fe-8b9e2df4070b/mzaf_4418974614278735399.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/60/40/d4604014-e1ec-07a2-156d-d97945d3db9c/198704504488_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:29.481Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4f/c3/de/4fc3de86-b034-0e7c-fabf-c7c6d83988c5/mzaf_1992292056877701811.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b9/2d/4b/b92d4b0b-d8d8-fdee-b14b-2a9de71e1b2d/198704605284_Cover.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:18.328Z"
   },
   "7APfctXV5tEUc91IWshj3L": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c0/8f/a5/c08fa5a4-f252-f2d7-3706-d2579ffdec5d/mzaf_16710357469328131504.plus.aac.ep.m4a",
@@ -24031,7 +24001,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/16/8b/b6168b6b-5560-41c7-c2d3-59a6f55354cc/mzaf_2004648566291396468.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/99/4f/5f/994f5f40-a842-4dc7-58d4-a0210ae09c8c/dj.rengmjbv.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:55:26.912Z"
+    "resolvedAt": "2026-10-09T07:00:59.732Z"
   },
   "7B2SMMslfm3Ocf7ZnTa5dS": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c8/66/00/c86600f3-c832-af61-c24c-d77728f01d36/mzaf_5276726996298995117.plus.aac.ep.m4a",
@@ -24262,10 +24232,10 @@
     "resolvedAt": "2026-10-09T06:09:06.128Z"
   },
   "7FHMNRLUgVHTfNaNAGaTbg": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/d5/a6/01d5a67f-ca7b-3f4b-5b07-122c25d4c54b/mzaf_10017834682156060201.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/8a/59/fa8a5999-c497-5903-20d0-fd7f08563dd9/196872387544.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:09:48.019Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5a/1a/e9/5a1ae9bc-6e76-c90a-5ed0-2ae7b1f95063/mzaf_4650512375774692591.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/02/4f/be/024fbe59-7bf9-098b-9a75-8a801e5edb0a/196871101493.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:35.078Z"
   },
   "7FIWs0pqAYbP91WWM0vlTQ": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/48/e5/8e/48e58e62-4af2-82fb-52ef-6c17a7093863/mzaf_10634934504260100788.plus.aac.ep.m4a",
@@ -24418,10 +24388,10 @@
     "resolvedAt": "2026-10-09T06:20:27.167Z"
   },
   "7ITRNB9OckYIp2SW2iXU8U": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fa/e2/40/fae2402b-44b1-ad4f-bcf3-59b50a91d447/mzaf_10361924111918698083.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/14/2f/2b/142f2b6c-5cee-18d7-b8f2-f7b14344b774/U0RTLnBuZw.png/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:16:10.100Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fe/59/36/fe59362a-1afe-771e-c2d4-51d6f0cd421b/mzaf_2749868154268335245.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/1f/6f/b7/1f6fb72e-5c9a-87f8-140c-d483aec28535/jbo_cover.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:02.201Z"
   },
   "7Id8Qi0oQMV8J78fdtuZxo": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ce/1d/3b/ce1d3b15-46e4-5c15-d41b-ff620d37b10f/mzaf_10344667252174331856.plus.aac.ep.m4a",
@@ -24459,10 +24429,9 @@
     "resolvedAt": "2026-10-09T06:11:33.522Z"
   },
   "7JxRr2baHFCCHsAfNxgJz4": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:33.367Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:23.605Z"
   },
   "7JzTTmvNedMzaYwijsJhxA": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ac/87/5a/ac875ae4-3b14-c2dd-8d6f-275264db36c9/mzaf_13295092427076346505.plus.aac.ep.m4a",
@@ -24657,10 +24626,10 @@
     "resolvedAt": "2026-10-09T06:13:17.119Z"
   },
   "7MtVPRGtZl6rPjMfLoI3Lh": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/08/b4/ea/08b4ea80-3526-188c-452a-5b19e2d36a6b/mzaf_10509024473416803833.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c6/5f/b9/c65fb9eb-da2f-89a9-b640-2fff1fc3a660/19UMGIM61350.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:12:06.743Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/55/f4/cb55f431-9770-630b-a8f7-bbf91ab2a8c0/mzaf_5679380577330623677.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/fc/d3/81/fcd381c9-451f-0917-da01-06678a92b85c/17UMGIM90308.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:45.850Z"
   },
   "7N3PAbqfTjSEU1edb2tY8j": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/89/fa/f1/89faf128-b7de-808a-6893-4fc730dcfbe4/mzaf_14456792705630708229.plus.aac.ep.m4a",
@@ -24759,10 +24728,9 @@
     "resolvedAt": "2026-10-09T05:42:07.219Z"
   },
   "7cHXss4b7AzJiofmG3TGig": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d4/12/9fd41264-78a7-bc7d-1d46-7c60a679cb6f/mzaf_10176910175818619224.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/aa/2f/a9/aa2fa927-cc99-3c78-79a8-8cdf14ddcaf8/artwork.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:33.770Z"
+    "failed": true,
+    "failureReason": "No preview found on Apple Web or iTunes API",
+    "resolvedAt": "2026-10-09T07:02:24.205Z"
   },
   "7cMFjxhbXBpOlais7KMF3j": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/60/d3/cf/60d3cf87-d9ac-03e5-a057-032b94cfd59e/mzaf_4908134929947327254.plus.aac.ep.m4a",
@@ -24789,10 +24757,10 @@
     "resolvedAt": "2026-10-09T05:30:53.651Z"
   },
   "7ccTcabbJlCJiIqtrSSwBk": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f1/41/53/f141535f-82a6-e8fd-ba63-8e3a699db2d4/mzaf_742090324965247854.plus.aac.p.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7d/36/53/7d36532b-0e8c-90d3-3dbc-b2239d1ad0ad/20UM1IM15658.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:46:43.711Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/43/16/cf/4316cfbd-2f2a-18f4-8e47-a11638411318/mzaf_13361369937208654881.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/c6/3f/7a/c63f7a28-4e53-1ae2-cfae-5d211e0c256c/20UMGIM02955.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:40.778Z"
   },
   "7cdy4PbCdDZZNjyxoZyE0c": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/84/f3/1c/84f31cdd-9995-cbd9-7c40-25f98098b523/mzaf_2826169603250597945.plus.aac.ep.m4a",
@@ -25131,10 +25099,10 @@
     "resolvedAt": "2026-10-09T05:47:55.909Z"
   },
   "7j0Watm6VZaCg41LIS2ImW": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/14/bc/f614bc9f-6881-2fa1-89fe-8b9e2df4070b/mzaf_4418974614278735399.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/60/40/d4604014-e1ec-07a2-156d-d97945d3db9c/198704504488_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:29.035Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3a/72/fd/3a72fd79-bafc-12c8-5b2b-e3a658b327d1/mzaf_3995074086827091935.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b9/2d/4b/b92d4b0b-d8d8-fdee-b14b-2a9de71e1b2d/198704605284_Cover.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:17.525Z"
   },
   "7j2Bmzpnf6RwEWEQ2sv8Ho": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0d/19/90/0d1990f6-c572-d287-c84f-7b0656757795/mzaf_9845229389229688785.plus.aac.ep.m4a",
@@ -25227,10 +25195,10 @@
     "resolvedAt": "2026-10-09T06:18:16.181Z"
   },
   "7kx4CkAX1rmyzggGPc3kC0": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/14/bc/f614bc9f-6881-2fa1-89fe-8b9e2df4070b/mzaf_4418974614278735399.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/60/40/d4604014-e1ec-07a2-156d-d97945d3db9c/198704504488_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:18:25.393Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/76/ce/ba/76ceba31-303c-49d6-edc1-0559e7f929c7/mzaf_10402794918003711851.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b9/2d/4b/b92d4b0b-d8d8-fdee-b14b-2a9de71e1b2d/198704605284_Cover.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:02:12.834Z"
   },
   "7lGKEWMXVWWTt3X71Bv44I": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/81/b6/de/81b6de3b-3624-c000-8cc9-e07751b01e4e/mzaf_2064364890273176236.plus.aac.ep.m4a",
@@ -25404,7 +25372,7 @@
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9c/9c/09/9c9c09cd-7c37-0d7f-b928-7a986846472a/mzaf_10155680949312053277.plus.aac.ep.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c1/16/59/c116596f-f3fd-3499-6cc2-bcb5b4931e6e/14UMGIM61459.rgb.jpg/600x600bb.jpg",
     "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:36:08.176Z"
+    "resolvedAt": "2026-10-09T07:00:17.034Z"
   },
   "7ouMYWpwJ422jRcDASZB7P": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e7/8c/45/e78c45b7-55a3-5a7e-b784-3fd16a8d799b/mzaf_7425749629007880301.plus.aac.ep.m4a",
@@ -25455,10 +25423,10 @@
     "resolvedAt": "2026-10-09T05:55:23.412Z"
   },
   "7pj6P5WnxkZsw3XRc8eMe1": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/9f/1d/aa9f1d53-aebd-6543-cf9b-50ea5eed1a39/mzaf_6355199564144959073.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f6/65/b5/f665b52b-8d6d-b94d-cc2c-db826e35304e/22UMGIM52376.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:08:06.310Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/a1/fa/4ea1faa5-3774-f9b8-1844-8746daefc4df/mzaf_6821347580322636043.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/eb/44/c9/eb44c9e1-401e-b118-6254-7b9a10888c39/22UMGIM52376.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:24.598Z"
   },
   "7pqWbzEcQOahkdDeTQJSUP": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0a/ca/d6/0acad605-e611-1455-66d0-0ad3d22e0e8e/mzaf_1862985544478688756.plus.aac.ep.m4a",
@@ -25617,10 +25585,10 @@
     "resolvedAt": "2026-10-09T06:07:47.434Z"
   },
   "7ssFG94tZHpX9vbIFM0GVH": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f0/b6/98/f0b698b8-9ae3-49be-1780-8ab96a82299c/mzaf_13221203781793245960.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f6/73/be/f673bed1-8b81-7af1-14bd-103ccdb9b3f2/19UMGIM46307.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:47:46.393Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/bf/7e/7abf7e4d-1214-84ee-4f52-efd432384e61/mzaf_10124382437670011732.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3e/fe/fa/3efefa81-fa46-8124-46b1-1b340baff0e9/19UMGIM46307.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:44.830Z"
   },
   "7t00jJDygiHzPabOYS6AGb": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fb/32/c0/fb32c07b-640f-b7c7-a2e7-2c72e145fc24/mzaf_9474359547909220454.plus.aac.ep.m4a",
@@ -25713,10 +25681,10 @@
     "resolvedAt": "2026-10-09T05:46:16.528Z"
   },
   "7uCq4vBPffjaTMlE8EQzJD": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/94/d9/01/94d9014a-8a63-3fcc-3cb5-e66a2b04311f/mzaf_798952034531409972.plus.aac.p.m4a",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3e/e0/3c/3ee03c7b-bee3-a9db-b947-42b4d49d10ff/mzaf_5926629663827065533.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1d/d7/f4/1dd7f45e-e64c-e928-7253-2ebcd7f23794/192641757730_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T06:07:20.014Z"
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:01:22.482Z"
   },
   "7uKcScNXuO3MWw6LowBjW1": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/61/55/d7/6155d708-2950-0402-25e4-3ad482bbd27d/mzaf_8726130699881346047.plus.aac.ep.m4a",
@@ -25791,10 +25759,10 @@
     "resolvedAt": "2026-10-09T05:57:06.553Z"
   },
   "7wclPheMJAUKn2njmO2s3A": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e2/9e/df/e29edfaa-e12f-d81f-81a0-9c9284e1be67/mzaf_8880315267358065122.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/98/f8/ab/98f8ab48-2bb6-ef63-4061-404459b02202/16UMGIM52971.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:35:59.668Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/48/45/ed/4845ed2c-ea6c-a7d8-b91e-bce1615edda6/mzaf_16181841565472395520.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/5c/40/7d/5c407dc1-d14d-51cd-1a03-6857e9deaf37/16UMGIM53164.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T07:00:16.067Z"
   },
   "7wfbHZcNtENuAcbog7c6kQ": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/87/aa/0d/87aa0d8b-314a-1c92-17f4-a89ba4056b43/mzaf_16289343684142062355.plus.aac.ep.m4a",
@@ -25899,10 +25867,10 @@
     "resolvedAt": "2026-10-09T06:07:22.909Z"
   },
   "7zEanUDqPrxM0RDxKxOq1v": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/14/bc/f614bc9f-6881-2fa1-89fe-8b9e2df4070b/mzaf_4418974614278735399.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d4/60/40/d4604014-e1ec-07a2-156d-d97945d3db9c/198704504488_Cover.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T04:23:14.272Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a5/01/97/a5019713-2ab6-363d-8b95-f1727b5303ba/mzaf_18306701055476187648.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b9/2d/4b/b92d4b0b-d8d8-fdee-b14b-2a9de71e1b2d/198704605284_Cover.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T06:59:35.515Z"
   },
   "7zFBtYAVURF3bUVqEQ6UUu": {
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fd/00/fa/fd00fafa-3197-af4d-099a-8a6b5ccf7c36/mzaf_2016979369268143903.plus.aac.ep.m4a",
@@ -25929,9 +25897,9 @@
     "resolvedAt": "2026-10-09T05:58:48.659Z"
   },
   "7zvfDihYiJ8RQ1nRcpKBF5": {
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/9f/1d/aa9f1d53-aebd-6543-cf9b-50ea5eed1a39/mzaf_6355199564144959073.plus.aac.ep.m4a",
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f6/65/b5/f665b52b-8d6d-b94d-cc2c-db826e35304e/22UMGIM52376.rgb.jpg/600x600bb.jpg",
-    "source": "apple-web",
-    "resolvedAt": "2026-10-09T05:31:17.590Z"
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/92/0e/7f/920e7f75-3664-2491-1390-1fe9d8c7cebf/mzaf_10112419150011864419.plus.aac.p.m4a",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/eb/44/c9/eb44c9e1-401e-b118-6254-7b9a10888c39/22UMGIM52376.rgb.jpg/600x600bb.jpg",
+    "source": "itunes-api",
+    "resolvedAt": "2026-10-09T06:59:57.999Z"
   }
 }

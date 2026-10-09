@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { normalize, getBaseTitle, createLabel, artistsMatch, createNormalizedLabelKey } from './normalize';
+import { normalize, getBaseTitle, createLabel, artistsMatch, createNormalizedLabelKey, titlesMatch } from './normalize';
 
 describe('normalize utility', () => {
   it('strips punctuation, whitespace, and lowercases', () => {
@@ -14,6 +14,25 @@ describe('normalize utility', () => {
     expect(getBaseTitle('In Your Eyes [Deluxe Edition]')).toBe('In Your Eyes');
     expect(getBaseTitle('Title: Subtitle')).toBe('Title');
     expect(getBaseTitle('Regular Song')).toBe('Regular Song');
+    expect(getBaseTitle('19-2000')).toBe('19-2000');
+    expect(getBaseTitle('Spider-Man')).toBe('Spider-Man');
+    expect(getBaseTitle("(I Can't Get No) Satisfaction - Mono")).toBe("(I Can't Get No) Satisfaction");
+  });
+
+  it('correctly matches and distinguishes song titles with titlesMatch', () => {
+    // Exact & variant matches
+    expect(titlesMatch('19-2000', '19-2000')).toBe(true);
+    expect(titlesMatch('19-2000', '19-2000 (Soulchild Remix)')).toBe(true);
+    expect(titlesMatch('Kids', 'Kids')).toBe(true);
+    expect(titlesMatch('Kids', 'Kids - Soulwax Remix')).toBe(true);
+    expect(titlesMatch("(I Can't Get No) Satisfaction", 'Satisfaction (Mono Version)')).toBe(true);
+
+    // Mismatches MUST return false
+    expect(titlesMatch('19-2000', 'On Melancholy Hill')).toBe(false);
+    expect(titlesMatch('19-2000', 'Re-Hash')).toBe(false);
+    expect(titlesMatch('19-2000', 'Feel Good Inc.')).toBe(false);
+    expect(titlesMatch('Hash Pipe', 'Island In The Sun')).toBe(false);
+    expect(titlesMatch('De Selby (Part 2)', 'Eat Your Young')).toBe(false);
   });
 
   it('formats user label correctly', () => {
