@@ -41,19 +41,29 @@ jobs:
 
       # Only run the data pipeline on scheduled or manual runs, and only if Spotify secrets are provided
       - name: Build Spotify & Apple data pipeline
-        if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && secrets.SPOTIFY_CLIENT_ID != ''
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
           SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
           INCLUDE_FOLLOWED: ${{ secrets.INCLUDE_FOLLOWED || 'false' }}
         run: |
+          if [ -z "$SPOTIFY_CLIENT_ID" ]; then
+            echo "SPOTIFY_CLIENT_ID not configured; skipping data rebuild."
+            exit 0
+          fi
           npm run data:build
           npm run data:check
 
       - name: Commit updated playlist data
-        if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && secrets.SPOTIFY_CLIENT_ID != ''
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
         run: |
+          if [ -z "$SPOTIFY_CLIENT_ID" ]; then
+            echo "Skipping commit."
+            exit 0
+          fi
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ public/data/
