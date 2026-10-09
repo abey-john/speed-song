@@ -1,44 +1,384 @@
 import './ui/styles.css';
-import { INTERVALS } from './data/types';
+import { loadManifest, loadPlaylist } from './data/loader';
+import { Manifest, PlaylistFile, Song, INTERVALS } from './data/types';
+import { ShuffleBag } from './game/bag';
+import { GameState, startRound, submitGuess, submitSkip } from './game/state';
+import { audioEngine } from './audio/engine';
+import { GameControls } from './ui/controls';
+import { renderReveal, preloadArtwork } from './ui/reveal';
+import { loadStats, saveStats, recordRoundOutcome, resetStats } from './stats/store';
+import { renderStatsModal } from './ui/histogram';
 
-const app = document.querySelector<HTMLDivElement>('#app');
+const LAST_PLAYLIST_KEY = 'speed-song:last-playlist:v1';
+const isDebugMode = new URLSearchParams(window.location.search).get('debug') === '1';
 
-if (app) {
-  app.innerHTML = `
-    <header class="app-header">
+class SpeedSongApp {
+  private root: HTMLElement;
+  private manifest: Manifest | null = null;
+  private currentPlaylist: PlaylistFile | null = null;
+  private shuffleBag: ShuffleBag<Song> | null = null;
+  private nextSong: Song | null = null;
+  private state: GameState = { type: 'idle', selectedPlaylistId: null };
+  private controls: GameControls;
+  private isPlayingFullPreview = false;
+
+  constructor(root: HTMLElement) {
+    this.root = root;
+    this.controls = new GameControls({
+      onPlaySnippet: () => this.handlePlaySnippet(),
+      onSkip: () => this.handleSkip(),
+      onSubmitGuess: (song: Song) => this.handleGuess(song),
+    });
+  }
+
+  public async init(): Promise<void> {
+    this.renderLoading('Loading playlists...');
+
+    try {
+      this.manifest = await loadManifest();
+      if (this.manifest.playlists.length === 0) {
+        this.renderError('No playlists found in manifest.');
+        return;
+      }
+
+      // Restore last playlist or use first
+      const savedId = localStorage.getItem(LAST_PLAYLIST_KEY);
+      const chosen =
+        this.manifest.playlists.find((p) => p.id === savedId) || this.manifest.playlists[0]!;
+
+      await this.selectPlaylist(chosen.id);
+    } catch (err) {
+      console.error('[app] Init error:', err);
+      this.renderError('Failed to load game data. Please refresh or build data.');
+    }
+  }
+
+  private async selectPlaylist(playlistId: string): Promise<void> {
+    if (!this.manifest) return;
+    const entry = this.manifest.playlists.find((p) => p.id === playlistId);
+    if (!entry) return;
+
+    localStorage.setItem(LAST_PLAYLIST_KEY, playlistId);
+    this.renderLoading(`Loading ${entry.name}...`);
+
+    try {
+      this.currentPlaylist = await loadPlaylist(entry.file);
+      this.shuffleBag = new ShuffleBag(this.currentPlaylist.songs);
+      this.nextSong = null;
+      this.state = { type: 'idle', selectedPlaylistId: playlistId };
+      audioEngine.stop();
+      this.render();
+    } catch (err) {
+      console.error('[app] Error loading playlist:', err);
+      this.renderError(`Failed to load playlist "${entry.name}".`);
+    }
+  }
+
+  private async startNewRound(): Promise<void> {
+    if (!this.shuffleBag || !this.currentPlaylist) return;
+
+    audioEngine.stop();
+    this.isPlayingFullPreview = false;
+
+    // Pick song
+    const song = this.nextSong || this.shuffleBag.draw();
+    this.nextSong = null;
+
+    if (!song) {
+      this.renderError('No songs available in this playlist.');
+      return;
+    }
+
+    // Preload artwork offscreen
+    preloadArtwork(song.artworkUrl);
+
+    // Update state
+    this.state = startRound(song, this.currentPlaylist.id);
+    this.render();
+
+    // Auto-unlock & auto-play step 0
+    const duration = INTERVALS[0] ?? 0.1;
+    this.playCurrentStep(duration);
+
+    // Prefetch next song in background
+    setTimeout(() => {
+      if (this.shuffleBag) {
+        this.nextSong = this.shuffleBag.draw();
+        if (this.nextSong?.previewUrl) {
+          audioEngine.preloadSong(this.nextSong.previewUrl);
+        }
+      }
+    }, 1000);
+  }
+
+  private async playCurrentStep(durationSec: number): Promise<void> {
+    if (this.state.type !== 'guessing') return;
+    const url = this.state.song.previewUrl;
+
+    this.controls.setPlayingState(true);
+    await audioEngine.playSnippet(url, durationSec, () => {
+      this.controls.setPlayingState(false);
+      this.updateDebugBar();
+    });
+    this.updateDebugBar();
+  }
+
+  private handlePlaySnippet(): void {
+    if (this.state.type !== 'guessing') return;
+    const duration = INTERVALS[this.state.step] ?? 30;
+    this.playCurrentStep(duration);
+  }
+
+  private handleSkip(): void {
+    if (this.state.type !== 'guessing') return;
+
+    audioEngine.stop();
+    this.controls.setPlayingState(false);
+
+    const next = submitSkip(this.state);
+    this.state = next;
+
+    if (next.type === 'revealed') {
+      this.handleGameOver(next.result);
+    } else if (next.type === 'guessing') {
+      this.renderGameArea();
+      // Auto-play next step
+      const duration = INTERVALS[next.step] ?? 30;
+      this.playCurrentStep(duration);
+    }
+  }
+
+  private handleGuess(guessedSong: Song): void {
+    if (this.state.type !== 'guessing') return;
+
+    audioEngine.stop();
+    this.controls.setPlayingState(false);
+
+    const next = submitGuess(this.state, guessedSong.id, `${guessedSong.title} — ${guessedSong.artist}`);
+    this.state = next;
+
+    if (next.type === 'revealed') {
+      this.handleGameOver(next.result);
+    } else if (next.type === 'guessing') {
+      this.renderGameArea();
+      // Auto-play next step
+      const duration = INTERVALS[next.step] ?? 30;
+      this.playCurrentStep(duration);
+    }
+  }
+
+  private handleGameOver(result: { outcome: 'guessed'; stepIndex: number } | { outcome: 'missed' }): void {
+    const stats = loadStats();
+    let updatedStats;
+
+    if (result.outcome === 'guessed') {
+      const stepKey = String(INTERVALS[result.stepIndex]) as any;
+      updatedStats = recordRoundOutcome(stats, stepKey);
+    } else {
+      updatedStats = recordRoundOutcome(stats, 'missed');
+    }
+
+    saveStats(updatedStats);
+    this.render();
+  }
+
+  private toggleFullPreview(): void {
+    if (this.state.type !== 'revealed') return;
+    const url = this.state.song.previewUrl;
+
+    if (this.isPlayingFullPreview) {
+      audioEngine.stop();
+      this.isPlayingFullPreview = false;
+      this.render();
+    } else {
+      this.isPlayingFullPreview = true;
+      this.render();
+      audioEngine.playSnippet(url, 30, () => {
+        this.isPlayingFullPreview = false;
+        this.render();
+      });
+    }
+  }
+
+  private openStatsModal(): void {
+    const stats = loadStats();
+    const modal = renderStatsModal(stats, {
+      onClose: () => modal.remove(),
+      onReset: () => {
+        resetStats();
+        modal.remove();
+        this.openStatsModal();
+      },
+    });
+    document.body.appendChild(modal);
+  }
+
+  private render(): void {
+    this.root.innerHTML = '';
+
+    // 1. Header
+    const header = document.createElement('header');
+    header.className = 'app-header';
+    header.innerHTML = `
       <div class="brand">
         <div class="brand-icon" aria-hidden="true">⚡</div>
         <h1 class="brand-title">Speed Song</h1>
       </div>
-      <div class="badge">
-        <span class="badge-dot"></span>
-        Ready
+      <div class="header-actions">
+        <button type="button" class="btn-header" id="btn-stats" aria-label="View stats">
+          📊 Stats
+        </button>
       </div>
-    </header>
+    `;
 
-    <main class="hero-card">
-      <span class="badge">Speed Run Mode</span>
-      <h2>Guess the song in seconds</h2>
-      <p>
-        Listen to progressively longer snippets starting at just 0.1s. Guess using the search box or skip to the next interval.
-      </p>
+    header.querySelector('#btn-stats')?.addEventListener('click', () => this.openStatsModal());
+    this.root.appendChild(header);
 
-      <div class="interval-preview" aria-label="Interval progression preview">
-        ${INTERVALS.map(
-          (sec, i) => `
-          <div class="interval-pill ${i === 0 ? 'active' : ''}">
-            <span>${sec}s</span>
-          </div>
-        `
-        ).join('')}
-      </div>
-    </main>
+    // 2. Playlist Selector
+    if (this.manifest && this.manifest.playlists.length > 0) {
+      const selectorWrap = document.createElement('div');
+      selectorWrap.className = 'playlist-select-wrapper';
+      selectorWrap.innerHTML = `
+        <label for="playlist-select" class="playlist-select-label">Select Playlist</label>
+        <select id="playlist-select" class="playlist-select">
+          ${this.manifest.playlists
+            .map(
+              (p) =>
+                `<option value="${p.id}" ${p.id === this.currentPlaylist?.id ? 'selected' : ''}>
+                  ${escapeHtml(p.name)} (${p.songCount} songs)
+                </option>`
+            )
+            .join('')}
+        </select>
+      `;
 
-    <footer class="app-footer">
+      selectorWrap.querySelector('select')?.addEventListener('change', (e) => {
+        const id = (e.target as HTMLSelectElement).value;
+        this.selectPlaylist(id);
+      });
+
+      this.root.appendChild(selectorWrap);
+    }
+
+    // 3. Debug bar if ?debug=1
+    if (isDebugMode) {
+      const debugDiv = document.createElement('div');
+      debugDiv.id = 'debug-bar';
+      debugDiv.className = 'debug-bar';
+      this.root.appendChild(debugDiv);
+      this.updateDebugBar();
+    }
+
+    // 4. Main Game Container
+    const main = document.createElement('main');
+    main.id = 'game-main-container';
+    this.root.appendChild(main);
+    this.renderGameArea();
+
+    // 5. Footer
+    const footer = document.createElement('footer');
+    footer.className = 'app-footer';
+    footer.innerHTML = `
       <p>
         Playlist data from <a href="https://spotify.com" target="_blank" rel="noopener noreferrer">Spotify</a> &bull;
         Previews and artwork from <a href="https://apple.com" target="_blank" rel="noopener noreferrer">Apple</a>
       </p>
-    </footer>
-  `;
+    `;
+    this.root.appendChild(footer);
+  }
+
+  private renderGameArea(): void {
+    const main = this.root.querySelector('#game-main-container');
+    if (!main) return;
+    main.innerHTML = '';
+
+    if (this.state.type === 'idle') {
+      const card = document.createElement('div');
+      card.className = 'hero-card';
+      card.innerHTML = `
+        <span class="badge">Speed Run Mode</span>
+        <h2>Ready to test your ears?</h2>
+        <p>
+          Guess songs from <strong>${escapeHtml(this.currentPlaylist?.name || 'your playlist')}</strong> 
+          starting from a tiny 0.1s clip!
+        </p>
+        <button type="button" class="btn-play" id="btn-start-game">
+          Start Game ▶
+        </button>
+      `;
+
+      card.querySelector('#btn-start-game')?.addEventListener('click', async () => {
+        await audioEngine.unlock();
+        this.startNewRound();
+      });
+
+      main.appendChild(card);
+    } else if (this.state.type === 'guessing') {
+      this.controls.update({
+        step: this.state.step,
+        wrongGuesses: this.state.wrongGuesses,
+        availableSongs: this.currentPlaylist?.songs || [],
+        isPlaying: audioEngine.isPlaying(),
+      });
+      main.appendChild(this.controls.getElement());
+    } else if (this.state.type === 'revealed') {
+      const revealEl = renderReveal(
+        this.state.song,
+        this.state.result,
+        this.isPlayingFullPreview,
+        {
+          onNextRound: () => this.startNewRound(),
+          onToggleFullPreview: () => this.toggleFullPreview(),
+        }
+      );
+      main.appendChild(revealEl);
+    }
+  }
+
+  private updateDebugBar(): void {
+    if (!isDebugMode) return;
+    const bar = document.getElementById('debug-bar');
+    if (!bar) return;
+    const info = audioEngine.getDebugInfo();
+    bar.innerHTML = `
+      <small style="font-family: monospace; color: #8fa0b8; display: block; padding: 4px 8px; background: #1a202c; border-radius: 4px; margin-bottom: 8px;">
+        ⚙️ Audio: ${info.engine} | Ctx: ${info.audioContextState} | Silence Trim: ${(info.leadingSilenceSec ?? 0).toFixed(3)}s | Duration: ${(info.decodedDurationSec ?? 0).toFixed(1)}s
+      </small>
+    `;
+  }
+
+  private renderLoading(msg: string): void {
+    this.root.innerHTML = `
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 60vh; gap: 12px;">
+        <div class="brand-icon" style="animation: spin 1s linear infinite;">⚡</div>
+        <p style="color: var(--color-text-muted); font-size: 0.95rem;">${escapeHtml(msg)}</p>
+      </div>
+    `;
+  }
+
+  private renderError(msg: string): void {
+    this.root.innerHTML = `
+      <div class="hero-card" style="margin-top: 40px; text-align: center;">
+        <span class="badge" style="color: var(--color-wrong); border-color: var(--color-wrong);">Error</span>
+        <h2>Something went wrong</h2>
+        <p>${escapeHtml(msg)}</p>
+        <button type="button" class="btn-play" onclick="location.reload()">Reload App</button>
+      </div>
+    `;
+  }
+}
+
+function escapeHtml(str: string): string {
+  return (str || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+const appEl = document.querySelector<HTMLDivElement>('#app');
+if (appEl) {
+  const app = new SpeedSongApp(appEl);
+  app.init();
 }

@@ -10,6 +10,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "auth": "tsx --env-file=.env scripts/data/auth.ts",
+    "sync:playlists": "tsx --env-file=.env scripts/data/sync-playlists.ts",
     "data:build": "tsx --env-file=.env scripts/data/index.ts",
     "data:check": "tsx --env-file=.env scripts/data/check-previews.ts"
   },

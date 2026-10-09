@@ -1,5 +1,4 @@
 import http from 'node:http';
-import url from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
 import { exec } from 'node:child_process';

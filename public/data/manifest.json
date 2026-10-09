@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-10-09T04:24:10.093Z",
+  "playlists": [
+    {
+      "id": "2KExcFMO47XI7pWZL8eOJY",
+      "name": "belt",
+      "songCount": 58,
+      "file": "playlists/2KExcFMO47XI7pWZL8eOJY.json"
+    },
+    {
+      "id": "37vcSy5hYWYCdtV7uuOkuS",
+      "name": "live 105",
+      "songCount": 166,
+      "file": "playlists/37vcSy5hYWYCdtV7uuOkuS.json"
+    },
+    {
+      "id": "3UpWJxyxebaKiw0IAMKIPv",
+      "name": "dance now",
+      "songCount": 43,
+      "file": "playlists/3UpWJxyxebaKiw0IAMKIPv.json"
+    },
+    {
+      "id": "6kzGwYY7BnwfdQfnZBDKQw",
+      "name": "2026 highlights",
+      "songCount": 77,
+      "file": "playlists/6kzGwYY7BnwfdQfnZBDKQw.json"
+    },
+    {
+      "id": "7bXnPvTLZFaNyOeRCNXg7y",
+      "name": "puget’s sound",
+      "songCount": 76,
+      "file": "playlists/7bXnPvTLZFaNyOeRCNXg7y.json"
+    }
+  ]
+}
