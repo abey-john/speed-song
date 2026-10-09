@@ -248,7 +248,11 @@ class SpeedSongApp {
       </div>
       <div class="header-actions">
         <button type="button" class="btn-header" id="btn-stats" aria-label="View stats">
-          📊 Stats
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stats-icon" aria-hidden="true">
+            <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+            <path d="M7 16c.5-2 1.5-7 4-7 2 0 2 3 4 3 2.5 0 4.5-5 5-7" />
+          </svg>
+          <span>Stats</span>
         </button>
       </div>
     `;

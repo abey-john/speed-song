@@ -128,9 +128,17 @@ body {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   transition: var(--transition-fast);
   box-shadow: var(--shadow-subtle);
+}
+
+.btn-header .stats-icon {
+  stroke: #f472b6; /* subtle pink */
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), stroke var(--transition-fast);
 }
 
 .btn-header:hover {
@@ -138,6 +146,11 @@ body {
   border-color: var(--color-accent-light);
   background: var(--color-surface-hover);
   box-shadow: 0 0 12px rgba(168, 85, 247, 0.25);
+}
+
+.btn-header:hover .stats-icon {
+  stroke: #fbcfe8;
+  transform: scale(1.08);
 }
 
 /* Playlist Selector */
