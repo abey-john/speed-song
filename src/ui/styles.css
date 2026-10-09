@@ -252,10 +252,18 @@ body {
   margin-top: 6px;
 }
 
+/* Game Controls Container */
+.game-controls-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
 /* 8-Segment Progress Bar */
 .progress-bar-container {
   width: 100%;
-  margin: 4px 0 8px;
+  margin: 0 0 2px;
 }
 
 .progress-segments {
@@ -376,8 +384,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-height: 24px;
-  margin: 4px 0;
+  margin: 0;
+}
+
+.wrong-guesses-list:empty {
+  display: none;
 }
 
 .wrong-guess-pill {
