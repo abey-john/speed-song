@@ -43,7 +43,7 @@ jobs:
 
       # Only run the data pipeline on scheduled or manual runs, and only if Spotify secrets are provided
       - name: Build Spotify & Apple data pipeline
-        if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && env.SPOTIFY_CLIENT_ID != ''
+        if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && secrets.SPOTIFY_CLIENT_ID != ''
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
@@ -54,7 +54,7 @@ jobs:
           npm run data:check
 
       - name: Commit updated playlist data
-        if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && env.SPOTIFY_CLIENT_ID != ''
+        if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && secrets.SPOTIFY_CLIENT_ID != ''
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"

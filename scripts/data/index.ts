@@ -61,8 +61,8 @@ async function runDataPipeline() {
     const pl = playlists[pIdx]!;
     const outPath = path.join(playlistsOutDir, `${pl.id}.json`);
 
-    // Resume support: if playlist is already built, reuse it unless FORCE=true
-    if (process.env.FORCE !== 'true' && fs.existsSync(outPath)) {
+    // Resume support: if RESUME=true and playlist is already built, reuse it
+    if (process.env.RESUME === 'true' && fs.existsSync(outPath)) {
       try {
         const existing = JSON.parse(fs.readFileSync(outPath, 'utf-8')) as PlaylistFile;
         if (existing.songs && existing.songs.length > 0) {
@@ -72,7 +72,7 @@ async function runDataPipeline() {
             songCount: existing.songs.length,
             file: `playlists/${pl.id}.json`,
           });
-          console.log(`[${pIdx + 1}/${playlists.length}] Already built: "${pl.name}" (${existing.songs.length} songs). Skipping.\n`);
+          console.log(`[${pIdx + 1}/${playlists.length}] Reusing built playlist: "${pl.name}" (${existing.songs.length} songs).\n`);
           continue;
         }
       } catch {}
