@@ -4,13 +4,26 @@ node_modules/
 # Production build
 dist/
 
-# Local env files
-.env
-.env*.local
+# Local env files (block all env files, allow only example)
+.env*
+!.env.example
+
+# Credentials & Keys
+*.pem
+*.key
+*.cert
+*.token
+*credentials*
 
 # Data output / reports (except committed cache & overrides)
 data/unmatched.json
 scripts/data/.temp*
+
+# Test artifacts & Coverage
+coverage/
+playwright-report/
+test-results/
+.playwright/
 
 # OS & Editor files
 .DS_Store
