@@ -382,9 +382,16 @@ class SpeedSongApp {
 
   private renderLoading(msg: string): void {
     this.root.innerHTML = `
-      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 60vh; gap: 12px;">
-        <div class="brand-icon" style="animation: spin 1s linear infinite;">⚡</div>
-        <p style="color: var(--color-text-muted); font-size: 0.95rem;">${escapeHtml(msg)}</p>
+      <div class="loading-screen" role="status" aria-live="polite">
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="loading-icon-audio" aria-hidden="true">
+          <path d="M2 10v3" />
+          <path d="M6 6v11" />
+          <path d="M10 3v18" />
+          <path d="M14 8v7" />
+          <path d="M18 5v13" />
+          <path d="M22 10v3" />
+        </svg>
+        <p class="loading-text">${escapeHtml(msg)}</p>
       </div>
     `;
   }

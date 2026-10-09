@@ -874,6 +874,43 @@ body {
   color: var(--color-accent-light);
 }
 
+/* Loading Screen */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 55vh;
+  gap: 16px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.loading-icon-audio {
+  width: 44px;
+  height: 44px;
+  stroke: #f472b6; /* subtle pink */
+  animation: audioPulse 1.4s ease-in-out infinite;
+  filter: drop-shadow(0 2px 8px rgba(244, 114, 182, 0.25));
+}
+
+@keyframes audioPulse {
+  0%, 100% {
+    transform: scale(0.94);
+    opacity: 0.72;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+.loading-text {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
 /* Accessibility */
 .sr-only {
   position: absolute;
