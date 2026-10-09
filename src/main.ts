@@ -275,13 +275,13 @@ class SpeedSongApp {
         <label for="playlist-select" class="playlist-select-label">Select Playlist</label>
         <select id="playlist-select" class="playlist-select">
           ${this.manifest.playlists
-            .map(
-              (p) =>
-                `<option value="${p.id}" ${p.id === this.currentPlaylist?.id ? 'selected' : ''}>
+          .map(
+            (p) =>
+              `<option value="${p.id}" ${p.id === this.currentPlaylist?.id ? 'selected' : ''}>
                   ${escapeHtml(p.name)} (${p.songCount} songs)
                 </option>`
-            )
-            .join('')}
+          )
+          .join('')}
         </select>
       `;
 
@@ -332,8 +332,8 @@ class SpeedSongApp {
         <span class="badge">Speed Run Mode</span>
         <h2>Ready to test your ears?</h2>
         <p>
-          Guess songs from <strong>${escapeHtml(this.currentPlaylist?.name || 'your playlist')}</strong> 
-          starting from a tiny 0.1s clip!
+          Guess songs from my playlist <strong>${escapeHtml(this.currentPlaylist?.name || 'your playlist')}</strong> 
+          as fast as you can!
         </p>
         <button type="button" class="btn-play" id="btn-start-game">
           Start Game ▶
