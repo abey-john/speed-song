@@ -16,7 +16,12 @@ async function checkPreviews() {
   let failedPreviews = 0;
   let failedArtwork = 0;
 
+  const limitCheck = process.env.LIMIT_CHECK ? parseInt(process.env.LIMIT_CHECK, 10) : undefined;
+  const targetPlaylistId = process.env.PLAYLIST_ID;
+
   for (const plEntry of manifest.playlists) {
+    if (targetPlaylistId && plEntry.id !== targetPlaylistId) continue;
+
     const plPath = path.resolve(process.cwd(), 'public', 'data', plEntry.file);
     if (!fs.existsSync(plPath)) {
       console.warn(`⚠️ Missing playlist file: ${plPath}`);
@@ -27,6 +32,7 @@ async function checkPreviews() {
     console.log(`Checking playlist: "${playlist.name}" (${playlist.songs.length} songs)...`);
 
     for (const song of playlist.songs) {
+      if (limitCheck && totalChecked >= limitCheck) break;
       totalChecked++;
 
       // Check previewUrl (HEAD or range GET)

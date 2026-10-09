@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:e2e": "tsx scripts/verify-e2e.ts",
     "auth": "tsx --env-file=.env scripts/data/auth.ts",
     "sync:playlists": "tsx --env-file=.env scripts/data/sync-playlists.ts",
     "data:build": "tsx --env-file=.env scripts/data/index.ts",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.13.9",
+    "playwright": "^1.64.0",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2",
     "vite": "^6.2.0",
