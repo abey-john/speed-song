@@ -42,11 +42,18 @@ class SpeedSongApp {
         return;
       }
 
-      // Restore last playlist or use first
-      const savedId = localStorage.getItem(LAST_PLAYLIST_KEY);
-      const chosen =
-        this.manifest.playlists.find((p) => p.id === savedId) || this.manifest.playlists[0]!;
+      // Default to compendium, or restore user's explicit saved choice
+      const compendium =
+        this.manifest.playlists.find((p) => p.name.toLowerCase().trim() === 'compendium') ||
+        this.manifest.playlists[0]!;
 
+      const savedId = localStorage.getItem(LAST_PLAYLIST_KEY);
+      const isStaleOldDefault = savedId === '3CpV0J5JEMkTYnLlOoEaWs';
+      const saved = savedId && !isStaleOldDefault
+        ? this.manifest.playlists.find((p) => p.id === savedId)
+        : undefined;
+
+      const chosen = saved || compendium;
       await this.selectPlaylist(chosen.id);
     } catch (err) {
       console.error('[app] Init error:', err);

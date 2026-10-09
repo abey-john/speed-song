@@ -11,6 +11,22 @@ export function getStaticDataUrl(relativePath: string): string {
 }
 
 /**
+ * Sorts playlists with compendium and pantheon pinned at the top,
+ * followed by remaining playlists in alphabetical order.
+ */
+export function sortPlaylists<T extends { name: string }>(playlists: T[]): T[] {
+  return [...playlists].sort((a, b) => {
+    const aName = a.name.toLowerCase().trim();
+    const bName = b.name.toLowerCase().trim();
+    if (aName === 'compendium' && bName !== 'compendium') return -1;
+    if (bName === 'compendium' && aName !== 'compendium') return 1;
+    if (aName === 'pantheon' && bName !== 'pantheon') return -1;
+    if (bName === 'pantheon' && aName !== 'pantheon') return 1;
+    return a.name.localeCompare(b.name);
+  });
+}
+
+/**
  * Loads the static manifest containing available playlists.
  */
 export async function loadManifest(): Promise<Manifest> {
@@ -26,7 +42,10 @@ export async function loadManifest(): Promise<Manifest> {
     throw new Error('Invalid manifest JSON structure');
   }
 
-  return data;
+  return {
+    ...data,
+    playlists: sortPlaylists(data.playlists),
+  };
 }
 
 /**

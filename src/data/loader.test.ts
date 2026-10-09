@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { loadManifest, loadPlaylist, getStaticDataUrl } from './loader';
+import { loadManifest, loadPlaylist, getStaticDataUrl, sortPlaylists } from './loader';
 
 describe('src/data/loader', () => {
   const originalFetch = global.fetch;
@@ -56,5 +56,24 @@ describe('src/data/loader', () => {
   it('throws helpful error on HTTP failure', async () => {
     global.fetch = vi.fn().mockResolvedValue(new Response('Not Found', { status: 404, statusText: 'Not Found' }));
     await expect(loadManifest()).rejects.toThrow(/Failed to load game manifest/);
+  });
+
+  it('pins compendium and pantheon at the top of playlists', () => {
+    const list = [
+      { name: '🦀' },
+      { name: 'Pantheon' },
+      { name: '2023 highlights' },
+      { name: 'compendium' },
+      { name: 'belt' },
+    ];
+
+    const sorted = sortPlaylists(list);
+    expect(sorted.map((p) => p.name)).toEqual([
+      'compendium',
+      'Pantheon',
+      '🦀',
+      '2023 highlights',
+      'belt',
+    ]);
   });
 });

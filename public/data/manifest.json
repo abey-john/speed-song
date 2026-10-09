@@ -2,6 +2,18 @@
   "generatedAt": "2026-10-09T07:23:37.361Z",
   "playlists": [
     {
+      "id": "6auUmzLNqMEfTaaM2vBXju",
+      "name": "compendium",
+      "songCount": 4205,
+      "file": "playlists/6auUmzLNqMEfTaaM2vBXju.json"
+    },
+    {
+      "id": "4d5Ge5O4ep1eV9e2PFKyoh",
+      "name": "Pantheon",
+      "songCount": 73,
+      "file": "playlists/4d5Ge5O4ep1eV9e2PFKyoh.json"
+    },
+    {
       "id": "3CpV0J5JEMkTYnLlOoEaWs",
       "name": "🦀",
       "songCount": 48,
@@ -50,12 +62,6 @@
       "file": "playlists/2qPSijrRus2BUQ8LKmZTts.json"
     },
     {
-      "id": "6auUmzLNqMEfTaaM2vBXju",
-      "name": "compendium",
-      "songCount": 4205,
-      "file": "playlists/6auUmzLNqMEfTaaM2vBXju.json"
-    },
-    {
       "id": "3UpWJxyxebaKiw0IAMKIPv",
       "name": "dance now",
       "songCount": 43,
@@ -66,12 +72,6 @@
       "name": "live 105",
       "songCount": 166,
       "file": "playlists/37vcSy5hYWYCdtV7uuOkuS.json"
-    },
-    {
-      "id": "4d5Ge5O4ep1eV9e2PFKyoh",
-      "name": "Pantheon",
-      "songCount": 73,
-      "file": "playlists/4d5Ge5O4ep1eV9e2PFKyoh.json"
     },
     {
       "id": "7bXnPvTLZFaNyOeRCNXg7y",

@@ -6,6 +6,7 @@ import { loadCache, saveCache, isCacheValid } from './cache';
 import { loadOverrides } from './overrides';
 import { deduplicateSongs } from './dedupe';
 import { Manifest, PlaylistFile, Song } from '../../src/data/types';
+import { sortPlaylists } from '../../src/data/loader';
 import { CacheEntry, UnmatchedReportEntry } from './types';
 
 async function runDataPipeline() {
@@ -210,7 +211,7 @@ async function runDataPipeline() {
       // Incremental manifest update
       const currentManifest: Manifest = {
         generatedAt: new Date().toISOString(),
-        playlists: [...manifestPlaylists].sort((a, b) => a.name.localeCompare(b.name)),
+        playlists: sortPlaylists(manifestPlaylists),
       };
       fs.writeFileSync(path.join(publicDataDir, 'manifest.json'), JSON.stringify(currentManifest, null, 2) + '\n', 'utf-8');
     } else {
@@ -222,7 +223,7 @@ async function runDataPipeline() {
   // Write Manifest
   const manifest: Manifest = {
     generatedAt: new Date().toISOString(),
-    playlists: manifestPlaylists.sort((a, b) => a.name.localeCompare(b.name)),
+    playlists: sortPlaylists(manifestPlaylists),
   };
 
   fs.writeFileSync(path.join(publicDataDir, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n', 'utf-8');
