@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Production build
+dist/
+
+# Local env files
+.env
+.env*.local
+
+# Data output / reports (except committed cache & overrides)
+data/unmatched.json
+scripts/data/.temp*
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/*
+!.vscode/extensions.json
+
+# Notes
+notes/
