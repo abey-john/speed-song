@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-09T07:23:37.361Z",
+  "generatedAt": "2026-10-10T07:41:25.132Z",
   "playlists": [
     {
       "id": "6auUmzLNqMEfTaaM2vBXju",
       "name": "compendium",
-      "songCount": 4205,
+      "songCount": 4216,
       "file": "playlists/6auUmzLNqMEfTaaM2vBXju.json"
     },
     {
@@ -40,7 +40,7 @@
     {
       "id": "6kzGwYY7BnwfdQfnZBDKQw",
       "name": "2026 highlights",
-      "songCount": 77,
+      "songCount": 79,
       "file": "playlists/6kzGwYY7BnwfdQfnZBDKQw.json"
     },
     {

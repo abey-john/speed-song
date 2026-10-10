@@ -17,7 +17,7 @@
 The system consists of two independent halves connected by static JSON:
 1. **Build-Time Data Pipeline** (`scripts/data/`):
    - Fetches public playlist tracks from Spotify (using Spotify app credentials).
-   - Resolves 30-second studio audio preview clips and high-res artwork from Apple (Apple Music web + iTunes Search API fallback).
+   - Resolves 30-second studio audio intro clips hosted on Cloudflare R2 and official high-res artwork from Spotify CDN.
    - Caches resolutions in `data/match-cache.json` and respects manual overrides in `data/overrides.json`.
    - Generates static JSON files in `public/data/` (`manifest.json` and `playlists/<id>.json`).
 2. **Static Frontend** (`src/`):

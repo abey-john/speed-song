@@ -27,7 +27,8 @@ export interface PipelinePlaylist {
 export interface CacheEntry {
   previewUrl?: string;
   artworkUrl?: string;
-  source?: 'apple-web' | 'itunes-api' | 'manual';
+  source?: 'manual' | 'intro-local' | 'r2';
+  previewType?: 'intro' | 'chorus';
   resolvedAt: string;
   failed?: boolean;
   failureReason?: string;
@@ -38,17 +39,11 @@ export type MatchCache = Record<string, CacheEntry>;
 export interface OverrideEntry {
   previewUrl?: string;
   artworkUrl?: string;
-  appleAlbumUrl?: string;
+  youtubeUrl?: string;
   skip?: boolean;
 }
 
 export type Overrides = Record<string, OverrideEntry>;
-
-export interface ResolutionResult {
-  previewUrl: string;
-  artworkUrl: string;
-  source: 'apple-web' | 'itunes-api';
-}
 
 export interface UnmatchedReportEntry {
   playlist: string;

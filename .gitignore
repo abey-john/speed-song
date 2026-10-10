@@ -18,6 +18,7 @@ dist/
 # Data output / reports (except committed cache & overrides)
 data/unmatched.json
 scripts/data/.temp*
+public/audio/
 
 # Test artifacts & Coverage
 coverage/

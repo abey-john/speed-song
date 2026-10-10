@@ -64,5 +64,14 @@ export async function loadPlaylist(playlistFileRelativePath: string): Promise<Pl
     throw new Error('Invalid playlist JSON structure');
   }
 
-  return data;
+  return {
+    ...data,
+    songs: data.songs.map((song) => ({
+      ...song,
+      previewUrl:
+        song.previewUrl.startsWith('http://') || song.previewUrl.startsWith('https://')
+          ? song.previewUrl
+          : getStaticDataUrl(song.previewUrl),
+    })),
+  };
 }

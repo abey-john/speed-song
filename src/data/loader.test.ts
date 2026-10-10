@@ -51,6 +51,30 @@ describe('src/data/loader', () => {
     const playlist = await loadPlaylist('playlists/p1.json');
     expect(playlist.songs).toHaveLength(1);
     expect(playlist.songs[0]?.title).toBe('Song');
+    expect(playlist.songs[0]?.previewUrl).toBe('https://example.com/audio.m4a');
+  });
+
+  it('resolves relative previewUrl using base path', async () => {
+    const mockPlaylist = {
+      id: 'p1',
+      name: 'Playlist 1',
+      generatedAt: '2026-10-08T00:00:00Z',
+      songs: [
+        {
+          id: 's2',
+          title: 'Song 2',
+          artist: 'Artist',
+          album: 'Album',
+          previewUrl: 'audio/s2.m4a',
+          artworkUrl: 'https://example.com/art.jpg',
+        },
+      ],
+    };
+
+    global.fetch = vi.fn().mockResolvedValue(new Response(JSON.stringify(mockPlaylist), { status: 200 }));
+
+    const playlist = await loadPlaylist('playlists/p1.json');
+    expect(playlist.songs[0]?.previewUrl).toContain('audio/s2.m4a');
   });
 
   it('throws helpful error on HTTP failure', async () => {

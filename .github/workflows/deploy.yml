@@ -40,13 +40,18 @@ jobs:
         run: npm test
 
       # Only run the data pipeline on scheduled or manual runs, and only if Spotify secrets are provided
-      - name: Build Spotify & Apple data pipeline
+      - name: Build Spotify playlist data pipeline
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
           SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
           INCLUDE_FOLLOWED: ${{ secrets.INCLUDE_FOLLOWED || 'false' }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          R2_PUBLIC_URL: ${{ secrets.R2_PUBLIC_URL }}
         run: |
           if [ -z "$SPOTIFY_CLIENT_ID" ]; then
             echo "SPOTIFY_CLIENT_ID not configured; skipping data rebuild."

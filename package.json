@@ -13,9 +13,14 @@
     "auth": "tsx --env-file=.env scripts/data/auth.ts",
     "sync:playlists": "tsx --env-file=.env scripts/data/sync-playlists.ts",
     "data:build": "tsx --env-file=.env scripts/data/index.ts",
-    "data:check": "tsx --env-file=.env scripts/data/check-previews.ts"
+    "data:check": "tsx --env-file=.env scripts/data/check-previews.ts",
+    "data:ingest": "tsx --env-file=.env scripts/data/ingest-intro.ts",
+    "data:update": "tsx --env-file=.env scripts/data/update-all.ts",
+    "data:count": "tsx --env-file=.env scripts/data/count-bucket.ts",
+    "data:throttle": "tsx scripts/data/test-throttle.ts"
   },
   "devDependencies": {
+    "@aws-sdk/client-s3": "^3.1149.0",
     "@types/node": "^22.13.9",
     "playwright": "^1.64.0",
     "tsx": "^4.19.3",

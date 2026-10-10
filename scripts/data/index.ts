@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fetchUserPlaylists, fetchPlaylistTracks } from './spotify';
-import { resolveTrack } from './resolver';
+import { audioExistsInR2, getR2PublicUrl } from './r2';
 import { loadCache, saveCache, isCacheValid } from './cache';
 import { loadOverrides } from './overrides';
 import { deduplicateSongs } from './dedupe';
@@ -112,13 +112,17 @@ async function runDataPipeline() {
       if (isCacheValid(cached)) {
         if (cached && !cached.failed && cached.previewUrl) {
           resolvedFromCacheCount++;
+          const canonicalArtwork = override?.artworkUrl || track.spotifyArtworkUrl || cached.artworkUrl || '';
+          if (track.spotifyArtworkUrl && cached.artworkUrl !== track.spotifyArtworkUrl) {
+            cached.artworkUrl = track.spotifyArtworkUrl;
+          }
           playableSongs.push({
             id: track.id,
             title: track.title,
             artist: track.artist,
             album: track.album,
             previewUrl: cached.previewUrl,
-            artworkUrl: cached.artworkUrl || track.spotifyArtworkUrl,
+            artworkUrl: canonicalArtwork,
           });
           continue;
         } else if (cached?.failed) {
@@ -137,18 +141,21 @@ async function runDataPipeline() {
         }
       }
 
-      // 3. Resolve via Apple / iTunes
-      process.stdout.write(`  Resolving: "${track.title}" by ${track.artist}... `);
-      const res = await resolveTrack(track.title, track.artist, track.album, track.spotifyArtworkUrl);
+      // 3. Check Cloudflare R2 for studio intro audio
+      process.stdout.write(`  Checking R2: "${track.title}" by ${track.artist}... `);
+      const inR2 = await audioExistsInR2(track.id);
 
-      if (res?.previewUrl) {
+      if (inR2) {
         resolvedFreshCount++;
-        process.stdout.write(`[OK: ${res.source}]\n`);
+        const r2Url = getR2PublicUrl(track.id);
+        process.stdout.write(`[OK: r2]\n`);
 
+        const canonicalArtwork = override?.artworkUrl || track.spotifyArtworkUrl;
         const newCacheEntry: CacheEntry = {
-          previewUrl: res.previewUrl,
-          artworkUrl: res.artworkUrl,
-          source: res.source,
+          previewUrl: r2Url,
+          artworkUrl: canonicalArtwork,
+          source: 'r2',
+          previewType: 'intro',
           resolvedAt: new Date().toISOString(),
         };
         cache[track.id] = newCacheEntry;
@@ -158,16 +165,16 @@ async function runDataPipeline() {
           title: track.title,
           artist: track.artist,
           album: track.album,
-          previewUrl: res.previewUrl,
-          artworkUrl: res.artworkUrl,
+          previewUrl: r2Url,
+          artworkUrl: canonicalArtwork,
         });
       } else {
         unmatchedCount++;
-        process.stdout.write(`[UNMATCHED]\n`);
+        process.stdout.write(`[PENDING INTRO INGESTION]\n`);
 
         cache[track.id] = {
           failed: true,
-          failureReason: 'No preview found on Apple Web or iTunes API',
+          failureReason: 'Needs intro audio ingestion to R2 (run npm run data:ingest)',
           resolvedAt: new Date().toISOString(),
         };
 
@@ -178,7 +185,7 @@ async function runDataPipeline() {
           title: track.title,
           artist: track.artist,
           album: track.album,
-          reason: 'No preview found on Apple Web or iTunes API',
+          reason: 'Needs intro audio ingestion to R2 (run npm run data:ingest)',
         });
       }
     }
