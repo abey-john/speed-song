@@ -1,7 +1,7 @@
 {
   "id": "5v0MCLaFomo8zUgeKtJfhs",
   "name": "Adventure Time",
-  "generatedAt": "2026-10-10T07:41:03.671Z",
+  "generatedAt": "2026-10-10T07:57:42.314Z",
   "songs": [
     {
       "id": "6AYFKOPbmd12rUP5DalRwB",
@@ -338,6 +338,14 @@
       "album": "Oh, Inverted World (20th Anniversary Remaster)",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0NslHuacjxQYfUTOW3HCIV.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734205b816277c7f9dba098d28"
+    },
+    {
+      "id": "78ugJH8q6W3kiGLwM2K7Lg",
+      "title": "Nina + Field of Cops",
+      "artist": "Cameron Winter",
+      "album": "Heavy Metal",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/78ugJH8q6W3kiGLwM2K7Lg.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734738aa171569052376f162fe"
     },
     {
       "id": "4oEf84vBYVftf6KmZexhVo",

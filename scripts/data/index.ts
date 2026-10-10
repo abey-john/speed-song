@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fetchUserPlaylists, fetchPlaylistTracks } from './spotify';
 import { audioExistsInR2, getR2PublicUrl } from './r2';
-import { loadCache, saveCache, isCacheValid } from './cache';
+import { loadCache, saveCache } from './cache';
 import { loadOverrides } from './overrides';
 import { deduplicateSongs } from './dedupe';
 import { Manifest, PlaylistFile, Song } from '../../src/data/types';
@@ -109,36 +109,21 @@ async function runDataPipeline() {
 
       // 2. Cache lookup
       const cached = cache[track.id];
-      if (isCacheValid(cached)) {
-        if (cached && !cached.failed && cached.previewUrl) {
-          resolvedFromCacheCount++;
-          const canonicalArtwork = override?.artworkUrl || track.spotifyArtworkUrl || cached.artworkUrl || '';
-          if (track.spotifyArtworkUrl && cached.artworkUrl !== track.spotifyArtworkUrl) {
-            cached.artworkUrl = track.spotifyArtworkUrl;
-          }
-          playableSongs.push({
-            id: track.id,
-            title: track.title,
-            artist: track.artist,
-            album: track.album,
-            previewUrl: cached.previewUrl,
-            artworkUrl: canonicalArtwork,
-          });
-          continue;
-        } else if (cached?.failed) {
-          // Recently failed, skip trying again
-          unmatchedCount++;
-          unmatchedReport.push({
-            playlist: pl.name,
-            playlistId: pl.id,
-            trackId: track.id,
-            title: track.title,
-            artist: track.artist,
-            album: track.album,
-            reason: cached.failureReason || 'Previously failed resolution',
-          });
-          continue;
+      if (cached?.previewUrl) {
+        resolvedFromCacheCount++;
+        const canonicalArtwork = override?.artworkUrl || track.spotifyArtworkUrl || cached.artworkUrl || '';
+        if (track.spotifyArtworkUrl && cached.artworkUrl !== track.spotifyArtworkUrl) {
+          cached.artworkUrl = track.spotifyArtworkUrl;
         }
+        playableSongs.push({
+          id: track.id,
+          title: track.title,
+          artist: track.artist,
+          album: track.album,
+          previewUrl: cached.previewUrl,
+          artworkUrl: canonicalArtwork,
+        });
+        continue;
       }
 
       // 3. Check Cloudflare R2 for studio intro audio

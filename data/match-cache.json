@@ -520,7 +520,11 @@
   "0AJb1Y223Ao47JCDeAUO0z": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:17.032Z"
+    "resolvedAt": "2026-10-10T07:51:24.148Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0AJb1Y223Ao47JCDeAUO0z.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cd8330aea6549a0d6207e22d",
+    "source": "r2",
+    "previewType": "intro"
   },
   "0AKAxdNkwq9ZxRdW1DN9zW": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0AKAxdNkwq9ZxRdW1DN9zW.m4a",
@@ -1015,7 +1019,11 @@
   "0IaR6HCEObaHxA52i0fdKU": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:23.996Z"
+    "resolvedAt": "2026-10-10T07:53:57.724Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0IaR6HCEObaHxA52i0fdKU.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27351adf6c40da8c3e2635893e9",
+    "source": "r2",
+    "previewType": "intro"
   },
   "0InIeZW4P6VO7dUGRM4AKH": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0InIeZW4P6VO7dUGRM4AKH.m4a",
@@ -1300,7 +1308,11 @@
   "0MnJ73xPk7rQDw0lIu8kBh": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:01:53.046Z"
+    "resolvedAt": "2026-10-10T07:54:33.387Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0MnJ73xPk7rQDw0lIu8kBh.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27320f08caabcf7658d36c98637",
+    "source": "r2",
+    "previewType": "intro"
   },
   "0N3W5peJUQtI4eyR6GJT5O": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0N3W5peJUQtI4eyR6GJT5O.m4a",
@@ -1557,7 +1569,11 @@
   "0SR4ItBJEpDf5I6zrcPDt4": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:21.524Z"
+    "resolvedAt": "2026-10-10T07:55:02.650Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0SR4ItBJEpDf5I6zrcPDt4.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "0SYRVn2YF7HBscQEmlkpTI": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0SYRVn2YF7HBscQEmlkpTI.m4a",
@@ -2164,7 +2180,11 @@
   "0bfKYrMLEDJ4fvcxzrMIwB": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:20.770Z"
+    "resolvedAt": "2026-10-10T07:52:28.364Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0bfKYrMLEDJ4fvcxzrMIwB.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cbdf4879d2607221b6a49908",
+    "source": "r2",
+    "previewType": "intro"
   },
   "0c0ptxjRaqaxMM8gvSWCG0": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0c0ptxjRaqaxMM8gvSWCG0.m4a",
@@ -2239,7 +2259,11 @@
   "0d0jsoba88SpOoFxCxA2rZ": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:19.911Z"
+    "resolvedAt": "2026-10-10T07:52:18.362Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0d0jsoba88SpOoFxCxA2rZ.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d58e537cea05c2156792c53d",
+    "source": "r2",
+    "previewType": "intro"
   },
   "0d28khcov6AiegSCpG5TuT": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0d28khcov6AiegSCpG5TuT.m4a",
@@ -2328,7 +2352,11 @@
   "0e8nrvls4Qqv5Rfa2UhqmO": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:42.318Z"
+    "resolvedAt": "2026-10-10T07:55:52.916Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0e8nrvls4Qqv5Rfa2UhqmO.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f27e4bdc58ebe249a6b90da0",
+    "source": "r2",
+    "previewType": "intro"
   },
   "0eBryM7ePQH3Klt3jz8xZd": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0eBryM7ePQH3Klt3jz8xZd.m4a",
@@ -2935,7 +2963,11 @@
   "0oaQasvlfdkSWepVuHFQtY": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:24.860Z"
+    "resolvedAt": "2026-10-10T07:55:12.541Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0oaQasvlfdkSWepVuHFQtY.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "0oemhAQXaaIHCEARF9JFGg": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0oemhAQXaaIHCEARF9JFGg.m4a",
@@ -2961,7 +2993,11 @@
   "0oiGUMBeL8Bn0csxAl4a1W": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:07.788Z"
+    "resolvedAt": "2026-10-10T07:54:54.223Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0oiGUMBeL8Bn0csxAl4a1W.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27345d60424109af911a1a2b1ef",
+    "source": "r2",
+    "previewType": "intro"
   },
   "0ono6UCNVZ1XqOm6j78Blu": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0ono6UCNVZ1XqOm6j78Blu.m4a",
@@ -3617,7 +3653,11 @@
   "0y4eECj53tUhMbKLTb8QOy": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:27.809Z"
+    "resolvedAt": "2026-10-10T07:55:20.847Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0y4eECj53tUhMbKLTb8QOy.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "0y5CnV2idm2KkQEudDjfDT": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0y5CnV2idm2KkQEudDjfDT.m4a",
@@ -4056,7 +4096,11 @@
   "16KosXZZWdX6SBWkwQUnBM": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:23.854Z"
+    "resolvedAt": "2026-10-10T07:53:45.968Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/16KosXZZWdX6SBWkwQUnBM.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cd8330aea6549a0d6207e22d",
+    "source": "r2",
+    "previewType": "intro"
   },
   "16eB3xbzGIjd6nItEzgxlf": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/16eB3xbzGIjd6nItEzgxlf.m4a",
@@ -4292,7 +4336,11 @@
   "1A5V1sxyCLpKJezp75tUXn": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:20.080Z"
+    "resolvedAt": "2026-10-10T07:52:07.592Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1A5V1sxyCLpKJezp75tUXn.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dec0d479b10bccff532074ed",
+    "source": "r2",
+    "previewType": "intro"
   },
   "1A9bOtUg91RLO9nGzXF8ao": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1A9bOtUg91RLO9nGzXF8ao.m4a",
@@ -4612,7 +4660,11 @@
   "1EtR8nAoFKJryJqmf426YZ": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:26.207Z"
+    "resolvedAt": "2026-10-10T07:55:18.697Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1EtR8nAoFKJryJqmf426YZ.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "1ExfPZEiahqhLyajhybFeS": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1ExfPZEiahqhLyajhybFeS.m4a",
@@ -4743,7 +4795,11 @@
   "1HNkqx9Ahdgi1Ixy2xkKkL": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:21.495Z"
+    "resolvedAt": "2026-10-10T07:52:38.601Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1HNkqx9Ahdgi1Ixy2xkKkL.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27313b3e37318a0c247b550bccd",
+    "source": "r2",
+    "previewType": "intro"
   },
   "1HNywa8Bk0TmzRwQrzhtPo": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1HNywa8Bk0TmzRwQrzhtPo.m4a",
@@ -5007,7 +5063,11 @@
   "1Kn5uogxM7gTdNCC8KbO5c": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T06:11:51.971Z"
+    "resolvedAt": "2026-10-10T07:54:18.519Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1Kn5uogxM7gTdNCC8KbO5c.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27334588bd81207d67468b2f15f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "1L2ZkXbRX00ZiaUDuMMgf7": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1L2ZkXbRX00ZiaUDuMMgf7.m4a",
@@ -5068,7 +5128,11 @@
   "1LmN9SSHISbtp9LoaR5ZVJ": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:22.881Z"
+    "resolvedAt": "2026-10-10T07:53:21.030Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1LmN9SSHISbtp9LoaR5ZVJ.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733119f490f02fcee6514e8604",
+    "source": "r2",
+    "previewType": "intro"
   },
   "1LmRAxdZUEM9xc2wNivy1y": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1LmRAxdZUEM9xc2wNivy1y.m4a",
@@ -5472,7 +5536,11 @@
   "1TORE12p4q3lu5OBhRJRvi": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:24.535Z"
+    "resolvedAt": "2026-10-10T07:55:42.425Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1TORE12p4q3lu5OBhRJRvi.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733174a9f789d91a20d3ef14aa",
+    "source": "r2",
+    "previewType": "intro"
   },
   "1ThmUihH9dF8EV08ku5AXN": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1ThmUihH9dF8EV08ku5AXN.m4a",
@@ -5659,7 +5727,11 @@
   "1WbYFNSUNn9fP1x0Z5DU95": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T05:37:14.117Z"
+    "resolvedAt": "2026-10-10T07:50:46.493Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1WbYFNSUNn9fP1x0Z5DU95.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a10c96e646a854b11cebd2f4",
+    "source": "r2",
+    "previewType": "intro"
   },
   "1WjbfWpctTwsWmNsbnV7BI": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1WjbfWpctTwsWmNsbnV7BI.m4a",
@@ -5797,7 +5869,11 @@
   "1YdtGoSYDvVQKoUqSDXX41": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:24.145Z"
+    "resolvedAt": "2026-10-10T07:55:40.742Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1YdtGoSYDvVQKoUqSDXX41.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273084a94988541c2402615d014",
+    "source": "r2",
+    "previewType": "intro"
   },
   "1YiAY1oCmkFjUabQL9gos4": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1YiAY1oCmkFjUabQL9gos4.m4a",
@@ -7587,7 +7663,11 @@
   "206uaQyzb8kOiZ7rHw9wCn": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:22.039Z"
+    "resolvedAt": "2026-10-10T07:52:59.059Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/206uaQyzb8kOiZ7rHw9wCn.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b8e93fb57fea5129617e3555",
+    "source": "r2",
+    "previewType": "intro"
   },
   "2073QOEC8rBtSyTsRyaWiP": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2073QOEC8rBtSyTsRyaWiP.m4a",
@@ -7704,7 +7784,11 @@
   "226wUCyDbHZ0cAs3InvNmo": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:22.610Z"
+    "resolvedAt": "2026-10-10T07:53:17.271Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/226wUCyDbHZ0cAs3InvNmo.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739cc9c2489710c634796e7f72",
+    "source": "r2",
+    "previewType": "intro"
   },
   "2297mxrYLBAC4XkhXs39If": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2297mxrYLBAC4XkhXs39If.m4a",
@@ -8654,7 +8738,11 @@
   "2FK1qmw8XNBqUe5CcgTVnE": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:22.469Z"
+    "resolvedAt": "2026-10-10T07:53:04.491Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2FK1qmw8XNBqUe5CcgTVnE.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273804533fa6608d1c8d420dbeb",
+    "source": "r2",
+    "previewType": "intro"
   },
   "2FQrifJ1N335Ljm3TjTVVf": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2FQrifJ1N335Ljm3TjTVVf.m4a",
@@ -8673,7 +8761,11 @@
   "2FZsOypXRoYIrGI6s8C3Zm": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:01:56.857Z"
+    "resolvedAt": "2026-10-10T07:54:41.837Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2FZsOypXRoYIrGI6s8C3Zm.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734738aa171569052376f162fe",
+    "source": "r2",
+    "previewType": "intro"
   },
   "2FeBslNBMdR9V58uv6hd2t": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2FeBslNBMdR9V58uv6hd2t.m4a",
@@ -8937,7 +9029,11 @@
   "2Jeh872xwy19kZWTh0W3cp": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:19.529Z"
+    "resolvedAt": "2026-10-10T07:51:57.412Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2Jeh872xwy19kZWTh0W3cp.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27395668a6c6cb887251b7c7ec3",
+    "source": "r2",
+    "previewType": "intro"
   },
   "2JoUtztTqCN4ZhmbRDGPIL": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2JoUtztTqCN4ZhmbRDGPIL.m4a",
@@ -9257,7 +9353,11 @@
   "2OiBrXP8M2EkF10c5FYod6": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:20.908Z"
+    "resolvedAt": "2026-10-10T07:55:00.360Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2OiBrXP8M2EkF10c5FYod6.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "2P3SLxeQHPqh8qKB6gtJY2": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2P3SLxeQHPqh8qKB6gtJY2.m4a",
@@ -9808,7 +9908,11 @@
   "2WNP92cnREKAU4PmzwfKvf": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:23.714Z"
+    "resolvedAt": "2026-10-10T07:53:45.763Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2WNP92cnREKAU4PmzwfKvf.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cd8330aea6549a0d6207e22d",
+    "source": "r2",
+    "previewType": "intro"
   },
   "2WQ8KMLXrSV7zL3hlwFVv8": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2WQ8KMLXrSV7zL3hlwFVv8.m4a",
@@ -10002,7 +10106,11 @@
   "2Zb7wnGUnNPCas2E0wWSQ5": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:19.771Z"
+    "resolvedAt": "2026-10-10T07:52:16.609Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2Zb7wnGUnNPCas2E0wWSQ5.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27370cf055d00ab1ec0290d3d5a",
+    "source": "r2",
+    "previewType": "intro"
   },
   "2Zo1PcszsT9WQ0ANntJbID": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2Zo1PcszsT9WQ0ANntJbID.m4a",
@@ -10168,7 +10276,11 @@
   "2c8sgbZoEanC3QyFNZxUcA": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:22.213Z"
+    "resolvedAt": "2026-10-10T07:53:00.784Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2c8sgbZoEanC3QyFNZxUcA.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b497e0b2e0c08b470ee70648",
+    "source": "r2",
+    "previewType": "intro"
   },
   "2cGxRwrMyEAp8dEbuZaVv6": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2cGxRwrMyEAp8dEbuZaVv6.m4a",
@@ -10670,7 +10782,11 @@
   "2iuZJX9X9P0GKaE93xcPjk": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:22.744Z"
+    "resolvedAt": "2026-10-10T07:53:20.907Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2iuZJX9X9P0GKaE93xcPjk.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273442b53773d50e1b5369bb16c",
+    "source": "r2",
+    "previewType": "intro"
   },
   "2jQ1P0aGT4WkNyJCeoQnb9": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2jQ1P0aGT4WkNyJCeoQnb9.m4a",
@@ -10955,7 +11071,11 @@
   "2nqwxzn7svkN30dVGbXdWf": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:20.356Z"
+    "resolvedAt": "2026-10-10T07:52:18.643Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2nqwxzn7svkN30dVGbXdWf.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273507abf494edb40c0d5f473a6",
+    "source": "r2",
+    "previewType": "intro"
   },
   "2o1pb13quMReXZqE7jWsgq": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2o1pb13quMReXZqE7jWsgq.m4a",
@@ -11415,7 +11535,11 @@
   "2x8evxqUlF0eRabbW2JBJd": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:17.916Z"
+    "resolvedAt": "2026-10-10T07:51:40.750Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2x8evxqUlF0eRabbW2JBJd.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b1f8da74f225fa1225cdface",
+    "source": "r2",
+    "previewType": "intro"
   },
   "2x8zUjRP6z5N2GmZ13zU76": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2x8zUjRP6z5N2GmZ13zU76.m4a",
@@ -11845,7 +11969,11 @@
   "34OSqW5ULWxmCEMjJ1ZgVW": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:44.073Z"
+    "resolvedAt": "2026-10-10T07:55:49.497Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/34OSqW5ULWxmCEMjJ1ZgVW.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a274bd961be8afb88d0d5c54",
+    "source": "r2",
+    "previewType": "intro"
   },
   "34aYkYrY3sXhEU9O4VQgtB": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/34aYkYrY3sXhEU9O4VQgtB.m4a",
@@ -11857,7 +11985,11 @@
   "34gCuhDGsG4bRPIf9bb02f": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:21.377Z"
+    "resolvedAt": "2026-10-10T07:52:35.053Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/34gCuhDGsG4bRPIf9bb02f.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27313b3e37318a0c247b550bccd",
+    "source": "r2",
+    "previewType": "intro"
   },
   "34j4OxJxKznBs88cjSL2j9": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/34j4OxJxKznBs88cjSL2j9.m4a",
@@ -11883,7 +12015,11 @@
   "3528IXKpbb7OMjdjWYlbfD": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:18.675Z"
+    "resolvedAt": "2026-10-10T07:51:52.186Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3528IXKpbb7OMjdjWYlbfD.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27370c9c3170d9d50e2d329169d",
+    "source": "r2",
+    "previewType": "intro"
   },
   "359Q4gGdrQIFhRzs7J8gZu": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/359Q4gGdrQIFhRzs7J8gZu.m4a",
@@ -12070,7 +12206,11 @@
   "37ZJ7uHXfK3Y4ORxtoMcoB": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:18.055Z"
+    "resolvedAt": "2026-10-10T07:51:46.233Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/37ZJ7uHXfK3Y4ORxtoMcoB.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27399c497afa30844a315af1359",
+    "source": "r2",
+    "previewType": "intro"
   },
   "37ZtpRBkHcaq6hHy0X98zn": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/37ZtpRBkHcaq6hHy0X98zn.m4a",
@@ -13351,7 +13491,11 @@
   "3RIgHHpnFKj5Rni1shokDj": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:01:44.792Z"
+    "resolvedAt": "2026-10-10T07:54:28.681Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3RIgHHpnFKj5Rni1shokDj.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273879e9318cb9f4e05ee552ac9",
+    "source": "r2",
+    "previewType": "intro"
   },
   "3RKblQNJs8HPvWBgXmq6nn": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3RKblQNJs8HPvWBgXmq6nn.m4a",
@@ -13839,7 +13983,11 @@
   "3XojqFisTYTQm2p7HK5p4P": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:18.194Z"
+    "resolvedAt": "2026-10-10T07:51:56.938Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3XojqFisTYTQm2p7HK5p4P.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ce70cb2d7063cf869f9f1239",
+    "source": "r2",
+    "previewType": "intro"
   },
   "3XtW744bgyQw3Squzk1MnO": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3XtW744bgyQw3Squzk1MnO.m4a",
@@ -14089,12 +14237,20 @@
   "3c7vquF4xacCmFrxztLUVH": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:17.201Z"
+    "resolvedAt": "2026-10-10T07:51:21.512Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3c7vquF4xacCmFrxztLUVH.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27324c80190d731ccaa74415049",
+    "source": "r2",
+    "previewType": "intro"
   },
   "3cBHUfts3KKLqXTo8U91pz": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:21.620Z"
+    "resolvedAt": "2026-10-10T07:52:42.732Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3cBHUfts3KKLqXTo8U91pz.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27309bc4de476a415e70132caf8",
+    "source": "r2",
+    "previewType": "intro"
   },
   "3cHyrEgdyYRjgJKSOiOtcS": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3cHyrEgdyYRjgJKSOiOtcS.m4a",
@@ -14304,7 +14460,11 @@
   "3evG0BIqEFMMP7lVJh1cSf": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:01:55.701Z"
+    "resolvedAt": "2026-10-10T07:54:45.518Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3evG0BIqEFMMP7lVJh1cSf.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736e3d3c964df32136fb1cd594",
+    "source": "r2",
+    "previewType": "intro"
   },
   "3f3omU8n47Mqyab5nCaGyT": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3f3omU8n47Mqyab5nCaGyT.m4a",
@@ -14694,7 +14854,11 @@
   "3mha0HzD52axbosG3H4Xsm": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:22.354Z"
+    "resolvedAt": "2026-10-10T07:53:03.575Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3mha0HzD52axbosG3H4Xsm.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739cc9c2489710c634796e7f72",
+    "source": "r2",
+    "previewType": "intro"
   },
   "3mxArYKgaBlVVTLYrNnms9": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3mxArYKgaBlVVTLYrNnms9.m4a",
@@ -15168,7 +15332,11 @@
   "3vq4QqcaVIRePdxSxRQmPX": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:23.565Z"
+    "resolvedAt": "2026-10-10T07:53:41.533Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3vq4QqcaVIRePdxSxRQmPX.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ce70cb2d7063cf869f9f1239",
+    "source": "r2",
+    "previewType": "intro"
   },
   "3vrOmd6lTTKXGjaYeq8kni": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3vrOmd6lTTKXGjaYeq8kni.m4a",
@@ -15243,7 +15411,11 @@
   "3x1BtwpOBgsXVPHG6nSkpm": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:22.880Z"
+    "resolvedAt": "2026-10-10T07:55:08.616Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3x1BtwpOBgsXVPHG6nSkpm.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "3x3K1RP3Zfi2qeMR8kyrNO": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3x3K1RP3Zfi2qeMR8kyrNO.m4a",
@@ -15367,7 +15539,11 @@
   "3yP6JtxLu2PFmpdEUl7Qj7": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:01:51.380Z"
+    "resolvedAt": "2026-10-10T07:54:21.821Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3yP6JtxLu2PFmpdEUl7Qj7.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731c21dd1d1ea90b5e7cc94c14",
+    "source": "r2",
+    "previewType": "intro"
   },
   "3ySCUGgxRXaP39gbO9Zu3Z": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3ySCUGgxRXaP39gbO9Zu3Z.m4a",
@@ -15617,7 +15793,11 @@
   "41R4fI1Z1w2gsJEFQWdeJs": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:01:59.229Z"
+    "resolvedAt": "2026-10-10T07:54:45.795Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/41R4fI1Z1w2gsJEFQWdeJs.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27345d60424109af911a1a2b1ef",
+    "source": "r2",
+    "previewType": "intro"
   },
   "41WcmdweTbIJAc8tiOR6xw": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/41WcmdweTbIJAc8tiOR6xw.m4a",
@@ -16014,7 +16194,11 @@
   "46EOWTszdIfllYY4o6rjkY": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:18.344Z"
+    "resolvedAt": "2026-10-10T07:51:49.166Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/46EOWTszdIfllYY4o6rjkY.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734068e6db0ec52b1f677119c3",
+    "source": "r2",
+    "previewType": "intro"
   },
   "46H9VQlQW2Aqf4zVY60cYR": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/46H9VQlQW2Aqf4zVY60cYR.m4a",
@@ -16726,7 +16910,11 @@
   "4ICKuJDY5F2XdTR4fIMA7W": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:18.970Z"
+    "resolvedAt": "2026-10-10T07:52:06.599Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4ICKuJDY5F2XdTR4fIMA7W.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737f36ed5b8463f0f99675c4e1",
+    "source": "r2",
+    "previewType": "intro"
   },
   "4IFmjJ4fEuLjTcR7GOtipi": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4IFmjJ4fEuLjTcR7GOtipi.m4a",
@@ -17004,7 +17192,11 @@
   "4M0gfUpAfFRv7O44ZSkRIK": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:25.546Z"
+    "resolvedAt": "2026-10-10T07:55:15.306Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4M0gfUpAfFRv7O44ZSkRIK.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "4M88Wd7Aps5LGRWMOC7gSH": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4M88Wd7Aps5LGRWMOC7gSH.m4a",
@@ -17149,7 +17341,11 @@
   "4Ozk6GESL4KkJ0C1yXgDLf": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:09.870Z"
+    "resolvedAt": "2026-10-10T07:54:58.083Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4Ozk6GESL4KkJ0C1yXgDLf.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737da9ae8f4a4d633772c9513b",
+    "source": "r2",
+    "previewType": "intro"
   },
   "4P0osvTXoSYZZC2n8IFH3c": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4P0osvTXoSYZZC2n8IFH3c.m4a",
@@ -17476,7 +17672,11 @@
   "4SuLBSHPVKd3PypgU88tWZ": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:29.279Z"
+    "resolvedAt": "2026-10-10T07:55:23.330Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4SuLBSHPVKd3PypgU88tWZ.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "4T1iiabe7G0UjWQJCY6NE2": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4T1iiabe7G0UjWQJCY6NE2.m4a",
@@ -18258,7 +18458,11 @@
   "4gbVRS8gloEluzf0GzDOFc": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:23.010Z"
+    "resolvedAt": "2026-10-10T07:53:23.936Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4gbVRS8gloEluzf0GzDOFc.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273442b53773d50e1b5369bb16c",
+    "source": "r2",
+    "previewType": "intro"
   },
   "4gphxUgq0JSFv2BCLhNDiE": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4gphxUgq0JSFv2BCLhNDiE.m4a",
@@ -18606,7 +18810,11 @@
   "4nGAoP1Q1SNv0sd8bK54TF": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:20.208Z"
+    "resolvedAt": "2026-10-10T07:55:00.172Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4nGAoP1Q1SNv0sd8bK54TF.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "4nHnXZfr4IdxYgmYkH8ivZ": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4nHnXZfr4IdxYgmYkH8ivZ.m4a",
@@ -18723,7 +18931,11 @@
   "4pHiSrrtHFlXH3DYACegi0": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:20.918Z"
+    "resolvedAt": "2026-10-10T07:52:39.785Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4pHiSrrtHFlXH3DYACegi0.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b53a4da797ba5472d3330b69",
+    "source": "r2",
+    "previewType": "intro"
   },
   "4pOwXHMGYZbsXQMhYnetHG": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4pOwXHMGYZbsXQMhYnetHG.m4a",
@@ -18826,7 +19038,11 @@
   "4qCZuJKrgXxODnojck347k": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T05:55:59.161Z"
+    "resolvedAt": "2026-10-10T07:51:25.430Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4qCZuJKrgXxODnojck347k.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27313fa877acaff9f268d51efff",
+    "source": "r2",
+    "previewType": "intro"
   },
   "4qRaZYiaOsSvWC7VgcxrI0": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4qRaZYiaOsSvWC7VgcxrI0.m4a",
@@ -19132,7 +19348,11 @@
   "4uiWVcv70Ct5Oz87LCxdrk": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:01:50.435Z"
+    "resolvedAt": "2026-10-10T07:54:22.195Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4uiWVcv70Ct5Oz87LCxdrk.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731c21dd1d1ea90b5e7cc94c14",
+    "source": "r2",
+    "previewType": "intro"
   },
   "4v4HwTfMPslhWAnJxIXchn": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4v4HwTfMPslhWAnJxIXchn.m4a",
@@ -19732,7 +19952,11 @@
   "542gZt6dUt1e0WL0QbIvZJ": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:21.743Z"
+    "resolvedAt": "2026-10-10T07:52:54.419Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/542gZt6dUt1e0WL0QbIvZJ.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731b26d2df7c1cd39d35f7bd73",
+    "source": "r2",
+    "previewType": "intro"
   },
   "54DmTIv86D3sYdiawjULQ0": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/54DmTIv86D3sYdiawjULQ0.m4a",
@@ -20404,7 +20628,11 @@
   "5E8xInnCsDmiI3gKi3da3X": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:23.429Z"
+    "resolvedAt": "2026-10-10T07:53:41.388Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5E8xInnCsDmiI3gKi3da3X.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ce70cb2d7063cf869f9f1239",
+    "source": "r2",
+    "previewType": "intro"
   },
   "5EA06TsQmqmQXZiEhr1AaM": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5EA06TsQmqmQXZiEhr1AaM.m4a",
@@ -20577,7 +20805,11 @@
   "5H5Xx4JYBxrP8DgWpY7Xgk": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:01:52.044Z"
+    "resolvedAt": "2026-10-10T07:54:25.130Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5H5Xx4JYBxrP8DgWpY7Xgk.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731c21dd1d1ea90b5e7cc94c14",
+    "source": "r2",
+    "previewType": "intro"
   },
   "5H6Jp0syB5yEPk7SWYdlmk": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5H6Jp0syB5yEPk7SWYdlmk.m4a",
@@ -20617,7 +20849,11 @@
   "5HRO58hfVhTpGR87AzHaBa": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:01:18.794Z"
+    "resolvedAt": "2026-10-10T07:54:00.967Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5HRO58hfVhTpGR87AzHaBa.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273734b1164a9e0faa980ce1b92",
+    "source": "r2",
+    "previewType": "intro"
   },
   "5HYHGYx3Yl0B344J6eAdgF": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5HYHGYx3Yl0B344J6eAdgF.m4a",
@@ -20923,7 +21159,11 @@
   "5Lng4q571jghXAeYMMndia": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:28.528Z"
+    "resolvedAt": "2026-10-10T07:55:21.261Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5Lng4q571jghXAeYMMndia.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "5MMLS3xm12D7N26xlfFApr": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5MMLS3xm12D7N26xlfFApr.m4a",
@@ -20984,7 +21224,11 @@
   "5NDUXbMwcnTQp66tI2zcdR": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:17.788Z"
+    "resolvedAt": "2026-10-10T07:51:36.598Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5NDUXbMwcnTQp66tI2zcdR.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738c166d9b753745f90caa6cd6",
+    "source": "r2",
+    "previewType": "intro"
   },
   "5NFiJqwS8iMtJwGOgTKa2v": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5NFiJqwS8iMtJwGOgTKa2v.m4a",
@@ -21430,7 +21674,11 @@
   "5TRCIkDGNty4FY284bdjRo": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:22.244Z"
+    "resolvedAt": "2026-10-10T07:55:04.548Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5TRCIkDGNty4FY284bdjRo.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "5TTGoX70AFrTvuEtqHK37S": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5TTGoX70AFrTvuEtqHK37S.m4a",
@@ -21554,7 +21802,11 @@
   "5Vu1MTtsQFUO03YpHyfcuU": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T06:17:03.381Z"
+    "resolvedAt": "2026-10-10T07:54:52.675Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5Vu1MTtsQFUO03YpHyfcuU.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27385113290807451a532ff595e",
+    "source": "r2",
+    "previewType": "intro"
   },
   "5W3cjX2J3tjhG8zb6u0qHn": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5W3cjX2J3tjhG8zb6u0qHn.m4a",
@@ -21608,7 +21860,11 @@
   "5WzpKiMPvbhBFwdZmNio2k": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:23.145Z"
+    "resolvedAt": "2026-10-10T07:53:24.999Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5WzpKiMPvbhBFwdZmNio2k.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ce70cb2d7063cf869f9f1239",
+    "source": "r2",
+    "previewType": "intro"
   },
   "5X2BUItGwr6fU8taExWb2i": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5X2BUItGwr6fU8taExWb2i.m4a",
@@ -21774,7 +22030,11 @@
   "5ZbztTcvj6QWWbeYsL4GTa": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:30.661Z"
+    "resolvedAt": "2026-10-10T07:55:37.333Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5ZbztTcvj6QWWbeYsL4GTa.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733b9b742c5c525af6e6767d87",
+    "source": "r2",
+    "previewType": "intro"
   },
   "5ZfOg71oANMaKmswvSEF2r": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5ZfOg71oANMaKmswvSEF2r.m4a",
@@ -22052,12 +22312,20 @@
   "5edBgVtRD0fvWk140Sl21T": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:17.483Z"
+    "resolvedAt": "2026-10-10T07:51:45.758Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5edBgVtRD0fvWk140Sl21T.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730dcd4d3fb73a5d9ba449a5f3",
+    "source": "r2",
+    "previewType": "intro"
   },
   "5eek2X5459T1HoYJk2CKXv": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:21.081Z"
+    "resolvedAt": "2026-10-10T07:52:33.657Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5eek2X5459T1HoYJk2CKXv.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273883c9f16e98d3aaba93fef97",
+    "source": "r2",
+    "previewType": "intro"
   },
   "5efhPREahj4RnQWyVEOikf": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5efhPREahj4RnQWyVEOikf.m4a",
@@ -22216,7 +22484,11 @@
   "5h9pB5af60LWJBrG1HCHsU": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:19.388Z"
+    "resolvedAt": "2026-10-10T07:51:54.347Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5h9pB5af60LWJBrG1HCHsU.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27395668a6c6cb887251b7c7ec3",
+    "source": "r2",
+    "previewType": "intro"
   },
   "5hA9X4twNR1Z9OFTN8rxfY": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5hA9X4twNR1Z9OFTN8rxfY.m4a",
@@ -22585,7 +22857,11 @@
   "5n8Aro6j1bEGIy7Tpo7FV7": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:00:32.234Z"
+    "resolvedAt": "2026-10-10T07:50:59.922Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5n8Aro6j1bEGIy7Tpo7FV7.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c79a70e8167cc1a4fab83781",
+    "source": "r2",
+    "previewType": "intro"
   },
   "5nEkWBNfUA87RY6ZSx2aR3": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5nEkWBNfUA87RY6ZSx2aR3.m4a",
@@ -24354,7 +24630,11 @@
   "6GIrIt2M39wEGwjCQjGChX": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:17.346Z"
+    "resolvedAt": "2026-10-10T07:51:34.901Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6GIrIt2M39wEGwjCQjGChX.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273317ebb91078852577248ed98",
+    "source": "r2",
+    "previewType": "intro"
   },
   "6GVynE5kXVXoOWksSqMp8B": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6GVynE5kXVXoOWksSqMp8B.m4a",
@@ -24436,7 +24716,11 @@
   "6HSqyfGnsHYw9MmIpa9zlZ": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:21.874Z"
+    "resolvedAt": "2026-10-10T07:52:56.253Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6HSqyfGnsHYw9MmIpa9zlZ.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737c22c8b9a5cfe27cd9914c4c",
+    "source": "r2",
+    "previewType": "intro"
   },
   "6HU7h9RYOaPRFeh0R3UeAr": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6HU7h9RYOaPRFeh0R3UeAr.m4a",
@@ -24847,7 +25131,11 @@
   "6NZOc8kO0Fxo0fLPvIdLnW": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:01:29.558Z"
+    "resolvedAt": "2026-10-10T07:54:15.111Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6NZOc8kO0Fxo0fLPvIdLnW.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f30764d5fa1e439ad6a7742f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "6NaBDHz9C7Uz9Z9CwLXQin": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6NaBDHz9C7Uz9Z9CwLXQin.m4a",
@@ -24964,7 +25252,11 @@
   "6OkOFxU6j0UufR97VgSnS7": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:00:45.921Z"
+    "resolvedAt": "2026-10-10T07:51:19.425Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6OkOFxU6j0UufR97VgSnS7.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738c697f553a46006a5d8886b2",
+    "source": "r2",
+    "previewType": "intro"
   },
   "6OnfBiiSc9RGKiBKKtZXgQ": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6OnfBiiSc9RGKiBKKtZXgQ.m4a",
@@ -25606,7 +25898,11 @@
   "6ZIuit0z4eQg77F1RGkp0L": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:20.635Z"
+    "resolvedAt": "2026-10-10T07:52:20.065Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6ZIuit0z4eQg77F1RGkp0L.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731347adcb6451a904b671bec4",
+    "source": "r2",
+    "previewType": "intro"
   },
   "6ZOBP3NvffbU4SZcrnt1k6": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6ZOBP3NvffbU4SZcrnt1k6.m4a",
@@ -25772,7 +26068,11 @@
   "6cQnrSlTxhHCCiUpKrs7g3": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:20.521Z"
+    "resolvedAt": "2026-10-10T07:52:18.415Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6cQnrSlTxhHCCiUpKrs7g3.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731347adcb6451a904b671bec4",
+    "source": "r2",
+    "previewType": "intro"
   },
   "6cS9PmLky2NhLOhpIsUlow": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6cS9PmLky2NhLOhpIsUlow.m4a",
@@ -25966,7 +26266,11 @@
   "6fgbQt13JlpN59PytgTMsA": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:20.222Z"
+    "resolvedAt": "2026-10-10T07:52:09.123Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6fgbQt13JlpN59PytgTMsA.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737056328c4d7eee31b3677e98",
+    "source": "r2",
+    "previewType": "intro"
   },
   "6foA8EHExHnZ6ZWJq8kHPE": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6foA8EHExHnZ6ZWJq8kHPE.m4a",
@@ -26881,7 +27185,11 @@
   "6t83zAQg9Efca1u1DPL930": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T05:53:32.544Z"
+    "resolvedAt": "2026-10-10T07:51:18.534Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6t83zAQg9Efca1u1DPL930.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ccdfe154fe251276f5ed16d7",
+    "source": "r2",
+    "previewType": "intro"
   },
   "6tCssnvTUREcperDOUTqvA": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6tCssnvTUREcperDOUTqvA.m4a",
@@ -26935,7 +27243,11 @@
   "6u13tCUeMafkT0KFsmvodB": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:21.212Z"
+    "resolvedAt": "2026-10-10T07:52:32.633Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6u13tCUeMafkT0KFsmvodB.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739f5013e0918c4cab46dc0c37",
+    "source": "r2",
+    "previewType": "intro"
   },
   "6u5M4jPpYkoRV4vVHDQvkd": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6u5M4jPpYkoRV4vVHDQvkd.m4a",
@@ -27339,7 +27651,11 @@
   "70Dt20sMmgLQiYOgnClHw1": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T06:59:50.060Z"
+    "resolvedAt": "2026-10-10T07:55:27.244Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/70Dt20sMmgLQiYOgnClHw1.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "70FCugJxa7XW04Np6iYJdI": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/70FCugJxa7XW04Np6iYJdI.m4a",
@@ -27855,7 +28171,11 @@
   "78ugJH8q6W3kiGLwM2K7Lg": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T04:28:03.743Z"
+    "resolvedAt": "2026-10-10T07:54:42.301Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/78ugJH8q6W3kiGLwM2K7Lg.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734738aa171569052376f162fe",
+    "source": "r2",
+    "previewType": "intro"
   },
   "7990Xs9HQx7FXVIDVPEwj9": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7990Xs9HQx7FXVIDVPEwj9.m4a",
@@ -27965,7 +28285,11 @@
   "7B5xJAe8B5f8GlUCoWWv7Z": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:23.284Z"
+    "resolvedAt": "2026-10-10T07:53:37.409Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7B5xJAe8B5f8GlUCoWWv7Z.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ce70cb2d7063cf869f9f1239",
+    "source": "r2",
+    "previewType": "intro"
   },
   "7BHPGtpuuWWsvE7cCaMuEU": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7BHPGtpuuWWsvE7cCaMuEU.m4a",
@@ -28432,7 +28756,11 @@
   "7ItsQ8ow0xsBJSW8NdGH5v": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T06:05:48.477Z"
+    "resolvedAt": "2026-10-10T07:53:58.656Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7ItsQ8ow0xsBJSW8NdGH5v.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273fb9735c11b76601a9c993885",
+    "source": "r2",
+    "previewType": "intro"
   },
   "7IxVWmdabNVhfLBV3JD0nJ": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7IxVWmdabNVhfLBV3JD0nJ.m4a",
@@ -28458,7 +28786,11 @@
   "7JxRr2baHFCCHsAfNxgJz4": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:23.605Z"
+    "resolvedAt": "2026-10-10T07:55:10.591Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7JxRr2baHFCCHsAfNxgJz4.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "7JzTTmvNedMzaYwijsJhxA": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7JzTTmvNedMzaYwijsJhxA.m4a",
@@ -28554,7 +28886,11 @@
   "7KwGV5HUzjLIk1yFCYAfMn": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:19.128Z"
+    "resolvedAt": "2026-10-10T07:51:58.590Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7KwGV5HUzjLIk1yFCYAfMn.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273230d88bf27d6ca322fb59eb4",
+    "source": "r2",
+    "previewType": "intro"
   },
   "7KwZNVEaqikRSBSpyhXK2j": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7KwZNVEaqikRSBSpyhXK2j.m4a",
@@ -28811,7 +29147,11 @@
   "7cHXss4b7AzJiofmG3TGig": {
     "failed": true,
     "failureReason": "No preview found on Apple Web or iTunes API",
-    "resolvedAt": "2026-10-09T07:02:24.205Z"
+    "resolvedAt": "2026-10-10T07:55:10.586Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7cHXss4b7AzJiofmG3TGig.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f",
+    "source": "r2",
+    "previewType": "intro"
   },
   "7cMFjxhbXBpOlais7KMF3j": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7cMFjxhbXBpOlais7KMF3j.m4a",
@@ -28935,7 +29275,11 @@
   "7e3BbVSFHrB6aa96DI51B3": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:24.423Z"
+    "resolvedAt": "2026-10-10T07:55:43.411Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7e3BbVSFHrB6aa96DI51B3.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733174a9f789d91a20d3ef14aa",
+    "source": "r2",
+    "previewType": "intro"
   },
   "7e44z4wOjkllaD8eulUeMd": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7e44z4wOjkllaD8eulUeMd.m4a",
@@ -29430,7 +29774,11 @@
   "7nB00pmlT3Dc6Vd536ha3l": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:24.278Z"
+    "resolvedAt": "2026-10-10T07:55:41.562Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7nB00pmlT3Dc6Vd536ha3l.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733174a9f789d91a20d3ef14aa",
+    "source": "r2",
+    "previewType": "intro"
   },
   "7nRmfGNhHKEEu5o8yFXLXt": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7nRmfGNhHKEEu5o8yFXLXt.m4a",
@@ -30170,7 +30518,11 @@
   "7zkDEBSxkcBVsStS4qBFpK": {
     "failed": true,
     "failureReason": "Needs intro audio ingestion to R2 (run npm run data:ingest)",
-    "resolvedAt": "2026-10-10T07:41:17.642Z"
+    "resolvedAt": "2026-10-10T07:51:38.242Z",
+    "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7zkDEBSxkcBVsStS4qBFpK.m4a",
+    "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cb36983369136148fecece5a",
+    "source": "r2",
+    "previewType": "intro"
   },
   "7zvfDihYiJ8RQ1nRcpKBF5": {
     "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7zvfDihYiJ8RQ1nRcpKBF5.m4a",

@@ -1,7 +1,7 @@
 {
   "id": "6auUmzLNqMEfTaaM2vBXju",
   "name": "compendium",
-  "generatedAt": "2026-10-10T07:41:24.667Z",
+  "generatedAt": "2026-10-10T07:57:54.618Z",
   "songs": [
     {
       "id": "3MjUtNVVq3C8Fn0MP3zhXa",
@@ -82,6 +82,14 @@
       "album": "Blackstar",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1Xb5UAKg5OdTHkg48FdQou.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273edaa573d262bc9eddca6519b"
+    },
+    {
+      "id": "2FZsOypXRoYIrGI6s8C3Zm",
+      "title": "$0",
+      "artist": "Cameron Winter",
+      "album": "Heavy Metal",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2FZsOypXRoYIrGI6s8C3Zm.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734738aa171569052376f162fe"
     },
     {
       "id": "2zDeZ7u3xsilDm86u1bDBf",
@@ -388,6 +396,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732a7db835b912dc5014bd37f4"
     },
     {
+      "id": "55MIRLbZzpYSmMlRt9ZDWM",
+      "title": "30/90",
+      "artist": "Andrew Garfield, Joshua Henry, Vanessa Hudgens, Robin de Jesus, Alexandra Shipp, MJ Rodriguez",
+      "album": "tick, tick... BOOM! (Soundtrack from the Netflix Film)",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/55MIRLbZzpYSmMlRt9ZDWM.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c234c3d4bc09167a1cc98c33"
+    },
+    {
       "id": "3Z2sglqDj1rDRMF5x0Sz2R",
       "title": "3005",
       "artist": "Childish Gambino",
@@ -410,6 +426,14 @@
       "album": "BRAT",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4w2GLmK2wnioVnb5CPQeex.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f88b43d15fd14e9525338b59"
+    },
+    {
+      "id": "5H5Xx4JYBxrP8DgWpY7Xgk",
+      "title": "365",
+      "artist": "Joey Valence & Brae",
+      "album": "NO HANDS (Deluxe Edition)",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5H5Xx4JYBxrP8DgWpY7Xgk.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731c21dd1d1ea90b5e7cc94c14"
     },
     {
       "id": "4DvoYgOZXnqmKuc2GzzFHz",
@@ -1844,6 +1868,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339ecd7ab3e6c23dfd3ea74ed"
     },
     {
+      "id": "34OSqW5ULWxmCEMjJ1ZgVW",
+      "title": "Anpanman",
+      "artist": "BTS",
+      "album": "Love Yourself 轉 'Tear'",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/34OSqW5ULWxmCEMjJ1ZgVW.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a274bd961be8afb88d0d5c54"
+    },
+    {
       "id": "5osSw3tL07Tuid7AWsvYcc",
       "title": "Ante Up Remix (feat. Busta Rhymes, Teflon & Remi Martin) - Remix",
       "artist": "M.O.P., Busta Rhymes, Teflon, Remi Martin",
@@ -1938,6 +1970,14 @@
       "album": "Are You Gonna Go My Way",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/45Ia1U4KtIjAPPU7Wv1Sea.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273542d87e4d1512bf7facb3860"
+    },
+    {
+      "id": "7cHXss4b7AzJiofmG3TGig",
+      "title": "ARE YOU HAPPY?",
+      "artist": "JPEGMAFIA",
+      "album": "OFFLINE!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7cHXss4b7AzJiofmG3TGig.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
     },
     {
       "id": "3CVPyuuD6HxWXgPbbGqbg6",
@@ -3508,6 +3548,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c2bba46b66a3c8a83a53015"
     },
     {
+      "id": "0y4eECj53tUhMbKLTb8QOy",
+      "title": "BMT - OFFLINE",
+      "artist": "JPEGMAFIA",
+      "album": "OFFLINE!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0y4eECj53tUhMbKLTb8QOy.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
+    },
+    {
       "id": "7CpbhqKUedOIrcvc94p60Y",
       "title": "Bodies",
       "artist": "Drowning Pool",
@@ -5044,6 +5092,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27320c315c1e97aef2f65329771"
     },
     {
+      "id": "7ItsQ8ow0xsBJSW8NdGH5v",
+      "title": "Chaiyya Chaiyya",
+      "artist": "Sukhwinder Singh & Sapana Awasthi",
+      "album": "Dil Se",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7ItsQ8ow0xsBJSW8NdGH5v.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273fb9735c11b76601a9c993885"
+    },
+    {
       "id": "5zGElc4Fk95ONl7YihpLFN",
       "title": "Chalk Tablet Towers (feat. St Vincent)",
       "artist": "Gorillaz, St. Vincent",
@@ -5170,6 +5226,14 @@
       "album": "Ants From Up There",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2UEH1NjNHGsoEIr3GKLhNR.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730f4b994c518581bf62157c38"
+    },
+    {
+      "id": "6t83zAQg9Efca1u1DPL930",
+      "title": "Charlie Brown - 2007 Remaster Stereo Single Version; Remastered",
+      "artist": "The Coasters",
+      "album": "There's A Riot Goin' On: The Coasters On Atco",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6t83zAQg9Efca1u1DPL930.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ccdfe154fe251276f5ed16d7"
     },
     {
       "id": "11bD1JtSjlIgKgZG2134DZ",
@@ -6444,6 +6508,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273518548f3d412ddcfd6c16eb8"
     },
     {
+      "id": "4SuLBSHPVKd3PypgU88tWZ",
+      "title": "DAM! DAM! DAM! - OFFLINE",
+      "artist": "JPEGMAFIA",
+      "album": "OFFLINE!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4SuLBSHPVKd3PypgU88tWZ.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
+    },
+    {
       "id": "2OLaeJRrRjFgLfTsccnzlM",
       "title": "Damage Gets Done (feat. Brandi Carlile)",
       "artist": "Hozier, Brandi Carlile",
@@ -7164,6 +7236,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cb3f67e8026e2e493a1e8262"
     },
     {
+      "id": "2OiBrXP8M2EkF10c5FYod6",
+      "title": "DIRTY! - OFFLINE",
+      "artist": "JPEGMAFIA",
+      "album": "OFFLINE!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2OiBrXP8M2EkF10c5FYod6.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
+    },
+    {
       "id": "54DmTIv86D3sYdiawjULQ0",
       "title": "Dis-ease",
       "artist": "BTS",
@@ -7340,6 +7420,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730672b0f8756ae2af86e8a5ce"
     },
     {
+      "id": "5Vu1MTtsQFUO03YpHyfcuU",
+      "title": "Doggy (feat. Love Spells and Truly Young)",
+      "artist": "Geezer, Kevin Abstract, Dominic Fike, Love Spells, Truly Young",
+      "album": "Doggy (feat. Love Spells and Truly Young)",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5Vu1MTtsQFUO03YpHyfcuU.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27385113290807451a532ff595e"
+    },
+    {
       "id": "36c4JohayB9qd64eidQMBi",
       "title": "Doin' it Right (feat. Panda Bear)",
       "artist": "Daft Punk, Panda Bear",
@@ -7474,6 +7562,14 @@
       "album": "Don't Let Me Down",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1i1fxkWeaMmKEB4T7zqbzK.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27302df2d642b572cf4f284a5c3"
+    },
+    {
+      "id": "3evG0BIqEFMMP7lVJh1cSf",
+      "title": "Don't Let Me Down - Remastered 2009",
+      "artist": "The Beatles",
+      "album": "The Beatles 1967 - 1970 (Remastered 2009)",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3evG0BIqEFMMP7lVJh1cSf.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736e3d3c964df32136fb1cd594"
     },
     {
       "id": "12D0n7hKpPcjuUpcbAKjjr",
@@ -8322,6 +8418,14 @@
       "album": "Speak Now",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/10eBRyImhfqVvkiVEGf0N0.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e11a75a2f2ff39cec788a015"
+    },
+    {
+      "id": "5TRCIkDGNty4FY284bdjRo",
+      "title": "END CREDITS! - OFFLINE",
+      "artist": "JPEGMAFIA",
+      "album": "OFFLINE!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5TRCIkDGNty4FY284bdjRo.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
     },
     {
       "id": "3qhlB30KknSejmIvZZLjOD",
@@ -9524,6 +9628,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273868d99be4de6929eeac899ba"
     },
     {
+      "id": "1EtR8nAoFKJryJqmf426YZ",
+      "title": "FLAME EMOJI!",
+      "artist": "JPEGMAFIA",
+      "album": "OFFLINE!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1EtR8nAoFKJryJqmf426YZ.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
+    },
+    {
       "id": "1hwaUW2DyfhIag9HlZiSIq",
       "title": "Flapper Girl",
       "artist": "The Lumineers",
@@ -9932,6 +10044,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b71e4e8c8f1fd82d9b85c9ae"
     },
     {
+      "id": "3yP6JtxLu2PFmpdEUl7Qj7",
+      "title": "FREAKS",
+      "artist": "Joey Valence & Brae",
+      "album": "NO HANDS (Deluxe Edition)",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3yP6JtxLu2PFmpdEUl7Qj7.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731c21dd1d1ea90b5e7cc94c14"
+    },
+    {
       "id": "7EkWXAI1wn8Ii883ecd9xr",
       "title": "Freaks",
       "artist": "Surf Curse",
@@ -10106,6 +10226,30 @@
       "album": "Norman Fucking Rockwell!",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7MtVPRGtZl6rPjMfLoI3Lh.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273879e9318cb9f4e05ee552ac9"
+    },
+    {
+      "id": "4Ozk6GESL4KkJ0C1yXgDLf",
+      "title": "Fuck Me Eyes",
+      "artist": "Ethel Cain",
+      "album": "Willoughby Tucker, I'll Always Love You",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4Ozk6GESL4KkJ0C1yXgDLf.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737da9ae8f4a4d633772c9513b"
+    },
+    {
+      "id": "5ZbztTcvj6QWWbeYsL4GTa",
+      "title": "Fuck My Computer",
+      "artist": "Ninajirachi",
+      "album": "I Love My Computer",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5ZbztTcvj6QWWbeYsL4GTa.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733b9b742c5c525af6e6767d87"
+    },
+    {
+      "id": "5n8Aro6j1bEGIy7Tpo7FV7",
+      "title": "Fuck Tha Police",
+      "artist": "N.W.A.",
+      "album": "Straight Outta Compton",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5n8Aro6j1bEGIy7Tpo7FV7.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c79a70e8167cc1a4fab83781"
     },
     {
       "id": "4ycLiPVzE5KamivXrAzGFG",
@@ -13522,6 +13666,14 @@
       "album": "Good Things",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6q1qACcezH6eH77Xljh5QV.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273bd6bf55ccc52ed75ce77e726"
+    },
+    {
+      "id": "0oiGUMBeL8Bn0csxAl4a1W",
+      "title": "I Only Said",
+      "artist": "my bloody valentine",
+      "album": "Loveless",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0oiGUMBeL8Bn0csxAl4a1W.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27345d60424109af911a1a2b1ef"
     },
     {
       "id": "6ss2vUwrV64xAVE4fXZMIh",
@@ -19156,6 +19308,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737d6ac8b4a84ad4b342050d87"
     },
     {
+      "id": "6NZOc8kO0Fxo0fLPvIdLnW",
+      "title": "Mother I Sober (feat. Beth Gibbons of Portishead)",
+      "artist": "Kendrick Lamar, Beth Gibbons",
+      "album": "Mr. Morale & The Big Steppers",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6NZOc8kO0Fxo0fLPvIdLnW.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f30764d5fa1e439ad6a7742f"
+    },
+    {
       "id": "1lbuL805ByZ1QRuXmKJqco",
       "title": "Motherlover",
       "artist": "The Lonely Island, Justin Timberlake",
@@ -19716,6 +19876,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27356ac7b86e090f307e218e9c8"
     },
     {
+      "id": "0SR4ItBJEpDf5I6zrcPDt4",
+      "title": "NEMO - OFFLINE",
+      "artist": "JPEGMAFIA",
+      "album": "OFFLINE!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0SR4ItBJEpDf5I6zrcPDt4.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
+    },
+    {
       "id": "1CnpSvu7eWn097s7FIsiKk",
       "title": "Neo Surf",
       "artist": "GENER8ION, 070 Shake",
@@ -20122,6 +20290,14 @@
       "album": "Discovery",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/63JXZZRbmzooashakb0zbu.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731e81bff9807a9e629fce5ade"
+    },
+    {
+      "id": "78ugJH8q6W3kiGLwM2K7Lg",
+      "title": "Nina + Field of Cops",
+      "artist": "Cameron Winter",
+      "album": "Heavy Metal",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/78ugJH8q6W3kiGLwM2K7Lg.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734738aa171569052376f162fe"
     },
     {
       "id": "6dX2teUMYCOoyOW8tCRzBJ",
@@ -20540,6 +20716,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e4073def0c03a91e3fceaf73"
     },
     {
+      "id": "3RIgHHpnFKj5Rni1shokDj",
+      "title": "Norman fucking Rockwell",
+      "artist": "Lana Del Rey",
+      "album": "Norman Fucking Rockwell!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3RIgHHpnFKj5Rni1shokDj.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273879e9318cb9f4e05ee552ac9"
+    },
+    {
       "id": "7C9SvJeVzuv8oQHxtZvc5K",
       "title": "North Cack",
       "artist": "G Yamazawa, Joshua Gunn, Kane Smego",
@@ -20842,6 +21026,14 @@
       "album": "Donda",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/2gbMPBrBVj3CuNTLp2dHYs.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736ba1cffc9b2c5469503430b3"
+    },
+    {
+      "id": "4M0gfUpAfFRv7O44ZSkRIK",
+      "title": "OG! - OFFLINE",
+      "artist": "JPEGMAFIA",
+      "album": "OFFLINE!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4M0gfUpAfFRv7O44ZSkRIK.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
     },
     {
       "id": "41WcmdweTbIJAc8tiOR6xw",
@@ -21836,6 +22028,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273053f006079bce979e5fef1e1"
     },
     {
+      "id": "1Kn5uogxM7gTdNCC8KbO5c",
+      "title": "People Pleaser (feat. Guapdad 4000)",
+      "artist": "Quadeca, Guapdad 4000",
+      "album": "From Me To You",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1Kn5uogxM7gTdNCC8KbO5c.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27334588bd81207d67468b2f15f"
+    },
+    {
       "id": "1Hle8Xb0v0CE4xJR8Ezr89",
       "title": "People Say",
       "artist": "Portugal. The Man",
@@ -22034,6 +22234,14 @@
       "album": "Professional Rapper",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4lh1PamTsomWbFpkOPyfrD.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734598988646356555fd93a33d"
+    },
+    {
+      "id": "4uiWVcv70Ct5Oz87LCxdrk",
+      "title": "PINEAPPLE FRIED RICE",
+      "artist": "Joey Valence & Brae",
+      "album": "NO HANDS (Deluxe Edition)",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4uiWVcv70Ct5Oz87LCxdrk.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731c21dd1d1ea90b5e7cc94c14"
     },
     {
       "id": "1k2pQc5i348DCHwbn5KTdc",
@@ -23084,6 +23292,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273013c00ee367dd85396f79c82"
     },
     {
+      "id": "0oaQasvlfdkSWepVuHFQtY",
+      "title": "REBOUND! - OFFLINE",
+      "artist": "JPEGMAFIA, DATPIFFMAFIA",
+      "album": "OFFLINE!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0oaQasvlfdkSWepVuHFQtY.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
+    },
+    {
       "id": "02ppMPbg1OtEdHgoPqoqju",
       "title": "Reckoner",
       "artist": "Radiohead",
@@ -23474,6 +23690,14 @@
       "album": "DON'T TAP THE GLASS",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1lTqq0aC6r2bXLviQ3oaVt.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734b7fbb849ed845ddedcce346"
+    },
+    {
+      "id": "1WbYFNSUNn9fP1x0Z5DU95",
+      "title": "Riptide",
+      "artist": "MisterWives",
+      "album": "Spotify Sessions",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1WbYFNSUNn9fP1x0Z5DU95.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a10c96e646a854b11cebd2f4"
     },
     {
       "id": "3JvrhDOgAt6p7K8mDyZwRd",
@@ -24754,6 +24978,14 @@
       "album": "Songs About Jane",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7sapKrjDij2fpDVj0GxP66.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27317b3850d758fff5a2301e537"
+    },
+    {
+      "id": "5HRO58hfVhTpGR87AzHaBa",
+      "title": "She Won't Let Me Fuck",
+      "artist": "Afroman",
+      "album": "The Good Times",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5HRO58hfVhTpGR87AzHaBa.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273734b1164a9e0faa980ce1b92"
     },
     {
       "id": "6KOtheMY0KN4s9TrQHr9It",
@@ -26354,6 +26586,14 @@
       "album": "HALO",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6dnMPOx96NSEAQqcDSdngO.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b5b273ebd1632a05019cd75c"
+    },
+    {
+      "id": "0MnJ73xPk7rQDw0lIu8kBh",
+      "title": "STARTAFIGHT",
+      "artist": "Joey Valence & Brae",
+      "album": "PUNK TACTICS",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0MnJ73xPk7rQDw0lIu8kBh.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27320f08caabcf7658d36c98637"
     },
     {
       "id": "1DwscornXpj8fmOmYVlqZt",
@@ -28076,6 +28316,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e09daa190c938f3fffbfe88a"
     },
     {
+      "id": "0e8nrvls4Qqv5Rfa2UhqmO",
+      "title": "THATS WHAT I WANT",
+      "artist": "Lil Nas X",
+      "album": "MONTERO",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0e8nrvls4Qqv5Rfa2UhqmO.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f27e4bdc58ebe249a6b90da0"
+    },
+    {
       "id": "0Jlcvv8IykzHaSmj49uNW8",
       "title": "the 1",
       "artist": "Taylor Swift",
@@ -28514,6 +28762,14 @@
       "album": "Life 1",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5X2BUItGwr6fU8taExWb2i.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732e4e4e1d8ae7643552ed0939"
+    },
+    {
+      "id": "5Lng4q571jghXAeYMMndia",
+      "title": "THE GHOST OF RANKING DREAD! - OFFLINE",
+      "artist": "JPEGMAFIA, Tkay Maidza",
+      "album": "OFFLINE!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/5Lng4q571jghXAeYMMndia.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
     },
     {
       "id": "6wNCdMW82LwJgFrnGqLhpJ",
@@ -29612,6 +29868,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732f44aec83b20e40f3baef73c"
     },
     {
+      "id": "7JxRr2baHFCCHsAfNxgJz4",
+      "title": "THOT'S PRAYER - OG MIX",
+      "artist": "JPEGMAFIA",
+      "album": "OFFLINE!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/7JxRr2baHFCCHsAfNxgJz4.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
+    },
+    {
       "id": "2aYHxnMF2umAavtgBvmkY1",
       "title": "Thought I Was Dead (feat. ScHoolboy Q & Santigold)",
       "artist": "Tyler, The Creator, ScHoolboy Q, Santigold",
@@ -29868,6 +30132,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273053f006079bce979e5fef1e1"
     },
     {
+      "id": "70Dt20sMmgLQiYOgnClHw1",
+      "title": "TIRED, NERVOUS & BROKE!",
+      "artist": "JPEGMAFIA, Kimbra",
+      "album": "OFFLINE!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/70Dt20sMmgLQiYOgnClHw1.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
+    },
+    {
       "id": "1IHWl5LamUGEuP4ozKQSXZ",
       "title": "Tití Me Preguntó",
       "artist": "Bad Bunny",
@@ -29898,6 +30170,14 @@
       "album": "Plastic Beach",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/1dvOwoHwZB9SwvRw2Gv3nz.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273661d019f34569f79eae9e985"
+    },
+    {
+      "id": "41R4fI1Z1w2gsJEFQWdeJs",
+      "title": "To Here Knows When",
+      "artist": "my bloody valentine",
+      "album": "Loveless",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/41R4fI1Z1w2gsJEFQWdeJs.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27345d60424109af911a1a2b1ef"
     },
     {
       "id": "7KucgC6JOASHQ0qDtKeomv",
@@ -30380,6 +30660,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730376bdff8b70d934f297303e"
     },
     {
+      "id": "4nGAoP1Q1SNv0sd8bK54TF",
+      "title": "TRUST! - OFFLINE",
+      "artist": "JPEGMAFIA",
+      "album": "OFFLINE!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4nGAoP1Q1SNv0sd8bK54TF.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
+    },
+    {
       "id": "1HYu6tD7LKlB0Rcbwa91f1",
       "title": "Try",
       "artist": "GENER8ION, Adèle Castillon",
@@ -30850,6 +31138,22 @@
       "album": "OFFLINE!",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/0ubyD2iLcA6W90tMaKyXs2.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
+    },
+    {
+      "id": "6OkOFxU6j0UufR97VgSnS7",
+      "title": "untitled 01 | 08.19.2014.",
+      "artist": "Kendrick Lamar",
+      "album": "untitled unmastered.",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/6OkOFxU6j0UufR97VgSnS7.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738c697f553a46006a5d8886b2"
+    },
+    {
+      "id": "3I0FBDc1c1BLNtXWKVjmFg",
+      "title": "untitled 02 | 06.23.2014.",
+      "artist": "Kendrick Lamar",
+      "album": "untitled unmastered.",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3I0FBDc1c1BLNtXWKVjmFg.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738c697f553a46006a5d8886b2"
     },
     {
       "id": "6QvxTX9zvo4u7XhP9vOP3n",
@@ -32036,6 +32340,14 @@
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273fdff0e4ec273827627487f39"
     },
     {
+      "id": "3x1BtwpOBgsXVPHG6nSkpm",
+      "title": "WHAT KINDA RAPPIN' IS THIS? - OFFLINE",
+      "artist": "JPEGMAFIA",
+      "album": "OFFLINE!",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/3x1BtwpOBgsXVPHG6nSkpm.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6ff353e9e91669eb9af5e2f"
+    },
+    {
       "id": "4cluDES4hQEUhmXj6TXkSo",
       "title": "What Makes You Beautiful",
       "artist": "One Direction",
@@ -32906,6 +33218,14 @@
       "album": "Stop The Clocks",
       "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4w7RuuQAVP0JXlAom3z1aC.m4a",
       "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27329f951c74e9cbfffeb7b52f9"
+    },
+    {
+      "id": "4qCZuJKrgXxODnojck347k",
+      "title": "Woodstock (Psychedelic Fiction)",
+      "artist": "Jon Bellion",
+      "album": "Woodstock (Psychedelic Fiction)",
+      "previewUrl": "https://pub-3f2baea479ab472f80431f0167fbe78d.r2.dev/4qCZuJKrgXxODnojck347k.m4a",
+      "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27313fa877acaff9f268d51efff"
     },
     {
       "id": "3U9Kkv90QElks0pzIgfAxw",

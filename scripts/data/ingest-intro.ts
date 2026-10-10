@@ -433,6 +433,13 @@ export async function runIngestion(options: IngestOptions) {
           skippedCount++;
           console.log(`[${completedCount}/${songsToProcess.length}] ⏩ "${song.title}" - ${song.artist} [EXISTS IN R2]`);
           song.previewUrl = r2Url!;
+          cache[song.id] = {
+            previewUrl: r2Url!,
+            artworkUrl: song.artworkUrl,
+            source: 'r2',
+            previewType: 'intro',
+            resolvedAt: new Date().toISOString(),
+          };
           return;
         }
       } else if (fs.existsSync(destFile) && !options.force) {
@@ -491,7 +498,6 @@ export async function runIngestion(options: IngestOptions) {
         song.previewUrl = finalUrl;
 
         const cacheEntry: CacheEntry = {
-          ...cache[song.id],
           previewUrl: finalUrl,
           artworkUrl: song.artworkUrl,
           source,
