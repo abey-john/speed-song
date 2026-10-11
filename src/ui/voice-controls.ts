@@ -142,15 +142,14 @@ export class VoiceControls {
             then speak the <strong>song title</strong> within 3 seconds!
           </p>
 
-          ${
-            !supported
-              ? `
+          ${!supported
+          ? `
             <div class="voice-warning-pill">
-              ⚠️ Speech recognition is best supported in Google Chrome, Microsoft Edge, and Safari.
+              ⚠️ Speech recognition is not currently supported on this browser. This game mode may not work as expected.
             </div>
           `
-              : ''
-          }
+          : ''
+        }
 
           <div class="voice-lives-preview" aria-label="3 lives per round">
             <span class="voice-life-icon">❤️</span>
@@ -191,11 +190,11 @@ export class VoiceControls {
 
         <div class="voice-lives-bar" aria-label="${lives} lives remaining">
           ${[1, 2, 3]
-            .map((i) => {
-              const active = i <= lives;
-              return `<span class="voice-heart ${active ? 'is-active' : 'is-lost'}">${active ? '❤️' : '💔'}</span>`;
-            })
-            .join('')}
+        .map((i) => {
+          const active = i <= lives;
+          return `<span class="voice-heart ${active ? 'is-active' : 'is-lost'}">${active ? '❤️' : '💔'}</span>`;
+        })
+        .join('')}
         </div>
       </div>
 
@@ -236,9 +235,8 @@ export class VoiceControls {
         </div>
 
         <!-- Buzzer Button & Give Up -->
-        ${
-          !isBuzzed
-            ? `
+        ${!isBuzzed
+        ? `
           <button type="button" class="btn-buzzer" id="btn-buzzer" aria-label="Buzz in to guess song">
             <div class="buzzer-inner">
               <span class="buzzer-icon">⚡</span>
@@ -253,33 +251,32 @@ export class VoiceControls {
             <span class="giveup-shortcut">[ESC]</span>
           </button>
         `
-            : `
+        : `
           <div class="buzzer-locked-card">
             <span>Buzzed at <strong>${buzzedTime.toFixed(2)}s</strong></span>
           </div>
         `
-        }
+      }
       </div>
 
       <!-- Attempt History Pills -->
-      ${
-        attempts.length > 0
-          ? `
+      ${attempts.length > 0
+        ? `
         <div class="voice-attempts-list" role="region" aria-label="Spoken guess history">
           ${attempts
-            .map(
-              (att) => `
+          .map(
+            (att) => `
             <div class="voice-attempt-pill ${att.wasCorrect ? 'is-correct' : 'is-wrong'}">
               <span class="attempt-time">${att.buzzedTimeSec.toFixed(1)}s</span>
               <span class="attempt-transcript">"${escapeHtml(att.transcript)}"</span>
               <span class="attempt-icon">${att.wasCorrect ? '✓' : '✕'}</span>
             </div>
           `
-            )
-            .join('')}
+          )
+          .join('')}
         </div>
       `
-          : ''
+        : ''
       }
     `;
 
