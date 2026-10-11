@@ -104,7 +104,7 @@ class SpeedSongApp {
 
         if (isRevealed) {
           e.preventDefault();
-          this.startNewRound();
+          this.startNewRound(true);
         }
       }
     });
@@ -175,7 +175,7 @@ class SpeedSongApp {
     this.startNewRound();
   }
 
-  private async startNewRound(): Promise<void> {
+  private async startNewRound(autoPlayVoice = false): Promise<void> {
     if (!this.shuffleBag || !this.currentPlaylist) return;
 
     if (this.prefetchTimer !== null) {
@@ -202,14 +202,27 @@ class SpeedSongApp {
       this.state = startRound(song, this.currentPlaylist.id);
       this.voiceState = null;
     } else {
-      this.voiceState = startVoiceRound(song, this.currentPlaylist.id);
+      const readyState = startVoiceRound(song, this.currentPlaylist.id);
       this.state = { type: 'idle', selectedPlaylistId: this.currentPlaylist.id };
+      if (autoPlayVoice && readyState.type === 'ready') {
+        this.voiceState = beginVoicePlayback(readyState, 0);
+      } else {
+        this.voiceState = readyState;
+      }
     }
 
     this.render();
 
     // Prefetch audio buffer
     audioEngine.preloadSong(song.previewUrl);
+
+    // If auto-playing in voice mode, unlock & start playing snippet immediately
+    if (this.activeGameMode === 'voice' && autoPlayVoice) {
+      await audioEngine.unlock();
+      audioEngine.playSnippet(song.previewUrl, 30, () => {
+        this.handleVoiceTimeout();
+      });
+    }
 
     // Warm up next song in background after 2.5s
     this.prefetchTimer = window.setTimeout(async () => {
@@ -671,7 +684,7 @@ class SpeedSongApp {
         this.voiceState.result,
         this.isPlayingFullPreview,
         {
-          onNextRound: () => this.startNewRound(),
+          onNextRound: () => this.startNewRound(true),
           onToggleFullPreview: () => this.toggleFullPreview(),
         }
       );
