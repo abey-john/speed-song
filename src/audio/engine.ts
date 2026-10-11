@@ -28,6 +28,7 @@ export class AudioEngine {
   private isCurrentlyPlaying = false;
   private playGeneration = 0;
   private playbackStartTime = 0;
+  private playbackStartOffsetSec = 0;
   private activeDuration = 0;
   private activeOnEnded?: () => void;
   private stopTimer: number | null = null;
@@ -98,7 +99,8 @@ export class AudioEngine {
   public async playSnippet(
     url: string,
     durationSec: number,
-    onEnded?: () => void
+    onEnded?: () => void,
+    startOffsetSec = 0
   ): Promise<boolean> {
     this.stop();
     const currentGen = this.playGeneration;
@@ -146,6 +148,7 @@ export class AudioEngine {
         this.activeSource = source;
         this.activeGain = gain;
         this.playbackStartTime = startTime;
+        this.playbackStartOffsetSec = startOffsetSec;
         this.activeDuration = durationSec;
         this.activeOnEnded = onEnded;
         this.isCurrentlyPlaying = true;
@@ -166,7 +169,7 @@ export class AudioEngine {
           }
         };
 
-        source.start(startTime, track.silenceOffset);
+        source.start(startTime, track.silenceOffset + startOffsetSec);
 
         const msRemaining = Math.max(0, (stopTime - ctx.currentTime) * 1000);
         this.stopTimer = window.setTimeout(() => {
@@ -263,15 +266,15 @@ export class AudioEngine {
    * Returns current playback position in seconds (0 to activeDuration).
    */
   public getCurrentTime(): number {
-    if (!this.isCurrentlyPlaying) return 0;
+    if (!this.isCurrentlyPlaying) return this.playbackStartOffsetSec;
     if (this.ctx && this.activeSource) {
       const elapsed = this.ctx.currentTime - this.playbackStartTime;
-      return Math.max(0, Math.min(elapsed, this.activeDuration));
+      return Math.max(0, Math.min(elapsed + this.playbackStartOffsetSec, this.playbackStartOffsetSec + this.activeDuration));
     }
     if (this.fallbackPlayer.isPlaying()) {
-      return this.fallbackPlayer.getCurrentTime();
+      return this.fallbackPlayer.getCurrentTime() + this.playbackStartOffsetSec;
     }
-    return 0;
+    return this.playbackStartOffsetSec;
   }
 
   /**
@@ -290,6 +293,7 @@ export class AudioEngine {
       window.clearTimeout(this.stopTimer);
       this.stopTimer = null;
     }
+    this.playbackStartOffsetSec = 0;
     if (this.activeSource) {
       try {
         if (this.ctx && this.activeGain) {

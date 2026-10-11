@@ -18,22 +18,32 @@ export interface RevealCallbacks {
   onToggleFullPreview: () => void;
 }
 
+export type UniversalRevealResult =
+  | RevealResult
+  | { outcome: 'won'; timeSec: number }
+  | { outcome: 'missed'; reason?: string };
+
 export function renderReveal(
   song: Song,
-  result: RevealResult,
+  result: UniversalRevealResult,
   isPlayingFullPreview: boolean,
   callbacks: RevealCallbacks
 ): HTMLElement {
   const container = document.createElement('div');
   container.className = 'reveal-card';
 
-  const isGuessed = result.outcome === 'guessed';
-  const outcomeText = isGuessed ? `Guessed at ${result.durationSec}s!` : 'Missed!';
-  const outcomeClass = isGuessed ? 'outcome-success' : 'outcome-missed';
+  const isSuccess = result.outcome === 'guessed' || result.outcome === 'won';
+  let outcomeText = 'Missed!';
+  if (result.outcome === 'guessed') {
+    outcomeText = `Guessed at ${result.durationSec}s!`;
+  } else if (result.outcome === 'won') {
+    outcomeText = `🎙️ Buzzed at ${result.timeSec.toFixed(2)}s!`;
+  }
+  const outcomeClass = isSuccess ? 'outcome-success' : 'outcome-missed';
 
   container.innerHTML = `
     <div class="reveal-badge-banner ${outcomeClass}">
-      <span class="outcome-icon">${isGuessed ? '🎉' : '❌'}</span>
+      <span class="outcome-icon">${isSuccess ? '🎉' : '❌'}</span>
       <span class="outcome-text">${outcomeText}</span>
     </div>
 

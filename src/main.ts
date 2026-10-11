@@ -7,9 +7,28 @@ import { audioEngine } from './audio/engine';
 import { GameControls } from './ui/controls';
 import { renderReveal, preloadArtwork } from './ui/reveal';
 import { loadStats, saveStats, recordRoundOutcome, resetStats } from './stats/store';
+import {
+  loadVoiceStats,
+  saveVoiceStats,
+  recordVoiceRoundOutcome,
+  resetVoiceStats,
+} from './stats/voice-store';
 import { renderStatsModal } from './ui/histogram';
+import { VoiceRecognizer } from './voice/recognition';
+import { evaluateVoiceGuess } from './voice/matcher';
+import {
+  VoiceGameState,
+  VoiceRoundOutcome,
+  startVoiceRound,
+  beginVoicePlayback,
+  buzzInVoice,
+  resolveVoiceGuess,
+  expireVoiceTimeout,
+} from './voice/state';
+import { VoiceControls } from './ui/voice-controls';
 
 const LAST_PLAYLIST_KEY = 'speed-song:last-playlist:v1';
+const GAME_MODE_KEY = 'speed-song:game-mode:v1';
 const isDebugMode = new URLSearchParams(window.location.search).get('debug') === '1';
 
 class SpeedSongApp {
@@ -18,17 +37,46 @@ class SpeedSongApp {
   private currentPlaylist: PlaylistFile | null = null;
   private shuffleBag: ShuffleBag<Song> | null = null;
   private nextSong: Song | null = null;
+
+  private activeGameMode: 'classic' | 'voice' =
+    (localStorage.getItem(GAME_MODE_KEY) as 'classic' | 'voice') || 'classic';
+
+  // Classic mode state & controls
   private state: GameState = { type: 'idle', selectedPlaylistId: null };
   private controls: GameControls;
+
+  // Voice mode state & controls
+  private voiceState: VoiceGameState | null = null;
+  private voiceControls: VoiceControls;
+  private voiceRecognizer: VoiceRecognizer;
+  private voiceListeningRemainingSec = 3.0;
+
   private isPlayingFullPreview = false;
   private prefetchTimer: number | null = null;
 
   constructor(root: HTMLElement) {
     this.root = root;
+
     this.controls = new GameControls({
       onPlaySnippet: () => this.handlePlaySnippet(),
       onSkip: () => this.handleSkip(),
       onSubmitGuess: (song: Song) => this.handleGuess(song),
+      getCurrentPlaybackTime: () => audioEngine.getCurrentTime(),
+    });
+
+    this.voiceRecognizer = new VoiceRecognizer({
+      onInterimTranscript: (text) => {
+        this.voiceControls.setListeningState(true, this.voiceListeningRemainingSec, text);
+      },
+      onError: (err) => {
+        console.warn('[voice] Speech recognition notice:', err);
+      },
+    });
+
+    this.voiceControls = new VoiceControls({
+      onBeginClip: () => this.handleVoiceBeginClip(),
+      onBuzzIn: () => this.handleVoiceBuzzIn(),
+      onResumePlayback: () => this.handleVoiceResume(),
       getCurrentPlaybackTime: () => audioEngine.getCurrentTime(),
     });
   }
@@ -43,7 +91,6 @@ class SpeedSongApp {
         return;
       }
 
-      // Default to compendium, or restore user's explicit saved choice
       const compendium =
         this.manifest.playlists.find((p) => p.name.toLowerCase().trim() === 'compendium') ||
         this.manifest.playlists[0]!;
@@ -81,12 +128,22 @@ class SpeedSongApp {
       this.shuffleBag = new ShuffleBag(this.currentPlaylist.songs);
       this.nextSong = null;
       this.state = { type: 'idle', selectedPlaylistId: playlistId };
+      this.voiceState = null;
       audioEngine.stop();
       this.render();
     } catch (err) {
       console.error('[app] Error loading playlist:', err);
       this.renderError(`Failed to load playlist "${entry.name}".`);
     }
+  }
+
+  private setGameMode(mode: 'classic' | 'voice'): void {
+    if (this.activeGameMode === mode) return;
+    this.activeGameMode = mode;
+    localStorage.setItem(GAME_MODE_KEY, mode);
+    audioEngine.stop();
+    this.isPlayingFullPreview = false;
+    this.startNewRound();
   }
 
   private async startNewRound(): Promise<void> {
@@ -100,7 +157,6 @@ class SpeedSongApp {
     audioEngine.stop();
     this.isPlayingFullPreview = false;
 
-    // Pick song, ensuring candidate belongs strictly to current playlist
     const isValidPrefetch =
       this.nextSong && this.currentPlaylist.songs.some((s) => s.id === this.nextSong?.id);
     const song = isValidPrefetch ? this.nextSong! : this.shuffleBag.draw();
@@ -111,42 +167,51 @@ class SpeedSongApp {
       return;
     }
 
-    // Preload artwork offscreen
     preloadArtwork(song.artworkUrl);
 
-    // Update state
-    this.state = startRound(song, this.currentPlaylist.id);
+    if (this.activeGameMode === 'classic') {
+      this.state = startRound(song, this.currentPlaylist.id);
+      this.voiceState = null;
+    } else {
+      this.voiceState = startVoiceRound(song, this.currentPlaylist.id);
+      this.state = { type: 'idle', selectedPlaylistId: this.currentPlaylist.id };
+    }
+
     this.render();
 
-    // Auto-unlock & auto-play step 0
-    const duration = INTERVALS[0] ?? 0.1;
-    this.playCurrentStep(duration);
+    // Prefetch audio buffer
+    audioEngine.preloadSong(song.previewUrl);
 
-    // Prefetch next song in background after 1s
-    this.prefetchTimer = window.setTimeout(() => {
-      this.prefetchTimer = null;
-      if (this.shuffleBag && this.currentPlaylist) {
-        const candidate = this.shuffleBag.draw();
-        if (candidate) {
-          this.nextSong = candidate;
-          if (candidate.previewUrl) {
-            audioEngine.preloadSong(candidate.previewUrl);
-          }
+    // Warm up next song in background after 2.5s
+    this.prefetchTimer = window.setTimeout(async () => {
+      if (this.shuffleBag) {
+        this.nextSong = this.shuffleBag.draw();
+        if (this.nextSong) {
+          preloadArtwork(this.nextSong.artworkUrl);
+          audioEngine.preloadSong(this.nextSong.previewUrl);
         }
       }
-    }, 1000);
+    }, 2500);
   }
 
-  private async playCurrentStep(durationSec: number): Promise<void> {
+  // =========================================================================
+  // Classic Mode Handlers
+  // =========================================================================
+
+  private async playCurrentStep(duration: number): Promise<void> {
     if (this.state.type !== 'guessing') return;
     const url = this.state.song.previewUrl;
-
     this.controls.setPlayingState(true);
-    await audioEngine.playSnippet(url, durationSec, () => {
+    this.updateDebugBar();
+
+    const played = await audioEngine.playSnippet(url, duration, () => {
       this.controls.setPlayingState(false);
       this.updateDebugBar();
     });
-    this.updateDebugBar();
+
+    if (!played) {
+      this.controls.setPlayingState(false);
+    }
   }
 
   private handlePlaySnippet(): void {
@@ -267,9 +332,119 @@ class SpeedSongApp {
     this.render();
   }
 
+  // =========================================================================
+  // Voice Buzzer Mode Handlers
+  // =========================================================================
+
+  private async handleVoiceBeginClip(): Promise<void> {
+    if (!this.voiceState || this.voiceState.type !== 'ready') return;
+    await audioEngine.unlock();
+
+    const song = this.voiceState.song;
+    this.voiceState = beginVoicePlayback(this.voiceState, 0);
+    this.voiceControls.update(this.voiceState);
+
+    audioEngine.playSnippet(song.previewUrl, 30, () => {
+      this.handleVoiceTimeout();
+    });
+  }
+
+  private async handleVoiceBuzzIn(): Promise<void> {
+    if (!this.voiceState || this.voiceState.type !== 'playing') return;
+
+    const buzzedTime = audioEngine.getCurrentTime();
+    audioEngine.stop();
+
+    this.voiceState = buzzInVoice(this.voiceState, buzzedTime);
+    this.voiceControls.update(this.voiceState);
+    this.voiceControls.setListeningState(true, 3.0, '');
+
+    this.voiceControls.startCountdownTimer(
+      (remaining) => {
+        this.voiceListeningRemainingSec = remaining;
+      },
+      () => {
+        this.voiceRecognizer.stopListening();
+      }
+    );
+
+    const transcript = await this.voiceRecognizer.startListening(3000);
+    this.voiceControls.stopCountdownTimer();
+
+    if (!this.voiceState || this.voiceState.type !== 'buzzed') return;
+
+    const song = this.voiceState.song;
+    const match = evaluateVoiceGuess(transcript, song);
+    const next = resolveVoiceGuess(this.voiceState, transcript, match.isCorrect);
+    this.voiceState = next;
+
+    if (next.type === 'revealed') {
+      this.handleVoiceGameOver(next.result);
+      return;
+    }
+
+    if (next.type === 'buzzed') {
+      this.voiceControls.update(next);
+      // Wait 1s so the player sees the wrong attempt pill, then resume playback
+      setTimeout(() => {
+        if (this.voiceState?.type === 'buzzed') {
+          this.handleVoiceResume();
+        }
+      }, 1000);
+    }
+  }
+
+  private handleVoiceResume(): void {
+    if (!this.voiceState || this.voiceState.type !== 'buzzed') return;
+
+    const resumeTime = this.voiceState.buzzedTimeSec;
+    const remainingDuration = Math.max(0.1, 30 - resumeTime);
+    const song = this.voiceState.song;
+
+    this.voiceState = beginVoicePlayback(this.voiceState, resumeTime);
+    this.voiceControls.update(this.voiceState);
+
+    audioEngine.playSnippet(
+      song.previewUrl,
+      remainingDuration,
+      () => this.handleVoiceTimeout(),
+      resumeTime
+    );
+  }
+
+  private handleVoiceTimeout(): void {
+    if (!this.voiceState || this.voiceState.type !== 'playing') return;
+    const next = expireVoiceTimeout(this.voiceState);
+    this.voiceState = next;
+    if (next.type === 'revealed') {
+      this.handleVoiceGameOver(next.result);
+    }
+  }
+
+  private handleVoiceGameOver(result: VoiceRoundOutcome): void {
+    audioEngine.stop();
+    const stats = loadVoiceStats();
+    const outcomeParam =
+      result.outcome === 'won'
+        ? { won: true as const, timeSec: result.timeSec }
+        : { won: false as const };
+    const updated = recordVoiceRoundOutcome(stats, outcomeParam);
+    saveVoiceStats(updated);
+    this.render();
+  }
+
+  // =========================================================================
+  // Shared & View Logic
+  // =========================================================================
+
   private toggleFullPreview(): void {
-    if (this.state.type !== 'revealed') return;
-    const url = this.state.song.previewUrl;
+    const currentSong =
+      this.activeGameMode === 'classic'
+        ? this.state.type === 'revealed' ? this.state.song : null
+        : this.voiceState?.type === 'revealed' ? this.voiceState.song : null;
+
+    if (!currentSong) return;
+    const url = currentSong.previewUrl;
 
     if (this.isPlayingFullPreview) {
       audioEngine.stop();
@@ -287,14 +462,25 @@ class SpeedSongApp {
 
   private openStatsModal(): void {
     const stats = loadStats();
-    const modal = renderStatsModal(stats, {
-      onClose: () => modal.remove(),
-      onReset: () => {
-        resetStats();
-        modal.remove();
-        this.openStatsModal();
+    const voiceStats = loadVoiceStats();
+    const modal = renderStatsModal(
+      stats,
+      voiceStats,
+      {
+        onClose: () => modal.remove(),
+        onReset: () => {
+          resetStats();
+          modal.remove();
+          this.openStatsModal();
+        },
+        onResetVoice: () => {
+          resetVoiceStats();
+          modal.remove();
+          this.openStatsModal();
+        },
       },
-    });
+      this.activeGameMode
+    );
     document.body.appendChild(modal);
   }
 
@@ -327,7 +513,37 @@ class SpeedSongApp {
     header.querySelector('#btn-stats')?.addEventListener('click', () => this.openStatsModal());
     this.root.appendChild(header);
 
-    // 2. Playlist Selector
+    // 2. Mode Switcher
+    const modeSwitcher = document.createElement('div');
+    modeSwitcher.className = 'mode-switcher-bar';
+    modeSwitcher.innerHTML = `
+      <div class="mode-switcher-pill" role="tablist" aria-label="Game Mode">
+        <button
+          type="button"
+          class="mode-toggle-btn ${this.activeGameMode === 'classic' ? 'is-active' : ''}"
+          id="mode-btn-classic"
+          role="tab"
+          aria-selected="${this.activeGameMode === 'classic'}"
+        >
+          🎵 Classic
+        </button>
+        <button
+          type="button"
+          class="mode-toggle-btn ${this.activeGameMode === 'voice' ? 'is-active' : ''}"
+          id="mode-btn-voice"
+          role="tab"
+          aria-selected="${this.activeGameMode === 'voice'}"
+        >
+          🎙️ Voice Buzzer
+        </button>
+      </div>
+    `;
+
+    modeSwitcher.querySelector('#mode-btn-classic')?.addEventListener('click', () => this.setGameMode('classic'));
+    modeSwitcher.querySelector('#mode-btn-voice')?.addEventListener('click', () => this.setGameMode('voice'));
+    this.root.appendChild(modeSwitcher);
+
+    // 3. Playlist Selector
     if (this.manifest && this.manifest.playlists.length > 0) {
       const selectorWrap = document.createElement('div');
       selectorWrap.className = 'playlist-select-wrapper';
@@ -353,7 +569,7 @@ class SpeedSongApp {
       this.root.appendChild(selectorWrap);
     }
 
-    // 3. Debug bar if ?debug=1
+    // 4. Debug bar if ?debug=1
     if (isDebugMode) {
       const debugDiv = document.createElement('div');
       debugDiv.id = 'debug-bar';
@@ -362,13 +578,13 @@ class SpeedSongApp {
       this.updateDebugBar();
     }
 
-    // 4. Main Game Container
+    // 5. Main Game Container
     const main = document.createElement('main');
     main.id = 'game-main-container';
     this.root.appendChild(main);
     this.renderGameArea();
 
-    // 5. Footer
+    // 6. Footer
     const footer = document.createElement('footer');
     footer.className = 'app-footer';
     footer.innerHTML = `
@@ -385,6 +601,44 @@ class SpeedSongApp {
     if (!main) return;
     main.innerHTML = '';
 
+    if (this.activeGameMode === 'voice') {
+      this.renderVoiceGameArea(main);
+    } else {
+      this.renderClassicGameArea(main);
+    }
+  }
+
+  private renderVoiceGameArea(main: Element): void {
+    if (!this.voiceState || this.voiceState.type === 'ready') {
+      const readyState = this.voiceState || (this.currentPlaylist?.songs[0] ? startVoiceRound(this.currentPlaylist.songs[0], this.currentPlaylist.id) : null);
+      if (readyState) {
+        this.voiceControls.update(readyState);
+        main.appendChild(this.voiceControls.getElement());
+      }
+      return;
+    }
+
+    if (this.voiceState.type === 'playing' || this.voiceState.type === 'buzzed') {
+      this.voiceControls.update(this.voiceState);
+      main.appendChild(this.voiceControls.getElement());
+      return;
+    }
+
+    if (this.voiceState.type === 'revealed') {
+      const revealEl = renderReveal(
+        this.voiceState.song,
+        this.voiceState.result,
+        this.isPlayingFullPreview,
+        {
+          onNextRound: () => this.startNewRound(),
+          onToggleFullPreview: () => this.toggleFullPreview(),
+        }
+      );
+      main.appendChild(revealEl);
+    }
+  }
+
+  private renderClassicGameArea(main: Element): void {
     if (this.state.type === 'idle') {
       const card = document.createElement('div');
       card.className = 'hero-card';
