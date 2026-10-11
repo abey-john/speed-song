@@ -299,21 +299,6 @@ body {
   color: var(--color-text-muted);
 }
 
-.timeline-step-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  background: rgba(168, 85, 247, 0.12);
-  border: 1px solid rgba(168, 85, 247, 0.28);
-  border-radius: var(--radius-full);
-  padding: 3px 10px;
-  font-size: 0.74rem;
-  font-weight: 700;
-  color: var(--color-accent-light);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
 .timeline-track-wrap {
   width: 100%;
   padding: 4px 0;

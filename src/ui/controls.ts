@@ -130,20 +130,14 @@ export class GameControls {
   private render(isPlaying: boolean): void {
     const currentDuration: IntervalStep = INTERVALS[this.currentStep] ?? 15;
     const unlockedPct = Math.min(100, (currentDuration / MAX_TIMELINE_SEC) * 100);
-    const stepNumber = this.currentStep + 1;
-    const totalSteps = INTERVALS.length;
-
     this.container.innerHTML = `
       <!-- Continuous Linear Timeline (0 to 15s) -->
-      <div class="timeline-container" role="region" aria-label="Audio timeline: Step ${stepNumber} of ${totalSteps}">
+      <div class="timeline-container" role="region" aria-label="Audio timeline up to ${currentDuration}s">
         <div class="timeline-meta">
           <div class="timeline-time" aria-live="off">
             <span class="time-current" id="time-current">0.0s</span>
             <span class="time-sep">/</span>
             <span class="time-max" id="time-max">${currentDuration}s</span>
-          </div>
-          <div class="timeline-step-badge">
-            <span>Step ${stepNumber} of ${totalSteps}</span>
           </div>
         </div>
 
