@@ -649,8 +649,8 @@ class SpeedSongApp {
     footer.className = 'app-footer';
     footer.innerHTML = `
       <p>
-        Playlist data from <a href="https://spotify.com" target="_blank" rel="noopener noreferrer">Spotify</a> &bull;
-        Previews and artwork from <a href="https://apple.com" target="_blank" rel="noopener noreferrer">Apple</a>
+        Playlist data and artwork from <a href="https://spotify.com" target="_blank" rel="noopener noreferrer">Spotify</a> &bull;
+        Audio previews from <a href="https://music.youtube.com" target="_blank" rel="noopener noreferrer">YouTube Music</a>
       </p>
     `;
     this.root.appendChild(footer);
