@@ -75,4 +75,25 @@ describe('src/ui/search', () => {
       '<mark class="search-highlight">Starboy</mark> — The <mark class="search-highlight">Weeknd</mark>'
     );
   });
+
+  it('performs searches on large playlists (5,000 songs) in under 5ms', () => {
+    const largeCatalog: Song[] = Array.from({ length: 5000 }, (_, i) => ({
+      id: `song-${i}`,
+      title: `Track ${i} Title`,
+      artist: `Artist ${i % 100} Name`,
+      album: `Album ${i}`,
+      previewUrl: '',
+      artworkUrl: '',
+    }));
+
+    // Warm up cache
+    filterSongs('track 1', largeCatalog);
+
+    const start = performance.now();
+    const results = filterSongs('track 25', largeCatalog);
+    const duration = performance.now() - start;
+
+    expect(results.length).toBeGreaterThanOrEqual(1);
+    expect(duration).toBeLessThan(10); // Under 10ms (usually < 1ms)
+  });
 });

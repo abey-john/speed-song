@@ -14,18 +14,22 @@ export interface SearchableSong {
   title: string;
   artist: string;
   label: string;
+  normTitle: string;
+  normArtist: string;
+  normLabel: string;
   song: Song;
 }
 
+interface CachedSearchData {
+  items: SearchableSong[];
+  fuse: Fuse<SearchableSong>;
+}
+
 let cachedSongsRef: Song[] | null = null;
-let cachedFuse: Fuse<SearchableSong> | null = null;
+let cachedData: CachedSearchData | null = null;
 
 const FUSE_OPTIONS: IFuseOptions<SearchableSong> = {
-  keys: [
-    { name: 'title', weight: 0.6 },
-    { name: 'artist', weight: 0.35 },
-    { name: 'label', weight: 0.2 },
-  ],
+  keys: ['label'],
   threshold: 0.38,
   ignoreLocation: true,
   minMatchCharLength: 2,
@@ -34,22 +38,35 @@ const FUSE_OPTIONS: IFuseOptions<SearchableSong> = {
   shouldSort: true,
 };
 
-export function getOrCreateFuse(allSongs: Song[]): Fuse<SearchableSong> {
-  if (cachedFuse && cachedSongsRef === allSongs) {
-    return cachedFuse;
+export function getSearchData(allSongs: Song[]): CachedSearchData {
+  if (cachedData && cachedSongsRef === allSongs) {
+    return cachedData;
   }
 
-  const items: SearchableSong[] = allSongs.map((song) => ({
-    id: song.id,
-    title: song.title,
-    artist: song.artist,
-    label: createLabel(song.title, song.artist),
-    song,
-  }));
+  const items: SearchableSong[] = allSongs.map((song) => {
+    const label = createLabel(song.title, song.artist);
+    return {
+      id: song.id,
+      title: song.title,
+      artist: song.artist,
+      label,
+      normTitle: normalizeSearchString(song.title),
+      normArtist: normalizeSearchString(song.artist),
+      normLabel: normalizeSearchString(label),
+      song,
+    };
+  });
+
+  const fuseIndex = Fuse.createIndex(['label'], items);
+  const fuse = new Fuse(items, FUSE_OPTIONS, fuseIndex);
 
   cachedSongsRef = allSongs;
-  cachedFuse = new Fuse(items, FUSE_OPTIONS);
-  return cachedFuse;
+  cachedData = { items, fuse };
+  return cachedData;
+}
+
+export function getOrCreateFuse(allSongs: Song[]): Fuse<SearchableSong> {
+  return getSearchData(allSongs).fuse;
 }
 
 /**
@@ -64,7 +81,38 @@ export function normalizeSearchString(str: string): string {
 }
 
 /**
- * Filters and ranks playlist songs matching the query using Fuse.js.
+ * Finds all occurrences of each token in normText.
+ */
+function findTokenRanges(normText: string, tokens: string[]): [number, number][] {
+  const ranges: [number, number][] = [];
+  for (const t of tokens) {
+    if (!t) continue;
+    let pos = 0;
+    while ((pos = normText.indexOf(t, pos)) !== -1) {
+      ranges.push([pos, pos + t.length]);
+      pos += t.length;
+    }
+  }
+  return ranges;
+}
+
+/**
+ * Finds all occurrences of the full query in normText.
+ */
+function findQueryRanges(normText: string, query: string): [number, number][] {
+  const ranges: [number, number][] = [];
+  let pos = 0;
+  while ((pos = normText.indexOf(query, pos)) !== -1) {
+    ranges.push([pos, pos + query.length]);
+    pos += query.length;
+  }
+  return ranges;
+}
+
+/**
+ * Filters and ranks playlist songs matching the query using high-performance
+ * hybrid search: sub-millisecond exact/token fast-path, falling back to
+ * Fuse.js fuzzy index for typo tolerance.
  * Returns at most maxResults (default 8).
  */
 export function filterSongs(
@@ -76,21 +124,72 @@ export function filterSongs(
   const trimmed = query.trim();
   if (!trimmed) return [];
 
-  const fuse = getOrCreateFuse(allSongs);
-  let searchResults = fuse.search(trimmed);
+  const { items, fuse } = getSearchData(allSongs);
+  const normQuery = normalizeSearchString(trimmed);
+  const tokens = normQuery.split(/\s+/).filter(Boolean);
+  if (tokens.length === 0) return [];
 
-  const tokens = trimmed.split(/\s+/).filter(Boolean);
+  // --- Fast-Path: Sub-millisecond substring & token matching ---
+  const b1: SearchableSong[] = []; // Title starts with query
+  const b2: SearchableSong[] = []; // Artist starts with query
+  const b3: SearchableSong[] = []; // Full query substring in label
+  const b4: SearchableSong[] = []; // All tokens present in label (multi-word)
+
+  for (let i = 0; i < items.length; i++) {
+    const it = items[i]!;
+    if (excludedSongIds.has(it.id)) continue;
+
+    if (it.normTitle.startsWith(normQuery)) {
+      b1.push(it);
+    } else if (it.normArtist.startsWith(normQuery)) {
+      b2.push(it);
+    } else if (it.normLabel.includes(normQuery)) {
+      b3.push(it);
+    } else if (tokens.length > 1) {
+      let allMatch = true;
+      for (let t = 0; t < tokens.length; t++) {
+        if (!it.normLabel.includes(tokens[t]!)) {
+          allMatch = false;
+          break;
+        }
+      }
+      if (allMatch) {
+        b4.push(it);
+      }
+    }
+
+    // Stop early if top prefix matches already satisfy maxResults
+    if (b1.length + b2.length >= maxResults * 2) {
+      break;
+    }
+  }
+
+  const fastMatches = [...b1, ...b2, ...b3, ...b4].slice(0, maxResults);
+
+  if (fastMatches.length > 0) {
+    return fastMatches.map((it) => {
+      let ranges: [number, number][];
+      if (it.normLabel.includes(normQuery)) {
+        ranges = findQueryRanges(it.normLabel, normQuery);
+      } else {
+        ranges = findTokenRanges(it.normLabel, tokens);
+      }
+      return {
+        song: it.song,
+        label: it.label,
+        matchedIndices: ranges.length === 1 ? ranges[0] : ranges,
+      };
+    });
+  }
+
+  // --- Fallback: Fuse.js fuzzy Bitap search for typos ---
+  let searchResults = fuse.search(trimmed, { limit: maxResults });
+
   if (searchResults.length === 0 && tokens.length > 1) {
     const andExpressions: Expression[] = tokens.map((t) => ({
-      $or: [
-        { title: t } as Expression,
-        { artist: t } as Expression,
-        { label: t } as Expression,
-      ],
+      label: t,
     }));
-    searchResults = fuse.search({
-      $and: andExpressions,
-    });
+    searchResults = fuse.search({ $and: andExpressions }, { limit: maxResults });
   }
 
   const results: SearchMatch[] = [];
@@ -99,20 +198,11 @@ export function filterSongs(
     if (excludedSongIds.has(res.item.id)) continue;
 
     const labelRanges: [number, number][] = [];
-    const titleLen = res.item.title.length;
-    const artistOffset = titleLen + 3; // " — " separator is 3 characters
-
     if (res.matches) {
       for (const m of res.matches) {
         if (!m.indices) continue;
         for (const [start, end] of m.indices) {
-          if (m.key === 'title') {
-            labelRanges.push([start, end + 1]);
-          } else if (m.key === 'artist') {
-            labelRanges.push([start + artistOffset, end + 1 + artistOffset]);
-          } else if (m.key === 'label') {
-            labelRanges.push([start, end + 1]);
-          }
+          labelRanges.push([start, end + 1]);
         }
       }
     }
