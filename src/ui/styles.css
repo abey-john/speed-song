@@ -1541,15 +1541,6 @@ body {
   }
 }
 
-.highlight-card {
-  border-color: rgba(236, 72, 153, 0.4);
-  background: rgba(236, 72, 153, 0.1);
-}
-
-.font-accent {
-  color: #f472b6 !important;
-}
-
 .voice-bar-fill {
   background: linear-gradient(90deg, #ec4899, #f43f5e) !important;
 }

@@ -119,8 +119,8 @@ export function renderStatsModal(
             <span class="metric-value">${voiceWinRate}%</span>
             <span class="metric-label">Win Rate</span>
           </div>
-          <div class="stat-metric-card highlight-card">
-            <span class="metric-value font-accent">${fastestTime}</span>
+          <div class="stat-metric-card">
+            <span class="metric-value">${fastestTime}</span>
             <span class="metric-label">⚡ Fastest Buzz</span>
           </div>
           <div class="stat-metric-card">
