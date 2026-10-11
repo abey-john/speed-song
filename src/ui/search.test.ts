@@ -47,4 +47,32 @@ describe('src/ui/search', () => {
     const highlighted = highlightMatch('Starboy — The Weeknd', [0, 7]);
     expect(highlighted).toBe('<mark class="search-highlight">Starboy</mark> — The Weeknd');
   });
+
+  it('matches songs with slight typos using fuzzy search', () => {
+    // "blindng" typo for "Blinding Lights"
+    const typoResults = filterSongs('blindng', songs);
+    expect(typoResults.length).toBeGreaterThanOrEqual(1);
+    expect(typoResults[0]?.song.id).toBe('2');
+
+    // "weend" typo for "The Weeknd"
+    const artistTypoResults = filterSongs('weend', songs);
+    expect(artistTypoResults.length).toBeGreaterThanOrEqual(1);
+    expect(artistTypoResults.some((r) => r.song.artist === 'The Weeknd')).toBe(true);
+  });
+
+  it('matches multi-word artist and title queries', () => {
+    const combinedResults = filterSongs('coldplay viva', songs);
+    expect(combinedResults.length).toBeGreaterThanOrEqual(1);
+    expect(combinedResults[0]?.song.id).toBe('4');
+  });
+
+  it('supports highlighting multiple ranges', () => {
+    const multiHighlighted = highlightMatch('Starboy — The Weeknd', [
+      [0, 7],
+      [14, 20],
+    ]);
+    expect(multiHighlighted).toBe(
+      '<mark class="search-highlight">Starboy</mark> — The <mark class="search-highlight">Weeknd</mark>'
+    );
+  });
 });
