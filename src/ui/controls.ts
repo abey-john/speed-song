@@ -174,7 +174,6 @@ export class GameControls {
 
         <!-- Milestone Markers Underneath -->
         <div class="timeline-labels" aria-hidden="true">
-          <span class="timeline-label" style="left: 0%">0s</span>
           <span class="timeline-label" style="left: ${(1 / MAX_TIMELINE_SEC) * 100}%">1s</span>
           <span class="timeline-label" style="left: ${(3 / MAX_TIMELINE_SEC) * 100}%">3s</span>
           <span class="timeline-label" style="left: ${(5 / MAX_TIMELINE_SEC) * 100}%">5s</span>
