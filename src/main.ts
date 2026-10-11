@@ -214,7 +214,7 @@ class SpeedSongApp {
       `${guessedSong.title} — ${guessedSong.artist}`,
       guessedSong.artist
     );
-
+    this.state = next;
 
     if (next.type === 'revealed') {
       audioEngine.stop();
