@@ -1,4 +1,5 @@
 import { Song, INTERVALS, IntervalStep } from '../data/types';
+import { isSamePrimaryArtist } from '../../scripts/data/normalize';
 
 export interface WrongGuess {
   guessId?: string;
@@ -6,6 +7,7 @@ export interface WrongGuess {
   stepIndex: number;
   durationSec: IntervalStep;
   wasSkipped: boolean;
+  sameArtist?: boolean;
 }
 
 export type RevealResult =
@@ -47,7 +49,8 @@ export function startRound(song: Song, selectedPlaylistId: string): GameState {
 export function submitGuess(
   currentState: Extract<GameState, { type: 'guessing' }>,
   guessedSongId: string,
-  guessedSongLabel: string
+  guessedSongLabel: string,
+  guessedArtist?: string
 ): GameState {
   const isCorrect = guessedSongId === currentState.song.id;
   const currentDuration = INTERVALS[currentState.step] ?? 15;
@@ -66,12 +69,22 @@ export function submitGuess(
     };
   }
 
+  const effectiveArtist =
+    guessedArtist ||
+    (guessedSongLabel.includes(' — ')
+      ? guessedSongLabel.split(' — ').slice(1).join(' — ').trim()
+      : '');
+  const sameArtist = Boolean(
+    effectiveArtist && isSamePrimaryArtist(currentState.song.artist, effectiveArtist)
+  );
+
   const newWrongGuess: WrongGuess = {
     guessId: guessedSongId,
     guessLabel: guessedSongLabel,
     stepIndex: currentState.step,
     durationSec: currentDuration,
     wasSkipped: false,
+    sameArtist,
   };
 
   const nextStep = currentState.step + 1;

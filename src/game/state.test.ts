@@ -53,8 +53,27 @@ describe('Game State Transitions', () => {
       expect(nextState.wrongGuesses).toHaveLength(1);
       expect(nextState.wrongGuesses[0]?.guessLabel).toBe('Wrong Song — Other Artist');
       expect(nextState.wrongGuesses[0]?.wasSkipped).toBe(false);
+      expect(nextState.wrongGuesses[0]?.sameArtist).toBe(false);
     }
   });
+
+  it('detects when an incorrect guess has the same primary artist', () => {
+    const guessing = startRound(sampleSong, 'playlist-1'); // sampleSong is The Weeknd
+    if (guessing.type !== 'guessing') throw new Error('Expected guessing state');
+
+    const nextState = submitGuess(
+      guessing,
+      'other-weeknd-song',
+      'Blinding Lights — The Weeknd',
+      'The Weeknd'
+    );
+    expect(nextState.type).toBe('guessing');
+    if (nextState.type === 'guessing') {
+      expect(nextState.wrongGuesses[0]?.sameArtist).toBe(true);
+      expect(nextState.wrongGuesses[0]?.wasSkipped).toBe(false);
+    }
+  });
+
 
   it('advances step on skip', () => {
     const guessing = startRound(sampleSong, 'playlist-1');

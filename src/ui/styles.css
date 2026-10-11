@@ -491,8 +491,31 @@ body {
   border-left: 3px solid var(--color-wrong);
 }
 
+.wrong-guess-pill.was-incorrect .wrong-icon {
+  color: var(--color-wrong);
+}
+
 .wrong-guess-pill.was-skipped {
   border-left: 3px solid var(--color-skipped);
+}
+
+.wrong-guess-pill.was-skipped .wrong-icon {
+  color: var(--color-skipped);
+}
+
+.wrong-guess-pill.was-same-artist {
+  border-left: 3px solid var(--color-skipped);
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.1) 0%, var(--color-surface) 60%);
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.wrong-guess-pill.was-same-artist .wrong-icon {
+  color: var(--color-skipped);
+  font-weight: 700;
+}
+
+.wrong-guess-pill.was-same-artist .wrong-step-badge {
+  color: var(--color-skipped);
 }
 
 .wrong-step-badge {

@@ -208,8 +208,13 @@ class SpeedSongApp {
     if (this.state.type !== 'guessing') return;
 
     const wasPlaying = audioEngine.isPlaying();
-    const next = submitGuess(this.state, guessedSong.id, `${guessedSong.title} — ${guessedSong.artist}`);
-    this.state = next;
+    const next = submitGuess(
+      this.state,
+      guessedSong.id,
+      `${guessedSong.title} — ${guessedSong.artist}`,
+      guessedSong.artist
+    );
+
 
     if (next.type === 'revealed') {
       audioEngine.stop();

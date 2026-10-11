@@ -50,6 +50,38 @@ export function createNormalizedLabelKey(title: string, artist: string): string 
   return `${normalize(title)}__${normalize(artist)}`;
 }
 
+const KNOWN_COMMA_ARTISTS = [
+  'Tyler, The Creator',
+  'Earth, Wind & Fire',
+  'Crosby, Stills, Nash & Young',
+  'Crosby, Stills & Nash',
+  'Emerson, Lake & Palmer',
+  'Bell, Biv DeVoe',
+  'Blood, Sweat & Tears',
+];
+
+/**
+ * Extracts the primary artist name (e.g. "Daft Punk, Pharrell Williams" -> "Daft Punk").
+ */
+export function getPrimaryArtist(artist: string): string {
+  const trimmed = (artist || '').trim();
+  for (const known of KNOWN_COMMA_ARTISTS) {
+    if (trimmed.toLowerCase().startsWith(known.toLowerCase())) {
+      return known;
+    }
+  }
+  return trimmed.split(/,\s*/)[0]?.trim() || trimmed;
+}
+
+/**
+ * Checks whether two artist strings share the exact same primary artist.
+ */
+export function isSamePrimaryArtist(artistA: string, artistB: string): boolean {
+  const primA = normalize(getPrimaryArtist(artistA));
+  const primB = normalize(getPrimaryArtist(artistB));
+  return Boolean(primA && primB && primA === primB);
+}
+
 /**
  * Checks if candidate artist matches target artist (substring match in either direction).
  */

@@ -203,13 +203,26 @@ export class GameControls {
       <!-- Wrong Guesses History -->
       <div class="wrong-guesses-list" role="region" aria-live="polite" aria-label="Previous guesses">
         ${this.wrongGuesses
-          .map((wg) => `
-            <div class="wrong-guess-pill ${wg.wasSkipped ? 'was-skipped' : 'was-incorrect'}">
-              <span class="wrong-step-badge">${wg.durationSec}s</span>
-              <span class="wrong-label">${wg.wasSkipped ? 'Skipped' : escapeHtml(wg.guessLabel || '')}</span>
-              <span class="wrong-icon">${wg.wasSkipped ? '⏭' : '✕'}</span>
-            </div>
-          `)
+          .map((wg) => {
+            let statusClass = 'was-incorrect';
+            let icon = '✕';
+            let titleAttr = '';
+            if (wg.wasSkipped) {
+              statusClass = 'was-skipped';
+              icon = '⏭';
+            } else if (wg.sameArtist) {
+              statusClass = 'was-same-artist';
+              icon = '✕';
+              titleAttr = ' title="Artist match!"';
+            }
+            return `
+              <div class="wrong-guess-pill ${statusClass}"${titleAttr}>
+                <span class="wrong-step-badge">${wg.durationSec}s</span>
+                <span class="wrong-label">${wg.wasSkipped ? 'Skipped' : escapeHtml(wg.guessLabel || '')}</span>
+                <span class="wrong-icon">${icon}</span>
+              </div>
+            `;
+          })
           .join('')}
       </div>
 

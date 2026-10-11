@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { normalize, getBaseTitle, createLabel, artistsMatch, createNormalizedLabelKey, titlesMatch } from './normalize';
+import { normalize, getBaseTitle, createLabel, artistsMatch, createNormalizedLabelKey, titlesMatch, getPrimaryArtist, isSamePrimaryArtist } from './normalize';
 
 describe('normalize utility', () => {
   it('strips punctuation, whitespace, and lowercases', () => {
@@ -50,5 +50,20 @@ describe('normalize utility', () => {
     expect(createNormalizedLabelKey('Song', 'Artist')).toBe(
       createNormalizedLabelKey('song!', 'artist.')
     );
+  });
+
+  it('correctly extracts primary artist and checks primary artist matching', () => {
+    expect(getPrimaryArtist('The Weeknd, Daft Punk')).toBe('The Weeknd');
+    expect(getPrimaryArtist('Tyler, The Creator, Pharrell Williams')).toBe('Tyler, The Creator');
+    expect(getPrimaryArtist('Earth, Wind & Fire, The Emotions')).toBe('Earth, Wind & Fire');
+    expect(getPrimaryArtist('Taylor Swift')).toBe('Taylor Swift');
+
+    expect(isSamePrimaryArtist('The Weeknd, Daft Punk', 'The Weeknd, Ariana Grande')).toBe(true);
+    expect(isSamePrimaryArtist('The Weeknd', 'The Weeknd')).toBe(true);
+    expect(isSamePrimaryArtist('Tyler, The Creator, Lola Young', 'Tyler, The Creator')).toBe(true);
+    expect(isSamePrimaryArtist('Taylor Swift', 'Taylor Swift, Bon Iver')).toBe(true);
+
+    expect(isSamePrimaryArtist('The Weeknd', 'Drake')).toBe(false);
+    expect(isSamePrimaryArtist('Kendrick Lamar, SZA', 'SZA')).toBe(false);
   });
 });
