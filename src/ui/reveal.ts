@@ -27,7 +27,8 @@ export function renderReveal(
   song: Song,
   result: UniversalRevealResult,
   isPlayingFullPreview: boolean,
-  callbacks: RevealCallbacks
+  callbacks: RevealCallbacks,
+  showSpacebarHint = true
 ): HTMLElement {
   const container = document.createElement('div');
   container.className = 'reveal-card';
@@ -68,7 +69,7 @@ export function renderReveal(
       </button>
 
       <button type="button" class="btn-next-round" id="btn-next-round">
-        Next Song <span class="btn-shortcut-hint">[Spacebar]</span> &rarr;
+        Next Song${showSpacebarHint ? ' <span class="btn-shortcut-hint">[Spacebar]</span>' : ''} &rarr;
       </button>
     </div>
   `;

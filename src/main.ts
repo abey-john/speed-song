@@ -692,7 +692,8 @@ class SpeedSongApp {
         {
           onNextRound: () => this.startNewRound(true),
           onToggleFullPreview: () => this.toggleFullPreview(),
-        }
+        },
+        true
       );
       main.appendChild(revealEl);
     }
@@ -736,7 +737,8 @@ class SpeedSongApp {
         {
           onNextRound: () => this.startNewRound(),
           onToggleFullPreview: () => this.toggleFullPreview(),
-        }
+        },
+        false
       );
       main.appendChild(revealEl);
     }
