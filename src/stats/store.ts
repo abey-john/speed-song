@@ -1,6 +1,6 @@
 export const STATS_STORAGE_KEY = 'snippet-game:stats:v1';
 
-export type BucketKey = '0.1' | '0.5' | '1' | '3' | '5' | '10' | '15' | '30' | 'missed';
+export type BucketKey = '0.1' | '0.5' | '1' | '3' | '5' | '10' | '15' | 'missed';
 
 export interface GameStats {
   version: 1;
@@ -22,7 +22,6 @@ export function createEmptyStats(): GameStats {
       '5': 0,
       '10': 0,
       '15': 0,
-      '30': 0,
       missed: 0,
     },
   };
@@ -34,8 +33,8 @@ export function isValidStats(obj: unknown): obj is GameStats {
   if (s.version !== 1 || typeof s.played !== 'number' || !s.buckets || typeof s.buckets !== 'object') {
     return false;
   }
-  const keys: BucketKey[] = ['0.1', '0.5', '1', '3', '5', '10', '15', '30', 'missed'];
-  return keys.every((k) => typeof s.buckets?.[k] === 'number');
+  const keys: BucketKey[] = ['0.1', '0.5', '1', '3', '5', '10', '15', 'missed'];
+  return keys.every((k) => typeof (s.buckets as Record<string, unknown>)?.[k] === 'number');
 }
 
 export function clearInMemoryFallback(): void {

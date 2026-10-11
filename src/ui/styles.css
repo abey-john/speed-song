@@ -260,66 +260,159 @@ body {
   width: 100%;
 }
 
-/* 8-Segment Progress Bar */
-.progress-bar-container {
+/* Continuous Linear Timeline (0 to 15s) */
+.timeline-container {
   width: 100%;
-  margin: 0 0 2px;
-}
-
-.progress-segments {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  margin: 0 0 6px;
+  display: flex;
+  flex-direction: column;
   gap: 6px;
 }
 
-.progress-segment {
+.timeline-meta {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  background: var(--color-surface-subtle);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-sm);
-  padding: 10px 2px;
-  transition: var(--transition-normal);
+  padding: 0 2px;
 }
 
-.segment-label {
+.timeline-time {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: baseline;
+  letter-spacing: -0.01em;
+}
+
+.time-current {
+  color: #f472b6;
+  min-width: 36px;
+}
+
+.time-sep {
+  color: var(--color-text-dim);
+  margin: 0 4px;
+}
+
+.time-max {
+  color: var(--color-text-muted);
+}
+
+.timeline-step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.28);
+  border-radius: var(--radius-full);
+  padding: 3px 10px;
   font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--color-accent-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timeline-track-wrap {
+  width: 100%;
+  padding: 4px 0;
+  position: relative;
+}
+
+.timeline-track {
+  width: 100%;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  position: relative;
+  overflow: visible;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-unlocked-zone {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(168, 85, 247, 0.16);
+  border-right: 2px solid var(--color-accent-light);
+  border-top-left-radius: var(--radius-full);
+  border-bottom-left-radius: var(--radius-full);
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.25);
+  pointer-events: none;
+}
+
+.timeline-progress-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #ec4899 0%, #a855f7 100%);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 12px rgba(236, 72, 153, 0.5);
+  pointer-events: none;
+  z-index: 2;
+  will-change: width;
+}
+
+.timeline-playhead {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2.5px solid #a855f7;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.8), 0 2px 5px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 3;
+  will-change: left;
+}
+
+.timeline-tick {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.timeline-tick.is-unlocked {
+  background: rgba(255, 255, 255, 0.38);
+}
+
+.timeline-labels {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  margin-top: 2px;
+}
+
+.timeline-label {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 0.72rem;
   font-family: var(--font-mono);
   font-weight: 600;
   color: var(--color-text-dim);
+  user-select: none;
 }
 
-.progress-segment.is-active {
-  background: linear-gradient(180deg, #271d49 0%, #1e163b 100%);
-  border-color: var(--color-accent-light);
-  box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
-  transform: translateY(-2px);
+.timeline-label:first-child {
+  transform: translateX(0);
 }
 
-.progress-segment.is-active .segment-label {
-  color: var(--color-accent-light);
-  font-weight: 700;
+.timeline-label:last-child {
+  transform: translateX(-100%);
 }
 
-.progress-segment.is-wrong {
-  background: var(--color-wrong-subtle);
-  border-color: var(--color-wrong);
-}
-
-.progress-segment.is-wrong .segment-label {
-  color: var(--color-wrong);
-}
-
-.progress-segment.is-skipped {
-  background: var(--color-skipped-subtle);
-  border-color: var(--color-skipped);
-}
-
-.progress-segment.is-skipped .segment-label {
-  color: var(--color-skipped);
-}
 
 /* Playback & Controls */
 .playback-controls {

@@ -3,10 +3,13 @@ import { WrongGuess } from '../game/state';
 import { filterSongs, highlightMatch } from './search';
 import { createLabel } from '../../scripts/data/normalize';
 
+const MAX_TIMELINE_SEC = 15;
+
 export interface GameControlsCallbacks {
   onPlaySnippet: () => void;
   onSkip: () => void;
   onSubmitGuess: (song: Song) => void;
+  getCurrentPlaybackTime?: () => number;
 }
 
 export class GameControls {
@@ -18,6 +21,8 @@ export class GameControls {
   private selectedSong: Song | null = null;
   private activeSuggestionIndex = -1;
   private currentSuggestions: Song[] = [];
+  private isPlaying = false;
+  private animFrameId: number | null = null;
 
   constructor(callbacks: GameControlsCallbacks) {
     this.container = document.createElement('div');
@@ -43,56 +48,157 @@ export class GameControls {
     this.currentSuggestions = [];
 
     this.render(options.isPlaying);
+    this.setPlayingState(options.isPlaying);
   }
 
   public setPlayingState(isPlaying: boolean): void {
+    this.isPlaying = isPlaying;
+    const currentDuration: IntervalStep = INTERVALS[this.currentStep] ?? 15;
     const playBtn = this.container.querySelector<HTMLButtonElement>('#btn-play-snippet');
+
     if (playBtn) {
       if (isPlaying) {
         playBtn.classList.add('is-playing');
         playBtn.innerHTML = `
-          <span class="btn-spinner" aria-hidden="true"></span>
-          <span>Playing (${INTERVALS[this.currentStep]}s)</span>
+          <span class="btn-icon" aria-hidden="true">⏸</span>
+          <span>Pause (${currentDuration}s)</span>
         `;
+        playBtn.setAttribute('aria-label', `Pause snippet at ${currentDuration} seconds`);
       } else {
         playBtn.classList.remove('is-playing');
         playBtn.innerHTML = `
           <span class="btn-icon" aria-hidden="true">▶</span>
-          <span>Play Snippet (${INTERVALS[this.currentStep]}s)</span>
+          <span>Play Snippet (${currentDuration}s)</span>
         `;
+        playBtn.setAttribute('aria-label', `Play snippet of ${currentDuration} seconds`);
       }
+    }
+
+    if (isPlaying) {
+      this.startAnimation();
+    } else {
+      this.stopAnimation();
+      this.resetProgressPosition();
     }
   }
 
+  private startAnimation(): void {
+    this.stopAnimation();
+    const updateFrame = () => {
+      if (!this.isPlaying) return;
+      const getPos = this.callbacks.getCurrentPlaybackTime;
+      const currentTime = getPos ? getPos() : 0;
+      this.updateProgressPosition(currentTime);
+      this.animFrameId = requestAnimationFrame(updateFrame);
+    };
+    this.animFrameId = requestAnimationFrame(updateFrame);
+  }
+
+  private stopAnimation(): void {
+    if (this.animFrameId !== null) {
+      cancelAnimationFrame(this.animFrameId);
+      this.animFrameId = null;
+    }
+  }
+
+  private updateProgressPosition(currentTimeSec: number): void {
+    const currentDuration: IntervalStep = INTERVALS[this.currentStep] ?? 15;
+    const clampedTime = Math.min(currentTimeSec, currentDuration);
+    const pct = Math.min(100, (clampedTime / MAX_TIMELINE_SEC) * 100);
+
+    const fillEl = this.container.querySelector<HTMLElement>('#timeline-fill');
+    const playheadEl = this.container.querySelector<HTMLElement>('#timeline-playhead');
+    const timeCurrentEl = this.container.querySelector<HTMLElement>('#time-current');
+
+    if (fillEl) fillEl.style.width = `${pct}%`;
+    if (playheadEl) playheadEl.style.left = `${pct}%`;
+    if (timeCurrentEl) {
+      timeCurrentEl.textContent = `${clampedTime.toFixed(1)}s`;
+    }
+  }
+
+  private resetProgressPosition(): void {
+    const fillEl = this.container.querySelector<HTMLElement>('#timeline-fill');
+    const playheadEl = this.container.querySelector<HTMLElement>('#timeline-playhead');
+    const timeCurrentEl = this.container.querySelector<HTMLElement>('#time-current');
+
+    if (fillEl) fillEl.style.width = '0%';
+    if (playheadEl) playheadEl.style.left = '0%';
+    if (timeCurrentEl) timeCurrentEl.textContent = '0.0s';
+  }
+
   private render(isPlaying: boolean): void {
-    const currentDuration: IntervalStep = INTERVALS[this.currentStep] ?? 30;
+    const currentDuration: IntervalStep = INTERVALS[this.currentStep] ?? 15;
+    const unlockedPct = Math.min(100, (currentDuration / MAX_TIMELINE_SEC) * 100);
+    const stepNumber = this.currentStep + 1;
+    const totalSteps = INTERVALS.length;
 
     this.container.innerHTML = `
-      <!-- 8-Segment Progress Bar -->
-      <div class="progress-bar-container" aria-label="Snippet Progress: Step ${this.currentStep + 1} of 8">
-        <div class="progress-segments">
-          ${INTERVALS.map((duration, index) => {
-            let statusClass = '';
-            if (index < this.currentStep) {
-              const wrong = this.wrongGuesses[index];
-              statusClass = wrong?.wasSkipped ? 'is-skipped' : 'is-wrong';
-            } else if (index === this.currentStep) {
-              statusClass = 'is-active';
-            }
-            return `
-              <div class="progress-segment ${statusClass}" title="${duration}s clip">
-                <span class="segment-label">${duration}s</span>
-              </div>
-            `;
-          }).join('')}
+      <!-- Continuous Linear Timeline (0 to 15s) -->
+      <div class="timeline-container" role="region" aria-label="Audio timeline: Step ${stepNumber} of ${totalSteps}">
+        <div class="timeline-meta">
+          <div class="timeline-time" aria-live="off">
+            <span class="time-current" id="time-current">0.0s</span>
+            <span class="time-sep">/</span>
+            <span class="time-max" id="time-max">${currentDuration}s</span>
+          </div>
+          <div class="timeline-step-badge">
+            <span>Step ${stepNumber} of ${totalSteps}</span>
+          </div>
+        </div>
+
+        <div class="timeline-track-wrap">
+          <div class="timeline-track" id="timeline-track">
+            <!-- Unlocked Window -->
+            <div
+              class="timeline-unlocked-zone"
+              id="timeline-unlocked"
+              style="width: ${unlockedPct}%"
+              title="Unlocked up to ${currentDuration}s"
+            ></div>
+
+            <!-- Active Playback Fill -->
+            <div class="timeline-progress-fill" id="timeline-fill" style="width: 0%"></div>
+
+            <!-- Playhead Handle -->
+            <div class="timeline-playhead" id="timeline-playhead" style="left: 0%"></div>
+
+            <!-- Interval Ticks: 0.1s, 0.5s, 1s, 3s, 5s, 10s, 15s -->
+            ${INTERVALS.map((duration) => {
+              const tickPct = (duration / MAX_TIMELINE_SEC) * 100;
+              const isUnlocked = duration <= currentDuration;
+              return `
+                <div
+                  class="timeline-tick ${isUnlocked ? 'is-unlocked' : ''}"
+                  style="left: ${tickPct}%"
+                  title="${duration}s milestone"
+                ></div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+
+        <!-- Milestone Markers Underneath -->
+        <div class="timeline-labels" aria-hidden="true">
+          <span class="timeline-label" style="left: 0%">0s</span>
+          <span class="timeline-label" style="left: ${(1 / MAX_TIMELINE_SEC) * 100}%">1s</span>
+          <span class="timeline-label" style="left: ${(3 / MAX_TIMELINE_SEC) * 100}%">3s</span>
+          <span class="timeline-label" style="left: ${(5 / MAX_TIMELINE_SEC) * 100}%">5s</span>
+          <span class="timeline-label" style="left: ${(10 / MAX_TIMELINE_SEC) * 100}%">10s</span>
+          <span class="timeline-label" style="left: 100%">15s</span>
         </div>
       </div>
 
       <!-- Playback and Skip Buttons -->
       <div class="playback-controls">
-        <button type="button" class="btn-play ${isPlaying ? 'is-playing' : ''}" id="btn-play-snippet" aria-label="Play snippet of ${currentDuration} seconds">
+        <button
+          type="button"
+          class="btn-play ${isPlaying ? 'is-playing' : ''}"
+          id="btn-play-snippet"
+          aria-label="${isPlaying ? `Pause snippet at ${currentDuration} seconds` : `Play snippet of ${currentDuration} seconds`}"
+        >
           <span class="btn-icon" aria-hidden="true">${isPlaying ? '⏸' : '▶'}</span>
-          <span>${isPlaying ? `Playing (${currentDuration}s)` : `Play Snippet (${currentDuration}s)`}</span>
+          <span>${isPlaying ? `Pause (${currentDuration}s)` : `Play Snippet (${currentDuration}s)`}</span>
         </button>
 
         <button type="button" class="btn-skip" id="btn-skip" aria-label="Skip to next snippet duration">

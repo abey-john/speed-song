@@ -27,6 +27,10 @@ export class AudioEngine {
   };
   private isCurrentlyPlaying = false;
   private playGeneration = 0;
+  private playbackStartTime = 0;
+  private activeDuration = 0;
+  private activeOnEnded?: () => void;
+  private stopTimer: number | null = null;
 
   private getContext(): AudioContext {
     if (!this.ctx) {
@@ -114,7 +118,6 @@ export class AudioEngine {
       if (this.playGeneration !== currentGen) return false;
 
       if (track) {
-        // Ensure any previous active source is completely detached
         if (this.activeSource) {
           try {
             this.activeSource.stop();
@@ -136,11 +139,15 @@ export class AudioEngine {
 
         // Apply 5ms micro fade-out at the end to prevent audio click
         const fadeStart = Math.max(startTime, stopTime - 0.005);
+        gain.gain.setValueAtTime(1, startTime);
         gain.gain.setValueAtTime(1, fadeStart);
         gain.gain.linearRampToValueAtTime(0, stopTime);
 
         this.activeSource = source;
         this.activeGain = gain;
+        this.playbackStartTime = startTime;
+        this.activeDuration = durationSec;
+        this.activeOnEnded = onEnded;
         this.isCurrentlyPlaying = true;
 
         this.lastDebugInfo = {
@@ -152,16 +159,23 @@ export class AudioEngine {
         };
 
         source.onended = () => {
-          if (this.activeSource === source) {
-            this.isCurrentlyPlaying = false;
-            this.activeSource = null;
-            this.activeGain = null;
-            if (onEnded) onEnded();
+          if (this.activeSource === source && this.playGeneration === currentGen) {
+            const cb = this.activeOnEnded;
+            this.stop();
+            if (cb) cb();
           }
         };
 
         source.start(startTime, track.silenceOffset);
-        source.stop(stopTime);
+
+        const msRemaining = Math.max(0, (stopTime - ctx.currentTime) * 1000);
+        this.stopTimer = window.setTimeout(() => {
+          if (this.playGeneration === currentGen) {
+            const cb = this.activeOnEnded;
+            this.stop();
+            if (cb) cb();
+          }
+        }, msRemaining);
 
         return true;
       }
@@ -178,6 +192,9 @@ export class AudioEngine {
       lastPlayedDurationSec: durationSec,
     };
     this.isCurrentlyPlaying = true;
+    this.activeDuration = durationSec;
+    this.activeOnEnded = onEnded;
+
     this.fallbackPlayer.play(url, durationSec, () => {
       if (this.playGeneration === currentGen) {
         this.isCurrentlyPlaying = false;
@@ -189,10 +206,90 @@ export class AudioEngine {
   }
 
   /**
+   * Extends active snippet playback seamlessly to a longer duration without restarting.
+   * Returns true if active playback was successfully extended.
+   */
+  public extendDuration(newDurationSec: number, onEnded?: () => void): boolean {
+    if (!this.isCurrentlyPlaying) return false;
+
+    // Web Audio path
+    if (this.activeSource && this.ctx && this.activeGain) {
+      const currentGen = this.playGeneration;
+      const newStopTime = this.playbackStartTime + newDurationSec;
+
+      if (newStopTime <= this.ctx.currentTime) {
+        this.stop();
+        if (onEnded) onEnded();
+        return true;
+      }
+
+      if (this.stopTimer !== null) {
+        window.clearTimeout(this.stopTimer);
+        this.stopTimer = null;
+      }
+
+      this.activeDuration = newDurationSec;
+      if (onEnded) this.activeOnEnded = onEnded;
+
+      this.activeGain.gain.cancelScheduledValues(this.ctx.currentTime);
+      this.activeGain.gain.setValueAtTime(1, this.ctx.currentTime);
+
+      const fadeStart = Math.max(this.ctx.currentTime, newStopTime - 0.005);
+      this.activeGain.gain.setValueAtTime(1, fadeStart);
+      this.activeGain.gain.linearRampToValueAtTime(0, newStopTime);
+
+      const msRemaining = Math.max(0, (newStopTime - this.ctx.currentTime) * 1000);
+      this.stopTimer = window.setTimeout(() => {
+        if (this.playGeneration === currentGen) {
+          const cb = this.activeOnEnded;
+          this.stop();
+          if (cb) cb();
+        }
+      }, msRemaining);
+
+      return true;
+    }
+
+    // HTML Audio fallback path
+    const extended = this.fallbackPlayer.extendDuration(newDurationSec, onEnded);
+    if (extended) {
+      this.activeDuration = newDurationSec;
+      if (onEnded) this.activeOnEnded = onEnded;
+    }
+    return extended;
+  }
+
+  /**
+   * Returns current playback position in seconds (0 to activeDuration).
+   */
+  public getCurrentTime(): number {
+    if (!this.isCurrentlyPlaying) return 0;
+    if (this.ctx && this.activeSource) {
+      const elapsed = this.ctx.currentTime - this.playbackStartTime;
+      return Math.max(0, Math.min(elapsed, this.activeDuration));
+    }
+    if (this.fallbackPlayer.isPlaying()) {
+      return this.fallbackPlayer.getCurrentTime();
+    }
+    return 0;
+  }
+
+  /**
+   * Returns the active duration of the playing snippet.
+   */
+  public getActiveDuration(): number {
+    return this.activeDuration;
+  }
+
+  /**
    * Stops any currently active snippet immediately.
    */
   public stop(): void {
     this.playGeneration++;
+    if (this.stopTimer !== null) {
+      window.clearTimeout(this.stopTimer);
+      this.stopTimer = null;
+    }
     if (this.activeSource) {
       try {
         if (this.ctx && this.activeGain) {
@@ -207,6 +304,9 @@ export class AudioEngine {
     }
     this.fallbackPlayer.stop();
     this.isCurrentlyPlaying = false;
+    this.activeOnEnded = undefined;
+    this.playbackStartTime = 0;
+    this.activeDuration = 0;
   }
 
   public isPlaying(): boolean {

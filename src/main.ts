@@ -29,6 +29,7 @@ class SpeedSongApp {
       onPlaySnippet: () => this.handlePlaySnippet(),
       onSkip: () => this.handleSkip(),
       onSubmitGuess: (song: Song) => this.handleGuess(song),
+      getCurrentPlaybackTime: () => audioEngine.getCurrentTime(),
     });
   }
 
@@ -150,45 +151,99 @@ class SpeedSongApp {
 
   private handlePlaySnippet(): void {
     if (this.state.type !== 'guessing') return;
-    const duration = INTERVALS[this.state.step] ?? 30;
+    if (audioEngine.isPlaying()) {
+      audioEngine.stop();
+      this.controls.setPlayingState(false);
+      this.updateDebugBar();
+      return;
+    }
+    const duration = INTERVALS[this.state.step] ?? 15;
     this.playCurrentStep(duration);
   }
 
   private handleSkip(): void {
     if (this.state.type !== 'guessing') return;
 
-    audioEngine.stop();
-    this.controls.setPlayingState(false);
-
+    const wasPlaying = audioEngine.isPlaying();
     const next = submitSkip(this.state);
     this.state = next;
 
     if (next.type === 'revealed') {
+      audioEngine.stop();
+      this.controls.setPlayingState(false);
       this.handleGameOver(next.result);
-    } else if (next.type === 'guessing') {
-      this.renderGameArea();
-      // Auto-play next step
-      const duration = INTERVALS[next.step] ?? 30;
-      this.playCurrentStep(duration);
+      return;
+    }
+
+    if (next.type === 'guessing') {
+      const nextDuration = INTERVALS[next.step] ?? 15;
+      if (wasPlaying) {
+        const extended = audioEngine.extendDuration(nextDuration, () => {
+          this.controls.setPlayingState(false);
+          this.updateDebugBar();
+        });
+        if (extended) {
+          this.controls.update({
+            step: next.step,
+            wrongGuesses: next.wrongGuesses,
+            availableSongs: this.currentPlaylist?.songs || [],
+            isPlaying: true,
+          });
+          this.updateDebugBar();
+          return;
+        }
+      }
+
+      this.controls.update({
+        step: next.step,
+        wrongGuesses: next.wrongGuesses,
+        availableSongs: this.currentPlaylist?.songs || [],
+        isPlaying: false,
+      });
+      this.playCurrentStep(nextDuration);
     }
   }
 
   private handleGuess(guessedSong: Song): void {
     if (this.state.type !== 'guessing') return;
 
-    audioEngine.stop();
-    this.controls.setPlayingState(false);
-
+    const wasPlaying = audioEngine.isPlaying();
     const next = submitGuess(this.state, guessedSong.id, `${guessedSong.title} — ${guessedSong.artist}`);
     this.state = next;
 
     if (next.type === 'revealed') {
+      audioEngine.stop();
+      this.controls.setPlayingState(false);
       this.handleGameOver(next.result);
-    } else if (next.type === 'guessing') {
-      this.renderGameArea();
-      // Auto-play next step
-      const duration = INTERVALS[next.step] ?? 30;
-      this.playCurrentStep(duration);
+      return;
+    }
+
+    if (next.type === 'guessing') {
+      const nextDuration = INTERVALS[next.step] ?? 15;
+      if (wasPlaying) {
+        const extended = audioEngine.extendDuration(nextDuration, () => {
+          this.controls.setPlayingState(false);
+          this.updateDebugBar();
+        });
+        if (extended) {
+          this.controls.update({
+            step: next.step,
+            wrongGuesses: next.wrongGuesses,
+            availableSongs: this.currentPlaylist?.songs || [],
+            isPlaying: true,
+          });
+          this.updateDebugBar();
+          return;
+        }
+      }
+
+      this.controls.update({
+        step: next.step,
+        wrongGuesses: next.wrongGuesses,
+        availableSongs: this.currentPlaylist?.songs || [],
+        isPlaying: false,
+      });
+      this.playCurrentStep(nextDuration);
     }
   }
 
