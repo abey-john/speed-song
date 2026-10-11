@@ -6,6 +6,7 @@ export interface VoiceControlsCallbacks {
   onBuzzIn: () => void;
   onResumePlayback: () => void;
   onSubmitEarly?: () => void;
+  onGiveUp?: () => void;
   getCurrentPlaybackTime?: () => number;
 }
 
@@ -162,7 +163,7 @@ export class VoiceControls {
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
               <polygon points="5 3 19 12 5 21 5 3"/>
             </svg>
-            <span>Begin Clip</span>
+            <span>Begin Clip <span class="btn-shortcut-hint">[Spacebar]</span></span>
           </button>
         </div>
       `;
@@ -234,7 +235,7 @@ export class VoiceControls {
           </div>
         </div>
 
-        <!-- Buzzer Button -->
+        <!-- Buzzer Button & Give Up -->
         ${
           !isBuzzed
             ? `
@@ -244,6 +245,12 @@ export class VoiceControls {
               <span class="buzzer-text">BUZZ IN</span>
               <span class="buzzer-shortcut">[SPACEBAR]</span>
             </div>
+          </button>
+
+          <button type="button" class="btn-voice-giveup" id="btn-voice-giveup" aria-label="Give up round">
+            <span class="giveup-icon">🏳️</span>
+            <span class="giveup-text">Give Up</span>
+            <span class="giveup-shortcut">[ESC]</span>
           </button>
         `
             : `
@@ -284,12 +291,33 @@ export class VoiceControls {
     if (beginBtn) {
       beginBtn.addEventListener('click', () => this.callbacks.onBeginClip());
     }
+
+    const handleReadyKeydown = (e: KeyboardEvent) => {
+      const activeTag = document.activeElement?.tagName.toLowerCase();
+      if (activeTag === 'input' || activeTag === 'textarea' || activeTag === 'select') return;
+
+      if (e.code === 'Space' && this.state?.type === 'ready') {
+        e.preventDefault();
+        this.callbacks.onBeginClip();
+      }
+    };
+
+    window.removeEventListener('keydown', (this as any)._spaceHandler);
+    (this as any)._spaceHandler = handleReadyKeydown;
+    window.addEventListener('keydown', handleReadyKeydown);
   }
 
   private bindActionEvents(): void {
     const buzzBtn = this.container.querySelector<HTMLButtonElement>('#btn-buzzer');
     if (buzzBtn) {
       buzzBtn.addEventListener('click', () => this.callbacks.onBuzzIn());
+    }
+
+    const giveUpBtn = this.container.querySelector<HTMLButtonElement>('#btn-voice-giveup');
+    if (giveUpBtn) {
+      giveUpBtn.addEventListener('click', () => {
+        this.callbacks.onGiveUp?.();
+      });
     }
 
     const submitBtn = this.container.querySelector<HTMLButtonElement>('#btn-voice-submit');
@@ -299,10 +327,10 @@ export class VoiceControls {
       });
     }
 
-    // Spacebar & Enter listener
+    // Spacebar, Enter, & Escape listener
     const handleKeydown = (e: KeyboardEvent) => {
       const activeTag = document.activeElement?.tagName.toLowerCase();
-      if (activeTag === 'input' || activeTag === 'textarea') return;
+      if (activeTag === 'input' || activeTag === 'textarea' || activeTag === 'select') return;
 
       if (e.code === 'Space') {
         if (this.state?.type === 'playing') {
@@ -316,6 +344,11 @@ export class VoiceControls {
         if (this.state?.type === 'buzzed') {
           e.preventDefault();
           this.callbacks.onSubmitEarly?.();
+        }
+      } else if (e.code === 'Escape') {
+        if (this.state?.type === 'playing') {
+          e.preventDefault();
+          this.callbacks.onGiveUp?.();
         }
       }
     };

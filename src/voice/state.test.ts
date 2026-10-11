@@ -5,6 +5,7 @@ import {
   buzzInVoice,
   resolveVoiceGuess,
   expireVoiceTimeout,
+  giveUpVoice,
 } from './state';
 import { Song } from '../data/types';
 
@@ -123,6 +124,21 @@ describe('src/voice/state', () => {
         expect(s.result.outcome).toBe('missed');
         if (s.result.outcome === 'missed') {
           expect(s.result.reason).toBe('timeout');
+        }
+      }
+    }
+  });
+
+  it('transitions to missed on give up', () => {
+    let s = startVoiceRound(mockSong, 'p1');
+    if (s.type === 'ready') s = beginVoicePlayback(s, 0);
+    if (s.type === 'playing') {
+      s = giveUpVoice(s);
+      expect(s.type).toBe('revealed');
+      if (s.type === 'revealed') {
+        expect(s.result.outcome).toBe('missed');
+        if (s.result.outcome === 'missed') {
+          expect(s.result.reason).toBe('give_up');
         }
       }
     }

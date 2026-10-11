@@ -68,7 +68,7 @@ export function renderReveal(
       </button>
 
       <button type="button" class="btn-next-round" id="btn-next-round">
-        Next Song &rarr;
+        Next Song <span class="btn-shortcut-hint">[Spacebar]</span> &rarr;
       </button>
     </div>
   `;

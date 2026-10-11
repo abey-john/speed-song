@@ -24,6 +24,7 @@ import {
   buzzInVoice,
   resolveVoiceGuess,
   expireVoiceTimeout,
+  giveUpVoice,
 } from './voice/state';
 import { VoiceControls } from './ui/voice-controls';
 
@@ -87,7 +88,25 @@ class SpeedSongApp {
       onSubmitEarly: () => {
         this.voiceRecognizer.stopListening();
       },
+      onGiveUp: () => this.handleVoiceGiveUp(),
       getCurrentPlaybackTime: () => audioEngine.getCurrentTime(),
+    });
+
+    // Global keyboard listener for Next Song on Reveal screen
+    window.addEventListener('keydown', (e: KeyboardEvent) => {
+      const activeTag = document.activeElement?.tagName.toLowerCase();
+      if (activeTag === 'input' || activeTag === 'textarea' || activeTag === 'select') return;
+
+      if (e.code === 'Space') {
+        const isRevealed =
+          (this.activeGameMode === 'classic' && this.state.type === 'revealed') ||
+          (this.activeGameMode === 'voice' && this.voiceState?.type === 'revealed');
+
+        if (isRevealed) {
+          e.preventDefault();
+          this.startNewRound();
+        }
+      }
     });
   }
 
@@ -425,6 +444,18 @@ class SpeedSongApp {
   private handleVoiceTimeout(): void {
     if (!this.voiceState || this.voiceState.type !== 'playing') return;
     const next = expireVoiceTimeout(this.voiceState);
+    this.voiceState = next;
+    if (next.type === 'revealed') {
+      this.handleVoiceGameOver(next.result);
+    }
+  }
+
+  private handleVoiceGiveUp(): void {
+    if (!this.voiceState || (this.voiceState.type !== 'playing' && this.voiceState.type !== 'buzzed')) return;
+    audioEngine.stop();
+    this.voiceControls.stopCountdownTimer();
+    this.voiceRecognizer.stopListening();
+    const next = giveUpVoice(this.voiceState);
     this.voiceState = next;
     if (next.type === 'revealed') {
       this.handleVoiceGameOver(next.result);

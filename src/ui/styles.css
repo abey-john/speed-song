@@ -1290,6 +1290,59 @@ body {
   font-size: 1rem;
 }
 
+/* Voice Give Up Button */
+.btn-voice-giveup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 22px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text-dim);
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-top: 2px;
+}
+
+.btn-voice-giveup:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  transform: translateY(-1px);
+}
+
+.btn-voice-giveup:active {
+  transform: translateY(1px);
+}
+
+.giveup-icon {
+  font-size: 0.95rem;
+}
+
+.giveup-text {
+  letter-spacing: 0.02em;
+}
+
+.giveup-shortcut {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  opacity: 0.65;
+  letter-spacing: 0.04em;
+}
+
+/* Inline Shortcut Badges on Buttons */
+.btn-shortcut-hint {
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  opacity: 0.75;
+  letter-spacing: 0.02em;
+  margin-left: 5px;
+}
+
 /* 3-Second Listening Banner */
 .voice-listening-banner {
   display: flex;

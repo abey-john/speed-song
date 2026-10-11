@@ -12,7 +12,7 @@ export interface VoiceAttempt {
 
 export type VoiceRoundOutcome =
   | { outcome: 'won'; timeSec: number; attempts: VoiceAttempt[]; livesRemaining: number }
-  | { outcome: 'missed'; attempts: VoiceAttempt[]; reason: 'out_of_lives' | 'timeout' };
+  | { outcome: 'missed'; attempts: VoiceAttempt[]; reason: 'out_of_lives' | 'timeout' | 'give_up' };
 
 export type VoiceGameState =
   | {
@@ -149,6 +149,22 @@ export function expireVoiceTimeout(
       outcome: 'missed',
       attempts: state.attempts,
       reason: 'timeout',
+    },
+    attempts: state.attempts,
+  };
+}
+
+export function giveUpVoice(
+  state: Extract<VoiceGameState, { type: 'playing' | 'buzzed' }>
+): VoiceGameState {
+  return {
+    type: 'revealed',
+    song: state.song,
+    selectedPlaylistId: state.selectedPlaylistId,
+    result: {
+      outcome: 'missed',
+      attempts: state.attempts,
+      reason: 'give_up',
     },
     attempts: state.attempts,
   };
