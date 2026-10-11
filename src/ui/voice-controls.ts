@@ -17,6 +17,7 @@ export class VoiceControls {
   private animFrameId: number | null = null;
   private liveTranscript = '';
   private countdownIntervalId: number | null = null;
+  private keydownHandler: ((e: KeyboardEvent) => void) | null = null;
 
   constructor(callbacks: VoiceControlsCallbacks) {
     this.container = document.createElement('div');
@@ -84,6 +85,15 @@ export class VoiceControls {
     if (this.countdownIntervalId !== null) {
       clearInterval(this.countdownIntervalId);
       this.countdownIntervalId = null;
+    }
+  }
+
+  public destroy(): void {
+    this.stopCountdownTimer();
+    this.stopPlaybackAnimation();
+    if (this.keydownHandler) {
+      window.removeEventListener('keydown', this.keydownHandler);
+      this.keydownHandler = null;
     }
   }
 
@@ -299,8 +309,10 @@ export class VoiceControls {
       }
     };
 
-    window.removeEventListener('keydown', (this as any)._spaceHandler);
-    (this as any)._spaceHandler = handleReadyKeydown;
+    if (this.keydownHandler) {
+      window.removeEventListener('keydown', this.keydownHandler);
+    }
+    this.keydownHandler = handleReadyKeydown;
     window.addEventListener('keydown', handleReadyKeydown);
   }
 
@@ -350,8 +362,10 @@ export class VoiceControls {
       }
     };
 
-    window.removeEventListener('keydown', (this as any)._spaceHandler);
-    (this as any)._spaceHandler = handleKeydown;
+    if (this.keydownHandler) {
+      window.removeEventListener('keydown', this.keydownHandler);
+    }
+    this.keydownHandler = handleKeydown;
     window.addEventListener('keydown', handleKeydown);
   }
 }

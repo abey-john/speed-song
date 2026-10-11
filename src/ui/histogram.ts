@@ -192,10 +192,24 @@ export function renderStatsModal(
     bindEvents();
   }
 
+  function closeModal(): void {
+    window.removeEventListener('keydown', handleKeydown);
+    callbacks.onClose();
+  }
+
+  function handleKeydown(e: KeyboardEvent): void {
+    if (e.key === 'Escape') {
+      e.stopPropagation();
+      closeModal();
+    }
+  }
+
+  window.addEventListener('keydown', handleKeydown);
+
   function bindEvents(): void {
     const closeBtn = container.querySelector<HTMLButtonElement>('.btn-close');
     if (closeBtn) {
-      closeBtn.addEventListener('click', () => callbacks.onClose());
+      closeBtn.addEventListener('click', () => closeModal());
     }
 
     const tabClassic = container.querySelector<HTMLButtonElement>('#tab-btn-classic');
@@ -245,7 +259,7 @@ export function renderStatsModal(
 
   container.addEventListener('click', (e) => {
     if (e.target === container) {
-      callbacks.onClose();
+      closeModal();
     }
   });
 

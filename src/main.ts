@@ -6,7 +6,7 @@ import { GameState, startRound, submitGuess, submitSkip } from './game/state';
 import { audioEngine } from './audio/engine';
 import { GameControls } from './ui/controls';
 import { renderReveal, preloadArtwork } from './ui/reveal';
-import { loadStats, saveStats, recordRoundOutcome, resetStats } from './stats/store';
+import { loadStats, saveStats, recordRoundOutcome, resetStats, BucketKey } from './stats/store';
 import {
   loadVoiceStats,
   saveVoiceStats,
@@ -150,6 +150,8 @@ class SpeedSongApp {
       window.clearTimeout(this.prefetchTimer);
       this.prefetchTimer = null;
     }
+    this.voiceRecognizer.stopListening();
+    this.voiceControls.destroy();
     this.nextSong = null;
 
     try {
@@ -168,6 +170,8 @@ class SpeedSongApp {
 
   private setGameMode(mode: 'classic' | 'voice'): void {
     if (this.activeGameMode === mode) return;
+    this.voiceRecognizer.stopListening();
+    this.voiceControls.destroy();
     this.activeGameMode = mode;
     localStorage.setItem(GAME_MODE_KEY, mode);
     audioEngine.stop();
@@ -183,6 +187,8 @@ class SpeedSongApp {
       this.prefetchTimer = null;
     }
 
+    this.voiceRecognizer.stopListening();
+    this.voiceControls.stopCountdownTimer();
     audioEngine.stop();
     this.isPlayingFullPreview = false;
 
@@ -364,7 +370,7 @@ class SpeedSongApp {
     let updatedStats;
 
     if (result.outcome === 'guessed') {
-      const stepKey = String(INTERVALS[result.stepIndex]) as any;
+      const stepKey = String(INTERVALS[result.stepIndex]) as BucketKey;
       updatedStats = recordRoundOutcome(stats, stepKey);
     } else {
       updatedStats = recordRoundOutcome(stats, 'missed');
