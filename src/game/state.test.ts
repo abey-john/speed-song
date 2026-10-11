@@ -88,10 +88,10 @@ describe('Game State Transitions', () => {
     }
   });
 
-  it('transitions to revealed missed outcome on wrong guess at last step (15s)', () => {
+  it('transitions to revealed missed outcome on wrong guess at last step (30s)', () => {
     let current = startRound(sampleSong, 'playlist-1');
 
-    // Advance 6 times to reach step 6 (15s interval)
+    // Advance to reach the last step (30s interval)
     for (let i = 0; i < INTERVALS.length - 1; i++) {
       if (current.type !== 'guessing') throw new Error('Expected guessing');
       current = submitSkip(current);
@@ -99,12 +99,12 @@ describe('Game State Transitions', () => {
 
     expect(current.type).toBe('guessing');
     if (current.type === 'guessing') {
-      expect(current.step).toBe(6);
+      expect(current.step).toBe(7);
       const finalState = submitGuess(current, 'wrong-999', 'Missed Guess');
       expect(finalState.type).toBe('revealed');
       if (finalState.type === 'revealed') {
         expect(finalState.result.outcome).toBe('missed');
-        expect(finalState.wrongGuesses).toHaveLength(7);
+        expect(finalState.wrongGuesses).toHaveLength(8);
       }
     }
   });

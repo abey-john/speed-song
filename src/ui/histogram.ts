@@ -21,6 +21,7 @@ export function renderStatsModal(stats: GameStats, callbacks: HistogramCallbacks
     { key: '5', label: '5s' },
     { key: '10', label: '10s' },
     { key: '15', label: '15s' },
+    { key: '30', label: '30s' },
     { key: 'missed', label: 'Miss' },
   ];
 

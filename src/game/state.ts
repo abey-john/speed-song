@@ -53,7 +53,7 @@ export function submitGuess(
   guessedArtist?: string
 ): GameState {
   const isCorrect = guessedSongId === currentState.song.id;
-  const currentDuration = INTERVALS[currentState.step] ?? 15;
+  const currentDuration = INTERVALS[currentState.step] ?? 30;
 
   if (isCorrect) {
     return {
@@ -108,7 +108,7 @@ export function submitGuess(
 }
 
 export function submitSkip(currentState: Extract<GameState, { type: 'guessing' }>): GameState {
-  const currentDuration = INTERVALS[currentState.step] ?? 15;
+  const currentDuration = INTERVALS[currentState.step] ?? 30;
 
   const newWrongGuess: WrongGuess = {
     stepIndex: currentState.step,

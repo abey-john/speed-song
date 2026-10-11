@@ -3,7 +3,7 @@ import { WrongGuess } from '../game/state';
 import { filterSongs, highlightMatch } from './search';
 import { createLabel } from '../../scripts/data/normalize';
 
-const MAX_TIMELINE_SEC = 15;
+const MAX_TIMELINE_SEC = 30;
 
 export interface GameControlsCallbacks {
   onPlaySnippet: () => void;
@@ -53,7 +53,7 @@ export class GameControls {
 
   public setPlayingState(isPlaying: boolean): void {
     this.isPlaying = isPlaying;
-    const currentDuration: IntervalStep = INTERVALS[this.currentStep] ?? 15;
+    const currentDuration: IntervalStep = INTERVALS[this.currentStep] ?? 30;
     const playBtn = this.container.querySelector<HTMLButtonElement>('#btn-play-snippet');
 
     if (playBtn) {
@@ -102,7 +102,7 @@ export class GameControls {
   }
 
   private updateProgressPosition(currentTimeSec: number): void {
-    const currentDuration: IntervalStep = INTERVALS[this.currentStep] ?? 15;
+    const currentDuration: IntervalStep = INTERVALS[this.currentStep] ?? 30;
     const clampedTime = Math.min(currentTimeSec, currentDuration);
     const pct = Math.min(100, (clampedTime / MAX_TIMELINE_SEC) * 100);
 
@@ -128,10 +128,10 @@ export class GameControls {
   }
 
   private render(isPlaying: boolean): void {
-    const currentDuration: IntervalStep = INTERVALS[this.currentStep] ?? 15;
+    const currentDuration: IntervalStep = INTERVALS[this.currentStep] ?? 30;
     const unlockedPct = Math.min(100, (currentDuration / MAX_TIMELINE_SEC) * 100);
     this.container.innerHTML = `
-      <!-- Continuous Linear Timeline (0 to 15s) -->
+      <!-- Continuous Linear Timeline (0 to 30s) -->
       <div class="timeline-container" role="region" aria-label="Audio timeline up to ${currentDuration}s">
         <div class="timeline-meta">
           <div class="timeline-time" aria-live="off">
@@ -157,7 +157,7 @@ export class GameControls {
             <!-- Playhead Handle -->
             <div class="timeline-playhead" id="timeline-playhead" style="left: 0%"></div>
 
-            <!-- Interval Ticks: 0.1s, 0.5s, 1s, 3s, 5s, 10s, 15s -->
+            <!-- Interval Ticks: 0.1s, 0.5s, 1s, 3s, 5s, 10s, 15s, 30s -->
             ${INTERVALS.map((duration) => {
               const tickPct = (duration / MAX_TIMELINE_SEC) * 100;
               const isUnlocked = duration <= currentDuration;
@@ -179,7 +179,8 @@ export class GameControls {
           <span class="timeline-label" style="left: ${(3 / MAX_TIMELINE_SEC) * 100}%">3s</span>
           <span class="timeline-label" style="left: ${(5 / MAX_TIMELINE_SEC) * 100}%">5s</span>
           <span class="timeline-label" style="left: ${(10 / MAX_TIMELINE_SEC) * 100}%">10s</span>
-          <span class="timeline-label" style="left: 100%">15s</span>
+          <span class="timeline-label" style="left: ${(15 / MAX_TIMELINE_SEC) * 100}%">15s</span>
+          <span class="timeline-label" style="left: 100%">30s</span>
         </div>
       </div>
 

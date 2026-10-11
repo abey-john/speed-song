@@ -157,7 +157,7 @@ class SpeedSongApp {
       this.updateDebugBar();
       return;
     }
-    const duration = INTERVALS[this.state.step] ?? 15;
+    const duration = INTERVALS[this.state.step] ?? 30;
     this.playCurrentStep(duration);
   }
 
@@ -176,7 +176,7 @@ class SpeedSongApp {
     }
 
     if (next.type === 'guessing') {
-      const nextDuration = INTERVALS[next.step] ?? 15;
+      const nextDuration = INTERVALS[next.step] ?? 30;
       if (wasPlaying) {
         const extended = audioEngine.extendDuration(nextDuration, () => {
           this.controls.setPlayingState(false);
@@ -224,7 +224,7 @@ class SpeedSongApp {
     }
 
     if (next.type === 'guessing') {
-      const nextDuration = INTERVALS[next.step] ?? 15;
+      const nextDuration = INTERVALS[next.step] ?? 30;
       if (wasPlaying) {
         const extended = audioEngine.extendDuration(nextDuration, () => {
           this.controls.setPlayingState(false);
