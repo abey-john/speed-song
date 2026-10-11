@@ -5,6 +5,7 @@ export interface VoiceControlsCallbacks {
   onBeginClip: () => void;
   onBuzzIn: () => void;
   onResumePlayback: () => void;
+  onSubmitEarly?: () => void;
   getCurrentPlaybackTime?: () => number;
 }
 
@@ -49,7 +50,7 @@ export class VoiceControls {
       micBanner.style.display = isListening ? 'flex' : 'none';
     }
     if (transcriptEl) {
-      transcriptEl.textContent = interimTranscript ? `"${interimTranscript}"` : 'Listening for song & artist...';
+      transcriptEl.textContent = interimTranscript ? `"${interimTranscript}"` : 'Listening for song title...';
       transcriptEl.classList.toggle('has-text', Boolean(interimTranscript));
     }
     if (timerFillEl) {
@@ -137,7 +138,7 @@ export class VoiceControls {
           <h2 class="voice-ready-title">Voice Buzzer Mode</h2>
           <p class="voice-ready-desc">
             Audio plays continuously. Hit the <strong>BUZZ</strong> button the second you know the track,
-            then speak the <strong>song title and primary artist</strong> within 3 seconds!
+            then speak the <strong>song title</strong> within 3 seconds!
           </p>
 
           ${
@@ -213,7 +214,7 @@ export class VoiceControls {
         <div class="voice-listening-banner" id="voice-listening-banner" style="display: ${isBuzzed ? 'flex' : 'none'}">
           <div class="voice-listening-header">
             <div class="voice-listening-pulse-ring" aria-hidden="true"></div>
-            <span class="voice-listening-label">🎙️ Speak song title & artist!</span>
+            <span class="voice-listening-label">🎙️ Speak song title!</span>
             <span class="voice-countdown-num" id="voice-countdown-num">3.0s</span>
           </div>
 
@@ -222,7 +223,14 @@ export class VoiceControls {
           </div>
 
           <div class="voice-live-transcript" id="voice-live-transcript">
-            Listening for song & artist...
+            Listening for song title...
+          </div>
+
+          <div class="voice-listening-footer">
+            <span class="voice-listening-hint">Auto-submits on pause, or press:</span>
+            <button type="button" class="btn-voice-submit" id="btn-voice-submit" aria-label="Submit spoken guess now">
+              Done [↵]
+            </button>
           </div>
         </div>
 
@@ -284,13 +292,30 @@ export class VoiceControls {
       buzzBtn.addEventListener('click', () => this.callbacks.onBuzzIn());
     }
 
-    // Spacebar listener for Buzzer
+    const submitBtn = this.container.querySelector<HTMLButtonElement>('#btn-voice-submit');
+    if (submitBtn) {
+      submitBtn.addEventListener('click', () => {
+        this.callbacks.onSubmitEarly?.();
+      });
+    }
+
+    // Spacebar & Enter listener
     const handleKeydown = (e: KeyboardEvent) => {
-      if (e.code === 'Space' && this.state?.type === 'playing') {
-        const activeTag = document.activeElement?.tagName.toLowerCase();
-        if (activeTag !== 'input' && activeTag !== 'textarea') {
+      const activeTag = document.activeElement?.tagName.toLowerCase();
+      if (activeTag === 'input' || activeTag === 'textarea') return;
+
+      if (e.code === 'Space') {
+        if (this.state?.type === 'playing') {
           e.preventDefault();
           this.callbacks.onBuzzIn();
+        } else if (this.state?.type === 'buzzed') {
+          e.preventDefault();
+          this.callbacks.onSubmitEarly?.();
+        }
+      } else if (e.code === 'Enter') {
+        if (this.state?.type === 'buzzed') {
+          e.preventDefault();
+          this.callbacks.onSubmitEarly?.();
         }
       }
     };

@@ -62,9 +62,9 @@ describe('src/voice/matcher', () => {
     expect(res3.isCorrect).toBe(true);
   });
 
-  it('rejects guesses where only title is spoken', () => {
+  it('accepts guesses where only title is spoken', () => {
     const res = evaluateVoiceGuess('Starboy', song1);
-    expect(res.isCorrect).toBe(false);
+    expect(res.isCorrect).toBe(true);
     expect(res.matchedTitle).toBe(true);
     expect(res.matchedArtist).toBe(false);
   });
@@ -76,10 +76,23 @@ describe('src/voice/matcher', () => {
     expect(res.matchedArtist).toBe(true);
   });
 
-  it('rejects guesses with wrong artist', () => {
+  it('accepts guesses where title is correct even if artist is different or extra', () => {
     const res = evaluateVoiceGuess('Starboy by Drake', song1);
-    expect(res.isCorrect).toBe(false);
+    expect(res.isCorrect).toBe(true);
     expect(res.matchedTitle).toBe(true);
-    expect(res.matchedArtist).toBe(false);
+  });
+
+  it('matches base title for songs with featured artists in parentheses', () => {
+    const songFeat: Song = {
+      id: 's4',
+      title: 'Sunflower (feat. Swae Lee)',
+      artist: 'Post Malone',
+      album: '',
+      previewUrl: '',
+      artworkUrl: '',
+    };
+    const res = evaluateVoiceGuess('Sunflower', songFeat);
+    expect(res.isCorrect).toBe(true);
+    expect(res.matchedTitle).toBe(true);
   });
 });

@@ -1,6 +1,6 @@
 import { Song } from '../data/types';
 import { normalizeSearchString } from '../ui/search';
-import { isSamePrimaryArtist } from '../../scripts/data/normalize';
+import { isSamePrimaryArtist, getBaseTitle } from '../../scripts/data/normalize';
 
 export interface VoiceMatchResult {
   isCorrect: boolean;
@@ -28,10 +28,25 @@ export function cleanSpokenTranscript(transcript: string): string {
 }
 
 /**
- * Checks whether the spoken text contains the song's primary title.
+ * Checks whether the spoken text contains the song's title or base title.
  */
 export function matchesTitle(spokenClean: string, targetTitle: string): boolean {
-  const normTitle = cleanSpokenTranscript(targetTitle);
+  if (!spokenClean || !targetTitle) return false;
+
+  const fullClean = cleanSpokenTranscript(targetTitle);
+  const baseClean = cleanSpokenTranscript(getBaseTitle(targetTitle));
+
+  const candidates = Array.from(new Set([fullClean, baseClean].filter(Boolean)));
+  for (const candidate of candidates) {
+    if (checkSingleTitleMatch(spokenClean, candidate)) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+function checkSingleTitleMatch(spokenClean: string, normTitle: string): boolean {
   if (!normTitle || !spokenClean) return false;
 
   // Direct phrase match
@@ -89,7 +104,8 @@ export function matchesArtist(spokenClean: string, targetArtist: string): boolea
 }
 
 /**
- * Evaluates whether a spoken guess names both the song and primary artist.
+ * Evaluates whether a spoken guess names the song.
+ * Artist name is optional and not required to win.
  */
 export function evaluateVoiceGuess(transcript: string, song: Song): VoiceMatchResult {
   const cleaned = cleanSpokenTranscript(transcript);
@@ -105,11 +121,12 @@ export function evaluateVoiceGuess(transcript: string, song: Song): VoiceMatchRe
 
   const titleMatch = matchesTitle(cleaned, song.title);
   const artistMatch = matchesArtist(cleaned, song.artist);
-  const isCorrect = titleMatch && artistMatch;
+  // Only song title is required in voice mode
+  const isCorrect = titleMatch;
 
   let confidence = 0;
-  if (titleMatch) confidence += 0.5;
-  if (artistMatch) confidence += 0.5;
+  if (titleMatch) confidence += 0.8;
+  if (artistMatch) confidence += 0.2;
 
   return {
     isCorrect,

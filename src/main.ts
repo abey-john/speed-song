@@ -67,6 +67,13 @@ class SpeedSongApp {
     this.voiceRecognizer = new VoiceRecognizer({
       onInterimTranscript: (text) => {
         this.voiceControls.setListeningState(true, this.voiceListeningRemainingSec, text);
+        // Early win detection: if spoken text matches the song title, finish immediately!
+        if (this.voiceState && this.voiceState.type === 'buzzed') {
+          const match = evaluateVoiceGuess(text, this.voiceState.song);
+          if (match.isCorrect) {
+            this.voiceRecognizer.stopListening();
+          }
+        }
       },
       onError: (err) => {
         console.warn('[voice] Speech recognition notice:', err);
@@ -77,6 +84,9 @@ class SpeedSongApp {
       onBeginClip: () => this.handleVoiceBeginClip(),
       onBuzzIn: () => this.handleVoiceBuzzIn(),
       onResumePlayback: () => this.handleVoiceResume(),
+      onSubmitEarly: () => {
+        this.voiceRecognizer.stopListening();
+      },
       getCurrentPlaybackTime: () => audioEngine.getCurrentTime(),
     });
   }

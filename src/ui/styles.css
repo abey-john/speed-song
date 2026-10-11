@@ -1358,6 +1358,44 @@ body {
   color: #fff;
 }
 
+.voice-listening-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.voice-listening-hint {
+  font-size: 0.76rem;
+  color: var(--color-text-dim);
+}
+
+.btn-voice-submit {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+  transition: transform 0.1s ease, filter 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-voice-submit:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.btn-voice-submit:active {
+  transform: translateY(1px);
+}
+
 /* Attempt History */
 .voice-attempts-list {
   display: flex;

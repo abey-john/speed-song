@@ -67,7 +67,9 @@ export class VoiceRecognizer {
   private recognition: ISpeechRecognition | null = null;
   private isCurrentlyListening = false;
   private currentTranscript = '';
-  private timerId: number | null = null;
+  private hardTimerId: number | null = null;
+  private silenceTimerId: number | null = null;
+  private activeResolve: ((transcript: string) => void) | null = null;
   private callbacks: VoiceRecognizerCallbacks;
 
   constructor(callbacks: VoiceRecognizerCallbacks = {}) {
@@ -94,23 +96,26 @@ export class VoiceRecognizer {
       };
 
       this.recognition.onresult = (event: SpeechRecognitionEvent) => {
-        let interimText = '';
-        let finalText = '';
+        let fullTranscript = '';
+        let hasFinal = false;
 
-        for (let i = event.resultIndex; i < event.results.length; i++) {
+        for (let i = 0; i < event.results.length; i++) {
           const res = event.results[i];
           if (!res || !res[0]) continue;
+          fullTranscript += res[0].transcript + ' ';
           if (res.isFinal) {
-            finalText += res[0].transcript + ' ';
-          } else {
-            interimText += res[0].transcript + ' ';
+            hasFinal = true;
           }
         }
 
-        const combined = (finalText || interimText).trim();
+        const combined = fullTranscript.trim();
         if (combined) {
           this.currentTranscript = combined;
           this.callbacks.onInterimTranscript?.(combined);
+
+          // If browser finalized a phrase, conclude in 350ms grace period.
+          // Otherwise, start a 750ms silence debounce so stopping speaking completes the guess.
+          this.resetSilenceTimer(hasFinal ? 350 : 750);
         }
       };
 
@@ -121,8 +126,10 @@ export class VoiceRecognizer {
       };
 
       this.recognition.onend = () => {
-        this.isCurrentlyListening = false;
-        this.clearTimer();
+        if (this.isCurrentlyListening) {
+          this.finishListening();
+        }
+        this.clearAllTimers();
         this.callbacks.onEnd?.();
       };
     } catch {
@@ -137,57 +144,79 @@ export class VoiceRecognizer {
   public startListening(timeoutMs = 3000): Promise<string> {
     return new Promise((resolve) => {
       this.currentTranscript = '';
-      this.clearTimer();
+      this.clearAllTimers();
+      this.activeResolve = resolve;
 
       if (!this.recognition) {
         this.callbacks.onError?.('Speech recognition is not supported in this browser.');
-        resolve('');
+        this.finishListening();
         return;
       }
 
-      const finishListening = () => {
-        this.clearTimer();
-        if (this.isCurrentlyListening) {
-          try {
-            this.recognition?.stop();
-          } catch {}
-        }
-        this.callbacks.onFinalTranscript?.(this.currentTranscript);
-        resolve(this.currentTranscript);
-      };
-
-      this.timerId = window.setTimeout(finishListening, timeoutMs);
+      this.hardTimerId = window.setTimeout(() => {
+        this.finishListening();
+      }, timeoutMs);
 
       try {
         this.recognition.start();
       } catch {
-        // If already started, restart
         try {
           this.recognition.stop();
           this.recognition.start();
         } catch {
-          finishListening();
+          this.finishListening();
         }
       }
     });
   }
 
-  public stopListening(): string {
-    this.clearTimer();
+  private resetSilenceTimer(delayMs: number): void {
+    if (this.silenceTimerId !== null) {
+      window.clearTimeout(this.silenceTimerId);
+      this.silenceTimerId = null;
+    }
+
+    if (this.isCurrentlyListening && this.currentTranscript.trim()) {
+      this.silenceTimerId = window.setTimeout(() => {
+        this.finishListening();
+      }, delayMs);
+    }
+  }
+
+  private finishListening(): void {
+    this.clearAllTimers();
+
     if (this.isCurrentlyListening && this.recognition) {
       try {
         this.recognition.stop();
       } catch {}
     }
+    this.isCurrentlyListening = false;
+
+    const transcript = this.currentTranscript;
+    this.callbacks.onFinalTranscript?.(transcript);
+
+    if (this.activeResolve) {
+      const resolve = this.activeResolve;
+      this.activeResolve = null;
+      resolve(transcript);
+    }
+  }
+
+  public stopListening(): string {
     const result = this.currentTranscript;
-    this.callbacks.onFinalTranscript?.(result);
+    this.finishListening();
     return result;
   }
 
-  private clearTimer(): void {
-    if (this.timerId !== null) {
-      window.clearTimeout(this.timerId);
-      this.timerId = null;
+  private clearAllTimers(): void {
+    if (this.hardTimerId !== null) {
+      window.clearTimeout(this.hardTimerId);
+      this.hardTimerId = null;
+    }
+    if (this.silenceTimerId !== null) {
+      window.clearTimeout(this.silenceTimerId);
+      this.silenceTimerId = null;
     }
   }
 }
