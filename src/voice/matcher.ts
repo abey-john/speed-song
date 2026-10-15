@@ -1,3 +1,4 @@
+import Fuse from 'fuse.js';
 import { doubleMetaphone } from 'double-metaphone';
 export { doubleMetaphone };
 import { Song } from '../data/types';
@@ -145,36 +146,6 @@ export function normalizeNumbers(text: string): string {
 }
 
 /**
- * Calculates Levenshtein edit distance between two strings using single-row dynamic programming.
- */
-export function levenshteinDistance(a: string, b: string): number {
-  if (a === b) return 0;
-  if (!a.length) return b.length;
-  if (!b.length) return a.length;
-
-  const bLen = b.length;
-  const aLen = a.length;
-  const v0: number[] = new Array<number>(bLen + 1);
-  const v1: number[] = new Array<number>(bLen + 1);
-
-  for (let i = 0; i <= bLen; i++) v0[i] = i;
-
-  for (let i = 0; i < aLen; i++) {
-    v1[0] = i + 1;
-    const aChar = a[i]!;
-    for (let j = 0; j < bLen; j++) {
-      const cost = aChar === b[j] ? 0 : 1;
-      const v1j = v1[j]!;
-      const v0j1 = v0[j + 1]!;
-      const v0j = v0[j]!;
-      v1[j + 1] = Math.min(v1j + 1, v0j1 + 1, v0j + cost);
-    }
-    for (let j = 0; j <= bLen; j++) v0[j] = v1[j]!;
-  }
-  return v0[bLen] ?? 0;
-}
-
-/**
  * Universal linguistic contraction expansions and number canonicalization.
  */
 export function canonicalizeContractions(text: string): string {
@@ -235,8 +206,7 @@ export function hasWholePhraseMatch(haystack: string, needle: string): boolean {
 }
 
 /**
- * Checks whether two individual tokens match with phonetic and edit-distance tolerance.
- * Uses Double Metaphone library for primary/alternate phonetic codes.
+ * Checks whether two individual tokens match with phonetic (Double Metaphone) and fuzzy (Fuse.js) tolerance.
  */
 export function isTokenFuzzyMatch(tokenA: string, tokenB: string): boolean {
   if (tokenA === tokenB) return true;
@@ -255,11 +225,10 @@ export function isTokenFuzzyMatch(tokenA: string, tokenB: string): boolean {
     return false;
   }
 
-  // Official Double Metaphone library
+  // Official Double Metaphone library handles phonetic homophones
   const [primA, altA] = doubleMetaphone(tokenA);
   const [primB, altB] = doubleMetaphone(tokenB);
 
-  // Phonetic match: either primary or alternate codes match
   const phoneticMatch = Boolean(
     (primA && primB && primA === primB) ||
     (primA && altB && primA === altB) ||
@@ -271,18 +240,19 @@ export function isTokenFuzzyMatch(tokenA: string, tokenB: string): boolean {
     return true;
   }
 
-  // For words of length <= 4, avoid loose edit-distance matches without identical start and phonetics
+  // For short words of length <= 4, avoid loose edit matches without identical start and phonetics
   if (minLen <= 4) {
     return false;
   }
 
-  // Edit distance check: requires same first character
+  // Fuzzy edit distance check using existing Fuse.js library
   if (tokenA[0] !== tokenB[0]) {
     return false;
   }
 
-  const dist = levenshteinDistance(tokenA, tokenB);
-  return minLen <= 5 ? dist <= 1 : dist <= 2;
+  const fuse = new Fuse([tokenB], { threshold: 0.35, ignoreLocation: true, includeScore: true });
+  const results = fuse.search(tokenA);
+  return results.length > 0;
 }
 
 /**

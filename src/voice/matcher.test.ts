@@ -5,7 +5,6 @@ import {
   matchesTitle,
   matchesArtist,
   doubleMetaphone,
-  levenshteinDistance,
   isTokenFuzzyMatch,
   canonicalizeContractions,
 } from './matcher';
@@ -105,14 +104,7 @@ describe('src/voice/matcher', () => {
     expect(res.matchedTitle).toBe(true);
   });
 
-  describe('Phonetic and Levenshtein Utilities', () => {
-    it('calculates correct Levenshtein distance', () => {
-      expect(levenshteinDistance('kitten', 'sitting')).toBe(3);
-      expect(levenshteinDistance('munny', 'money')).toBe(2);
-      expect(levenshteinDistance('jennie', 'jenny')).toBe(2);
-      expect(levenshteinDistance('morale', 'morel')).toBe(2);
-      expect(levenshteinDistance('same', 'same')).toBe(0);
-    });
+  describe('Phonetic and Fuzzy Utilities', () => {
 
     it('generates consistent Metaphone codes for homophones', () => {
       expect(doubleMetaphone('munny')).toEqual(doubleMetaphone('money'));
