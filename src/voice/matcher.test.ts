@@ -4,7 +4,7 @@ import {
   evaluateVoiceGuess,
   matchesTitle,
   matchesArtist,
-  metaphone,
+  doubleMetaphone,
   levenshteinDistance,
   isTokenFuzzyMatch,
   canonicalizeContractions,
@@ -115,10 +115,10 @@ describe('src/voice/matcher', () => {
     });
 
     it('generates consistent Metaphone codes for homophones', () => {
-      expect(metaphone('munny')).toBe(metaphone('money'));
-      expect(metaphone('jennie')).toBe(metaphone('jenny'));
-      expect(metaphone('morale')).toBe(metaphone('morel'));
-      expect(metaphone('phil')).toBe(metaphone('fill'));
+      expect(doubleMetaphone('munny')).toEqual(doubleMetaphone('money'));
+      expect(doubleMetaphone('jennie')).toEqual(doubleMetaphone('jenny'));
+      expect(doubleMetaphone('morale')).toEqual(doubleMetaphone('morel'));
+      expect(doubleMetaphone('phil')).toEqual(doubleMetaphone('fill'));
     });
 
     it('canonicalizes spoken contractions and slang', () => {
@@ -281,6 +281,56 @@ describe('src/voice/matcher', () => {
       };
       expect(evaluateVoiceGuess('machine head', song).isCorrect).toBe(true);
       expect(evaluateVoiceGuess('Machinehead', song).isCorrect).toBe(true);
+    });
+
+    it('matches Roman numerals, number words, and digits interchangeably', () => {
+      const songRoman: Song = {
+        id: 'star-part-2',
+        title: 'Starboy Part II',
+        artist: 'The Weeknd',
+        album: 'Starboy',
+        previewUrl: '',
+        artworkUrl: '',
+      };
+      expect(evaluateVoiceGuess('Starboy Part 2', songRoman).isCorrect).toBe(true);
+      expect(evaluateVoiceGuess('Starboy Part Two', songRoman).isCorrect).toBe(true);
+      expect(evaluateVoiceGuess('Starboy Part II', songRoman).isCorrect).toBe(true);
+
+      const songMambo: Song = {
+        id: 'mambo-5',
+        title: 'Mambo No. 5',
+        artist: 'Lou Bega',
+        album: 'A Little Bit of Mambo',
+        previewUrl: '',
+        artworkUrl: '',
+      };
+      expect(evaluateVoiceGuess('Mambo Number 5', songMambo).isCorrect).toBe(true);
+      expect(evaluateVoiceGuess('Mambo Number Five', songMambo).isCorrect).toBe(true);
+
+      const songBlur: Song = {
+        id: 'song-2',
+        title: 'Song 2',
+        artist: 'Blur',
+        album: 'Blur',
+        previewUrl: '',
+        artworkUrl: '',
+      };
+      expect(evaluateVoiceGuess('Song Two', songBlur).isCorrect).toBe(true);
+      expect(evaluateVoiceGuess('Song 2', songBlur).isCorrect).toBe(true);
+    });
+
+    it('prevents false positive substring matches on short common words', () => {
+      const songOne: Song = {
+        id: 'u2-one',
+        title: 'One',
+        artist: 'U2',
+        album: 'Achtung Baby',
+        previewUrl: '',
+        artworkUrl: '',
+      };
+      expect(evaluateVoiceGuess('One', songOne).isCorrect).toBe(true);
+      // "Someone Like You" contains the letters "one", but MUST NOT match the song "One"
+      expect(evaluateVoiceGuess('Someone like you', songOne).isCorrect).toBe(false);
     });
   });
 });

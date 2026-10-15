@@ -29,6 +29,7 @@
     "vitest": "^5.0.3"
   },
   "dependencies": {
+    "double-metaphone": "^2.0.1",
     "fuse.js": "^7.5.0"
   }
 }

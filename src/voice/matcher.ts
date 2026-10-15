@@ -1,3 +1,5 @@
+import { doubleMetaphone } from 'double-metaphone';
+export { doubleMetaphone };
 import { Song } from '../data/types';
 import { normalizeSearchString } from '../ui/search';
 import { isSamePrimaryArtist, getBaseTitle } from '../../scripts/data/normalize';
@@ -41,8 +43,109 @@ export const VOICE_STOP_WORDS = new Set([
   'eine',
 ]);
 
+const ROMAN_VALUES: Record<string, number> = {
+  i: 1,
+  v: 5,
+  x: 10,
+  l: 50,
+  c: 100,
+  d: 500,
+  m: 1000,
+};
+
 /**
- * Calculates Levenshtein distance between two strings using single-row dynamic programming.
+ * Parses valid Roman numerals into their integer values algorithmically (1 to 3999).
+ */
+export function parseRomanNumeral(token: string): number | null {
+  const s = token.toLowerCase();
+  if (!s || !/^m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})$/i.test(s)) {
+    return null;
+  }
+  let total = 0;
+  for (let i = 0; i < s.length; i++) {
+    const cur = ROMAN_VALUES[s[i]!] || 0;
+    const next = ROMAN_VALUES[s[i + 1]!] || 0;
+    if (next > cur) {
+      total += next - cur;
+      i++;
+    } else {
+      total += cur;
+    }
+  }
+  return total > 0 ? total : null;
+}
+
+const NUMBER_WORDS: Record<string, number> = {
+  zero: 0,
+  one: 1,
+  two: 2,
+  three: 3,
+  four: 4,
+  five: 5,
+  six: 6,
+  seven: 7,
+  eight: 8,
+  nine: 9,
+  ten: 10,
+  eleven: 11,
+  twelve: 12,
+  thirteen: 13,
+  fourteen: 14,
+  fifteen: 15,
+  sixteen: 16,
+  seventeen: 17,
+  eighteen: 18,
+  nineteen: 19,
+  twenty: 20,
+  thirty: 30,
+  forty: 40,
+  fifty: 50,
+  sixty: 60,
+  seventy: 70,
+  eighty: 80,
+  ninety: 90,
+  hundred: 100,
+  thousand: 1000,
+};
+
+/**
+ * Normalizes number words, digits, and Roman numerals to standard decimal digits.
+ */
+export function normalizeNumbers(text: string): string {
+  const tokens = text.split(/\s+/);
+  const result: string[] = [];
+
+  for (let i = 0; i < tokens.length; i++) {
+    const tok = tokens[i]!;
+    const prev = i > 0 ? tokens[i - 1]! : '';
+
+    // Standard number words: "five" -> "5"
+    if (tok.toLowerCase() in NUMBER_WORDS) {
+      result.push(String(NUMBER_WORDS[tok.toLowerCase()]));
+      continue;
+    }
+
+    // Roman numerals: "ii" -> "2", "iv" -> "4"
+    // For single "i", only convert if preceded by part/act/volume/etc to avoid colliding with pronoun "I"
+    const isSingleI = tok.toLowerCase() === 'i';
+    const isContextualI = isSingleI && /^(part|pt|volume|vol|act|chapter|no|number)$/i.test(prev);
+
+    if (!isSingleI || isContextualI) {
+      const romanVal = parseRomanNumeral(tok);
+      if (romanVal !== null && romanVal <= 100) {
+        result.push(String(romanVal));
+        continue;
+      }
+    }
+
+    result.push(tok);
+  }
+
+  return result.join(' ');
+}
+
+/**
+ * Calculates Levenshtein edit distance between two strings using single-row dynamic programming.
  */
 export function levenshteinDistance(a: string, b: string): number {
   if (a === b) return 0;
@@ -72,167 +175,12 @@ export function levenshteinDistance(a: string, b: string): number {
 }
 
 /**
- * Standard Metaphone phonetic algorithm implementation.
- * Encodes words based on English phonetic pronunciation rules.
- */
-export function metaphone(word: string): string {
-  if (!word) return '';
-  let str = word.toLowerCase().replace(/[^a-z]/g, '');
-  if (!str) return '';
-
-  // Drop silent initial letters in kn, gn, pn, wr, ae
-  if (/^(kn|gn|pn|wr|ae)/.test(str)) {
-    str = str.slice(1);
-  } else if (str.startsWith('x')) {
-    str = 's' + str.slice(1);
-  } else if (str.startsWith('wh')) {
-    str = 'w' + str.slice(2);
-  }
-
-  let code = '';
-  const len = str.length;
-
-  for (let i = 0; i < len; i++) {
-    const c = str[i]!;
-    const next = str[i + 1] || '';
-    const prev = str[i - 1] || '';
-
-    // Ignore duplicate letters (except c)
-    if (c === prev && c !== 'c') continue;
-
-    // Vowel at start kept, interior vowels dropped
-    if (i === 0 && 'aeiou'.includes(c)) {
-      code += c;
-      continue;
-    }
-
-    switch (c) {
-      case 'b':
-        // Silent b at end after m: "dumb", "comb"
-        if (i === len - 1 && prev === 'm') break;
-        code += 'b';
-        break;
-      case 'c':
-        if (next === 'h') {
-          code += 'x';
-          i++;
-        } else if (next === 'i' && str[i + 2] === 'a') {
-          code += 'x';
-          i += 2;
-        } else if (next && 'eiy'.includes(next)) {
-          code += 's';
-        } else {
-          code += 'k';
-        }
-        break;
-      case 'd': {
-        const afterNext = str[i + 2];
-        if (next === 'g' && afterNext && 'eiy'.includes(afterNext)) {
-          code += 'j';
-          i += 2;
-        } else {
-          code += 't';
-        }
-        break;
-      }
-      case 'f':
-        code += 'f';
-        break;
-      case 'g':
-        if (next === 'h' && i === len - 2) break; // silent gh at end
-        if (next && 'eiy'.includes(next)) {
-          code += 'j';
-        } else {
-          code += 'k';
-        }
-        break;
-      case 'h':
-        // h after vowel and not before vowel is silent
-        if (prev && 'aeiou'.includes(prev) && (!next || !'aeiou'.includes(next))) break;
-        code += 'h';
-        break;
-      case 'j':
-        code += 'j';
-        break;
-      case 'k':
-        if (prev !== 'c') code += 'k';
-        break;
-      case 'l':
-        code += 'l';
-        break;
-      case 'm':
-        code += 'm';
-        break;
-      case 'n':
-        code += 'n';
-        break;
-      case 'p':
-        if (next === 'h') {
-          code += 'f';
-          i++;
-        } else {
-          code += 'p';
-        }
-        break;
-      case 'q':
-        code += 'k';
-        break;
-      case 'r':
-        code += 'r';
-        break;
-      case 's':
-        if (next === 'h') {
-          code += 'x';
-          i++;
-        } else if (next === 'i' && (str[i + 2] === 'a' || str[i + 2] === 'o')) {
-          code += 'x';
-          i += 2;
-        } else {
-          code += 's';
-        }
-        break;
-      case 't':
-        if (next === 'i' && (str[i + 2] === 'a' || str[i + 2] === 'o')) {
-          code += 'x';
-          i += 2;
-        } else if (next === 'h') {
-          code += '0';
-          i++;
-        } else if (next === 'c' && str[i + 2] === 'h') {
-          // tch -> ch
-          break;
-        } else {
-          code += 't';
-        }
-        break;
-      case 'v':
-        code += 'f';
-        break;
-      case 'w':
-      case 'y':
-        if (next && 'aeiou'.includes(next)) {
-          code += c;
-        }
-        break;
-      case 'x':
-        code += 'ks';
-        break;
-      case 'z':
-        code += 's';
-        break;
-    }
-  }
-
-  return code.toUpperCase();
-}
-
-/**
- * Canonicalizes common slang, spoken contractions, and music title abbreviations.
+ * Universal linguistic contraction expansions and number canonicalization.
  */
 export function canonicalizeContractions(text: string): string {
   let s = text.toLowerCase();
 
-  // Multi-word phrase contractions & STT misrecognitions
+  // Universal informal reductions
   s = s.replace(/\bwannabe\b/g, 'want to be');
   s = s.replace(/\bwanna be\b/g, 'want to be');
   s = s.replace(/\bwanna\b/g, 'want to');
@@ -254,7 +202,7 @@ export function canonicalizeContractions(text: string): string {
   s = s.replace(/\bkinda\b/g, 'kind of');
   s = s.replace(/\bsorta\b/g, 'sort of');
 
-  // Common title abbreviations
+  // Universal English abbreviations
   s = s.replace(/\bmr\b/g, 'mister');
   s = s.replace(/\bmrs\b/g, 'missus');
   s = s.replace(/\bms\b/g, 'miss');
@@ -263,15 +211,32 @@ export function canonicalizeContractions(text: string): string {
   s = s.replace(/\bpt\b/g, 'part');
   s = s.replace(/\bvol\b/g, 'volume');
   s = s.replace(/\blil\b/g, 'little');
-
-  // 'cause / cuz -> because
+  s = s.replace(/\b(no|num|nr)\b/g, 'number');
   s = s.replace(/\b(cuz|cause)\b/g, 'because');
+
+  // Normalize numbers, digit words, and Roman numerals
+  s = normalizeNumbers(s);
 
   return s.replace(/\s+/g, ' ').trim();
 }
 
 /**
+ * Checks whether haystack contains needle as a whole word/phrase to prevent short word false positives
+ * (e.g. "someone" incorrectly matching the song title "One").
+ */
+export function hasWholePhraseMatch(haystack: string, needle: string): boolean {
+  if (!haystack || !needle) return false;
+  if (haystack === needle) return true;
+  if (needle.length >= 6) {
+    return haystack.includes(needle);
+  }
+  const escaped = needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(`(?:^|\\s)${escaped}(?:$|\\s)`).test(haystack);
+}
+
+/**
  * Checks whether two individual tokens match with phonetic and edit-distance tolerance.
+ * Uses Double Metaphone library for primary/alternate phonetic codes.
  */
 export function isTokenFuzzyMatch(tokenA: string, tokenB: string): boolean {
   if (tokenA === tokenB) return true;
@@ -290,30 +255,34 @@ export function isTokenFuzzyMatch(tokenA: string, tokenB: string): boolean {
     return false;
   }
 
-  const codeA = metaphone(tokenA);
-  const codeB = metaphone(tokenB);
+  // Official Double Metaphone library
+  const [primA, altA] = doubleMetaphone(tokenA);
+  const [primB, altB] = doubleMetaphone(tokenB);
 
-  // Exact phonetic match (e.g. "morel" vs "morale" -> MRL, "money" vs "munny" -> MN, "jenny" vs "jennie" -> JN)
-  if (codeA && codeB && codeA === codeB) {
+  // Phonetic match: either primary or alternate codes match
+  const phoneticMatch = Boolean(
+    (primA && primB && primA === primB) ||
+    (primA && altB && primA === altB) ||
+    (altA && primB && altA === primB) ||
+    (altA && altB && altA === altB)
+  );
+
+  if (phoneticMatch) {
     return true;
   }
 
-  // For short words of length <= 4, avoid loose edit-distance matches without identical starting character
+  // For words of length <= 4, avoid loose edit-distance matches without identical start and phonetics
   if (minLen <= 4) {
-    return Boolean(tokenA[0] === tokenB[0] && codeA && codeB && codeA === codeB);
+    return false;
   }
 
-  // Edit distance check with anchor: requires either same first letter or same phonetic starting code
-  const sameStart = tokenA[0] === tokenB[0] || (codeA && codeB && codeA[0] === codeB[0]);
-  if (!sameStart) {
+  // Edit distance check: requires same first character
+  if (tokenA[0] !== tokenB[0]) {
     return false;
   }
 
   const dist = levenshteinDistance(tokenA, tokenB);
-  if (minLen <= 5) {
-    return dist <= 1;
-  }
-  return dist <= 2;
+  return minLen <= 5 ? dist <= 1 : dist <= 2;
 }
 
 /**
@@ -370,8 +339,8 @@ export function matchesTitle(spokenClean: string, targetTitle: string): boolean 
 export function checkSingleTitleMatch(spokenClean: string, normTitle: string): boolean {
   if (!normTitle || !spokenClean) return false;
 
-  // 1. Direct phrase match
-  if (spokenClean.includes(normTitle)) {
+  // 1. Direct phrase match with whole-word boundary safety
+  if (hasWholePhraseMatch(spokenClean, normTitle)) {
     return true;
   }
 
@@ -379,10 +348,10 @@ export function checkSingleTitleMatch(spokenClean: string, normTitle: string): b
   const spokenCanon = canonicalizeContractions(spokenClean);
   const normCanon = canonicalizeContractions(normTitle);
 
-  if (spokenCanon.includes(normCanon)) {
+  if (hasWholePhraseMatch(spokenCanon, normCanon)) {
     return true;
   }
-  if (normCanon.includes(spokenCanon) && spokenCanon.length >= 4) {
+  if (normCanon.length >= 4 && hasWholePhraseMatch(normCanon, spokenCanon)) {
     return true;
   }
 
