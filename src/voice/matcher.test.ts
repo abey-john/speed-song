@@ -7,6 +7,7 @@ import {
   doubleMetaphone,
   isTokenFuzzyMatch,
   canonicalizeContractions,
+  isSpaceCollapsedFuzzyMatch,
 } from './matcher';
 import { Song } from '../data/types';
 
@@ -113,16 +114,25 @@ describe('src/voice/matcher', () => {
       expect(doubleMetaphone('phil')).toEqual(doubleMetaphone('fill'));
     });
 
-    it('canonicalizes spoken contractions and slang', () => {
-      expect(canonicalizeContractions('wannabe')).toBe('want to be');
-      expect(canonicalizeContractions('wanna')).toBe('want to');
-      expect(canonicalizeContractions('gonna')).toBe('going to');
-      expect(canonicalizeContractions('gotta')).toBe('got to');
-      expect(canonicalizeContractions('got a')).toBe('got to');
-      expect(canonicalizeContractions('gimme')).toBe('give me');
-      expect(canonicalizeContractions('whatcha')).toBe('what to');
-      expect(canonicalizeContractions('what to')).toBe('what to');
+    it('canonicalizes universal English abbreviations and numbers', () => {
       expect(canonicalizeContractions('mr')).toBe('mister');
+      expect(canonicalizeContractions('dr')).toBe('doctor');
+      expect(canonicalizeContractions('st')).toBe('saint');
+      expect(canonicalizeContractions('five')).toBe('5');
+    });
+
+    it('matches space-collapsed phrases with Fuse.js without hardcoded dictionaries', () => {
+      expect(isSpaceCollapsedFuzzyMatch('wanttobe', 'wannabe')).toBe(true);
+      expect(isSpaceCollapsedFuzzyMatch('givemeshelter', 'gimmeshelter')).toBe(true);
+      expect(isSpaceCollapsedFuzzyMatch('whattosay', 'whatchasay')).toBe(true);
+      expect(isSpaceCollapsedFuzzyMatch('itsgoingtobeme', 'itsgonnabeme')).toBe(true);
+      expect(isSpaceCollapsedFuzzyMatch('igottafeeling', 'igotafeeling')).toBe(true);
+      expect(isSpaceCollapsedFuzzyMatch('machinehead', 'machinehead')).toBe(true);
+
+      // Must reject false positives
+      expect(isSpaceCollapsedFuzzyMatch('bad', 'mad')).toBe(false);
+      expect(isSpaceCollapsedFuzzyMatch('hello', 'yellow')).toBe(false);
+      expect(isSpaceCollapsedFuzzyMatch('letitbe', 'letitgo')).toBe(false);
     });
 
     it('evaluates token fuzzy matches safely without false positives on short words', () => {

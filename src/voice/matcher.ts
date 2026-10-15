@@ -151,28 +151,6 @@ export function normalizeNumbers(text: string): string {
 export function canonicalizeContractions(text: string): string {
   let s = text.toLowerCase();
 
-  // Universal informal reductions
-  s = s.replace(/\bwannabe\b/g, 'want to be');
-  s = s.replace(/\bwanna be\b/g, 'want to be');
-  s = s.replace(/\bwanna\b/g, 'want to');
-
-  s = s.replace(/\bgonna\b/g, 'going to');
-
-  s = s.replace(/\bgotta\b/g, 'got to');
-  s = s.replace(/\bgot a\b/g, 'got to'); // Speech-to-text turns "I gotta" into "I got a"
-
-  s = s.replace(/\bgimme\b/g, 'give me');
-  s = s.replace(/\blemme\b/g, 'let me');
-
-  s = s.replace(/\bwhatcha\b/g, 'what to');
-  s = s.replace(/\bwhat you\b/g, 'what to');
-  s = s.replace(/\bwhat do you\b/g, 'what to');
-
-  s = s.replace(/\bimma\b/g, 'i am going to');
-  s = s.replace(/\boutta\b/g, 'out of');
-  s = s.replace(/\bkinda\b/g, 'kind of');
-  s = s.replace(/\bsorta\b/g, 'sort of');
-
   // Universal English abbreviations
   s = s.replace(/\bmr\b/g, 'mister');
   s = s.replace(/\bmrs\b/g, 'missus');
@@ -183,9 +161,8 @@ export function canonicalizeContractions(text: string): string {
   s = s.replace(/\bvol\b/g, 'volume');
   s = s.replace(/\blil\b/g, 'little');
   s = s.replace(/\b(no|num|nr)\b/g, 'number');
-  s = s.replace(/\b(cuz|cause)\b/g, 'because');
 
-  // Normalize numbers, digit words, and Roman numerals
+  // Normalize numbers, digit words, and Roman numerals algorithmically
   s = normalizeNumbers(s);
 
   return s.replace(/\s+/g, ' ').trim();
@@ -306,6 +283,50 @@ export function matchesTitle(spokenClean: string, targetTitle: string): boolean 
   return false;
 }
 
+/**
+ * Matches space-collapsed phrases using Fuse.js (threshold <= 0.38).
+ * Handles compound words (e.g. "machine head" <-> "machinehead") and
+ * phonetic/slang splits (e.g. "want to be" <-> "wannabe", "give me shelter" <-> "gimme shelter")
+ * without hardcoding any word dictionaries.
+ */
+export function isSpaceCollapsedFuzzyMatch(spokenNoSpace: string, normNoSpace: string): boolean {
+  if (normNoSpace.length < 6 || spokenNoSpace.length < 6) return false;
+  if (normNoSpace[0] !== spokenNoSpace[0]) return false;
+  if (Math.abs(normNoSpace.length - spokenNoSpace.length) > 3) return false;
+
+  // Last character must match to avoid false positive suffix substitutions (e.g. "let it be" vs "let it go")
+  if (normNoSpace.slice(-1) !== spokenNoSpace.slice(-1)) {
+    return false;
+  }
+
+  const fuse = new Fuse([normNoSpace], {
+    threshold: 0.38,
+    ignoreLocation: true,
+    includeScore: true,
+  });
+  const res = fuse.search(spokenNoSpace);
+  return res.length > 0;
+}
+
+/**
+ * Checks sliding windows of spoken tokens against a target space-collapsed string.
+ * This ensures that phrases like "i love want to be" match "wannabe" even when extra words were spoken.
+ */
+export function checkSpaceCollapsedWindows(spokenTokens: string[], normNoSpace: string): boolean {
+  if (normNoSpace.length < 6) return false;
+  for (let start = 0; start < spokenTokens.length; start++) {
+    let windowStr = '';
+    for (let end = start; end < spokenTokens.length; end++) {
+      windowStr += spokenTokens[end];
+      if (windowStr.length > normNoSpace.length + 3) break;
+      if (isSpaceCollapsedFuzzyMatch(windowStr, normNoSpace)) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
 export function checkSingleTitleMatch(spokenClean: string, normTitle: string): boolean {
   if (!normTitle || !spokenClean) return false;
 
@@ -325,13 +346,22 @@ export function checkSingleTitleMatch(spokenClean: string, normTitle: string): b
     return true;
   }
 
-  // 3. Space-collapsed match (handles compound words like "machinehead" <-> "machine head")
+  // 3. Space-collapsed match (handles compound words like "machinehead" <-> "machine head"
+  // and speech-to-text word splitting like "wannabe" <-> "want to be", "gimme" <-> "give me")
   const spokenNoSpace = spokenCanon.replace(/\s+/g, '');
   const normNoSpace = normCanon.replace(/\s+/g, '');
   if (normNoSpace.length >= 4 && spokenNoSpace.includes(normNoSpace)) {
     return true;
   }
   if (normNoSpace.length >= 4 && normNoSpace.includes(spokenNoSpace) && spokenNoSpace.length >= 4) {
+    return true;
+  }
+  if (isSpaceCollapsedFuzzyMatch(spokenNoSpace, normNoSpace)) {
+    return true;
+  }
+
+  const spokenTokens = spokenCanon.split(/\s+/).filter((t) => t.length > 0);
+  if (checkSpaceCollapsedWindows(spokenTokens, normNoSpace)) {
     return true;
   }
 
@@ -344,14 +374,14 @@ export function checkSingleTitleMatch(spokenClean: string, normTitle: string): b
     return spokenNoSpace.includes(normNoSpace);
   }
 
-  const spokenTokens = spokenCanon.split(/\s+/).filter((t) => t.length > 1);
-  if (spokenTokens.length === 0) {
+  const validSpokenTokens = spokenTokens.filter((t) => t.length > 1);
+  if (validSpokenTokens.length === 0) {
     return false;
   }
 
   let matches = 0;
   for (const tToken of titleTokens) {
-    const hasMatch = spokenTokens.some((sToken) => isTokenFuzzyMatch(sToken, tToken));
+    const hasMatch = validSpokenTokens.some((sToken) => isTokenFuzzyMatch(sToken, tToken));
     if (hasMatch) {
       matches++;
     }
