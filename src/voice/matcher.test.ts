@@ -334,5 +334,34 @@ describe('src/voice/matcher', () => {
       // "Someone Like You" contains the letters "one", but MUST NOT match the song "One"
       expect(evaluateVoiceGuess('Someone like you', songOne).isCorrect).toBe(false);
     });
+
+    it('rejects partial title guesses so players are not marked correct prematurely', () => {
+      const songBeastie: Song = {
+        id: 'no-sleep',
+        title: 'No Sleep Till Brooklyn',
+        artist: 'Beastie Boys',
+        album: 'Licensed to Ill',
+        previewUrl: '',
+        artworkUrl: '',
+      };
+      // Saying only the first 2 words MUST NOT mark correct
+      expect(evaluateVoiceGuess('No Sleep', songBeastie).isCorrect).toBe(false);
+      // Saying full title marks correct
+      expect(evaluateVoiceGuess('No Sleep Till Brooklyn', songBeastie).isCorrect).toBe(true);
+      expect(evaluateVoiceGuess('No Sleep Til Brooklyn', songBeastie).isCorrect).toBe(true);
+
+      const songFOB: Song = {
+        id: 'fob',
+        title: 'My Songs Know What You Did In The Dark (Light Em Up)',
+        artist: 'Fall Out Boy',
+        album: 'Save Rock and Roll',
+        previewUrl: '',
+        artworkUrl: '',
+      };
+      // Saying only "My Songs" MUST NOT mark correct
+      expect(evaluateVoiceGuess('My Songs', songFOB).isCorrect).toBe(false);
+      // Saying base title marks correct
+      expect(evaluateVoiceGuess('My Songs Know What You Did In The Dark', songFOB).isCorrect).toBe(true);
+    });
   });
 });

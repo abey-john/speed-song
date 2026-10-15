@@ -342,18 +342,12 @@ export function checkSingleTitleMatch(spokenClean: string, normTitle: string): b
   if (hasWholePhraseMatch(spokenCanon, normCanon)) {
     return true;
   }
-  if (normCanon.length >= 4 && hasWholePhraseMatch(normCanon, spokenCanon)) {
-    return true;
-  }
 
   // 3. Space-collapsed match (handles compound words like "machinehead" <-> "machine head"
   // and speech-to-text word splitting like "wannabe" <-> "want to be", "gimme" <-> "give me")
   const spokenNoSpace = spokenCanon.replace(/\s+/g, '');
   const normNoSpace = normCanon.replace(/\s+/g, '');
   if (normNoSpace.length >= 4 && spokenNoSpace.includes(normNoSpace)) {
-    return true;
-  }
-  if (normNoSpace.length >= 4 && normNoSpace.includes(spokenNoSpace) && spokenNoSpace.length >= 4) {
     return true;
   }
   if (isSpaceCollapsedFuzzyMatch(spokenNoSpace, normNoSpace)) {
@@ -379,6 +373,11 @@ export function checkSingleTitleMatch(spokenClean: string, normTitle: string): b
     return false;
   }
 
+  // If the user spoke fewer tokens than a multi-token title requires, reject premature match
+  if (validSpokenTokens.length < Math.min(titleTokens.length, 3)) {
+    return false;
+  }
+
   let matches = 0;
   for (const tToken of titleTokens) {
     const hasMatch = validSpokenTokens.some((sToken) => isTokenFuzzyMatch(sToken, tToken));
@@ -387,12 +386,9 @@ export function checkSingleTitleMatch(spokenClean: string, normTitle: string): b
     }
   }
 
-  // For 1-token and 2-token non-stop titles, all non-stop tokens must match:
-  // e.g. "Mr Morale" (tokens: mister, morale) -> 2 / 2 = 1.0
-  // e.g. "Munny Right" (tokens: munny, right) -> 2 / 2 = 1.0
-  // e.g. "Champs-Elysees" (tokens: champs, elysees) -> 2 / 2 = 1.0
-  // For 3+ token titles, at least 70% of tokens must match:
-  const requiredRatio = titleTokens.length <= 2 ? 1.0 : 0.7;
+  // For titles up to 3 non-stop tokens, all non-stop tokens must be spoken (1.0).
+  // For long titles (4+ tokens), at least 85% of tokens must match (permits at most 1 minor dropped token).
+  const requiredRatio = titleTokens.length <= 3 ? 1.0 : 0.85;
   return matches / titleTokens.length >= requiredRatio;
 }
 
