@@ -161,7 +161,11 @@ class SpeedSongApp {
       this.state = { type: 'idle', selectedPlaylistId: playlistId };
       this.voiceState = null;
       audioEngine.stop();
-      this.render();
+      if (this.activeGameMode === 'voice') {
+        this.startNewRound(false);
+      } else {
+        this.render();
+      }
     } catch (err) {
       console.error('[app] Error loading playlist:', err);
       this.renderError(`Failed to load playlist "${entry.name}".`);
@@ -385,6 +389,14 @@ class SpeedSongApp {
   // =========================================================================
 
   private async handleVoiceBeginClip(): Promise<void> {
+    if (!this.voiceState && this.shuffleBag && this.currentPlaylist) {
+      const song = this.shuffleBag.draw();
+      if (song) {
+        preloadArtwork(song.artworkUrl);
+        audioEngine.preloadSong(song.previewUrl);
+        this.voiceState = startVoiceRound(song, this.currentPlaylist.id);
+      }
+    }
     if (!this.voiceState || this.voiceState.type !== 'ready') return;
     await audioEngine.unlock();
 
@@ -669,25 +681,30 @@ class SpeedSongApp {
   }
 
   private renderVoiceGameArea(main: Element): void {
-    if (!this.voiceState || this.voiceState.type === 'ready') {
-      const readyState = this.voiceState || (this.currentPlaylist?.songs[0] ? startVoiceRound(this.currentPlaylist.songs[0], this.currentPlaylist.id) : null);
-      if (readyState) {
-        this.voiceControls.update(readyState);
-        main.appendChild(this.voiceControls.getElement());
+    if (!this.voiceState) {
+      if (this.shuffleBag && this.currentPlaylist) {
+        const song = this.shuffleBag.draw();
+        if (song) {
+          preloadArtwork(song.artworkUrl);
+          audioEngine.preloadSong(song.previewUrl);
+          this.voiceState = startVoiceRound(song, this.currentPlaylist.id);
+        }
       }
-      return;
     }
 
-    if (this.voiceState.type === 'playing' || this.voiceState.type === 'buzzed') {
-      this.voiceControls.update(this.voiceState);
+    const state = this.voiceState;
+    if (!state) return;
+
+    if (state.type === 'ready' || state.type === 'playing' || state.type === 'buzzed') {
+      this.voiceControls.update(state);
       main.appendChild(this.voiceControls.getElement());
       return;
     }
 
-    if (this.voiceState.type === 'revealed') {
+    if (state.type === 'revealed') {
       const revealEl = renderReveal(
-        this.voiceState.song,
-        this.voiceState.result,
+        state.song,
+        state.result,
         this.isPlayingFullPreview,
         {
           onNextRound: () => this.startNewRound(true),
